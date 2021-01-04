@@ -4,7 +4,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.metadata.myvariable }}.
 
-title: Planet Ruby
+title: Ruby World
 tagline: This site is totally awesome
 email: me@mikerogers.io
 description: >- # this means to ignore newlines until "baseurl:"
