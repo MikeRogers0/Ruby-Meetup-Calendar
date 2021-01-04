@@ -1,0 +1,15 @@
+- name: LRUG
+  eventbrite_id: 28936506513
+  url: https://lrug.org/
+
+- name: Melbourne Ruby
+  meetup_id: Ruby-On-Rails-Oceania-Melbourne
+  url: https://www.meetup.com/Ruby-On-Rails-Oceania-Melbourne
+
+- name: Ruby on Rails Oceania Sydney
+  meetup_id: Ruby-On-Rails-Oceania-Sydney
+  url: https://www.meetup.com/Ruby-On-Rails-Oceania-Sydney
+
+- name: RUG::B
+  feed_url: https://www.rug-b.de/events.json
+  url: https://www.rug-b.de

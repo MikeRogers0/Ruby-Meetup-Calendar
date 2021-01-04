@@ -1,0 +1,59 @@
+---
+title: Event Calender
+layout: page
+---
+
+<% date_range = (Time.new(2021, 01, 01).to_date...Time.new(2021, 01, 30).to_date).to_a %>
+
+<p>https://tailwindcomponents.com/component/calendar-ui-with-tailwindcss-and-alpinejs - We're making this</p>
+
+<div class="py-2 md:py-6">
+  <div class="bg-white rounded-lg shadow overflow-hidden">
+    <div class="flex items-center justify-between py-2 px-6">
+      <div>
+        <span class="text-lg font-bold text-gray-800">January</span>
+        <span class="ml-1 text-lg text-gray-600 font-normal">2021</span>
+      </div>
+      <div class="border rounded-lg px-1" style="padding-top: 2px;">
+        <button type="button" class="leading-none rounded-lg transition ease-in-out duration-100 inline-flex cursor-pointer hover:bg-gray-200 p-1 items-center cursor-not-allowed opacity-25" disabled="disabled">
+          <svg class="h-6 w-6 text-gray-500 inline-flex leading-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+          </svg>  
+        </button>
+        <div class="border-r inline-flex h-6"></div>		
+        <button type="button" class="leading-none rounded-lg transition ease-in-out duration-100 inline-flex items-center cursor-pointer hover:bg-gray-200 p-1" >
+          <svg class="h-6 w-6 text-gray-500 inline-flex leading-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>									  
+        </button>
+      </div>
+    </div>	
+
+    <div class="grid grid-cols-7">
+      <% date_range.slice(0, 7).each do |date| %>
+        <div class="py-2 px-6 text-center border-r border-b border-t">
+          <div class="text-gray-600 text-sm uppercase tracking-wide font-bold text-center">
+            <%= t('date.abbr_day_names')[date.wday] %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="grid grid-cols-7">
+      <% date_range.each do |date| %>
+        <div class="py-2 px-6 border-r border-b min-h-28">
+          <div class="inline-flex w-6 h-6 leading-none text-gray-700">
+            <%= date.day %>
+          </div>
+
+          <ul class="list-disc list-inside text-gray-700">
+            <li class="text-xs mb-1"><a href="#">Sample Event</a></li>
+            <li class="text-xs">Sample Event</li>
+          </ul>
+        </div>
+      <% end %>
+    </div>
+
+  </div>
+</div>
+
