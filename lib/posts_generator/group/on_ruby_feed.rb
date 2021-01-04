@@ -2,7 +2,7 @@ require 'net/http'
 require 'uri'
 require 'json'
 
-class PostsGenerator::Group::Feed < PostsGenerator::Group
+class PostsGenerator::Group::OnRubyFeed < PostsGenerator::Group
   private
 
   def events
@@ -10,7 +10,7 @@ class PostsGenerator::Group::Feed < PostsGenerator::Group
       Event.new(
         title: event_data['name'],
         datetime: Time.parse(event_data['date']),
-        url: "#{@group['url']}/events/#{event_data['name'].parameterize}-#{event_data['id']}",
+        url: "#{@group['url']}events/#{event_data['name'].parameterize}-#{event_data['id']}",
         name: name
       )
     end

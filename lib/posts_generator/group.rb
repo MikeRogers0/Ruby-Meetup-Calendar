@@ -16,4 +16,4 @@ end
 
 require './lib/posts_generator/group/meetup'
 require './lib/posts_generator/group/eventbrite'
-require './lib/posts_generator/group/feed'
+require './lib/posts_generator/group/on_ruby_feed'
