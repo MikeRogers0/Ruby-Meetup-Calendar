@@ -11,11 +11,9 @@ layout: page
 <% end_date = Time.now.to_date.end_of_month.end_of_week %>
 <% date_range = (start_date..end_date).to_a %>
 
-<p>https://tailwindcomponents.com/component/calendar-ui-with-tailwindcss-and-alpinejs - We're making this</p>
-
 <div class="py-2 md:py-6">
   <div class="bg-white rounded-lg shadow overflow-hidden">
-    <div class="flex items-center justify-between py-2 px-6">
+    <div class="flex items-center justify-between py-2 px-6 border-l border-t">
       <div>
         <span class="text-lg font-bold text-gray-800">January</span>
         <span class="ml-1 text-lg text-gray-600 font-normal">2021</span>
@@ -37,7 +35,7 @@ layout: page
 
     <div class="grid grid-cols-7">
       <% date_range.slice(0, 7).each do |date| %>
-        <div class="py-2 px-6 text-center border-r border-b border-t">
+        <div class="py-2 px-6 text-center border-l border-b border-t">
           <div class="text-gray-600 text-sm uppercase tracking-wide font-bold text-center">
             <%= t('date.abbr_day_names')[date.wday] %>
           </div>
@@ -47,7 +45,7 @@ layout: page
 
     <div class="grid grid-cols-7">
       <% date_range.each do |date| %>
-        <div class="py-2 px-6 border-r border-b min-h-28">
+        <div class="py-2 px-6 border-l border-b min-h-28">
           <div class="inline-flex w-6 h-6 leading-none text-gray-700">
             <%= date.day %>
           </div>

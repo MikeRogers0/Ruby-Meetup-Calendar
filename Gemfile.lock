@@ -43,6 +43,7 @@ GEM
       bridgetown-core (= 0.19.1)
     colorator (1.1.0)
     concurrent-ruby (1.1.7)
+    dotenv (2.7.6)
     erubi (1.10.0)
     faraday (1.3.0)
       faraday-net_http (~> 1.0)
@@ -74,6 +75,7 @@ GEM
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (4.0.6)
+    rake (13.0.3)
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
@@ -97,6 +99,8 @@ PLATFORMS
 DEPENDENCIES
   activesupport
   bridgetown (~> 0.19.1)
+  dotenv
+  rake
 
 BUNDLED WITH
    2.1.4
