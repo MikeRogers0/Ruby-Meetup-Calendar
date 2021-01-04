@@ -95,6 +95,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activesupport
   bridgetown (~> 0.19.1)
 
 BUNDLED WITH

@@ -3,7 +3,9 @@ title: Event Calender
 layout: page
 ---
 
-<% date_range = (Time.new(2021, 01, 01).to_date...Time.new(2021, 01, 30).to_date).to_a %>
+<% start_date = Time.today.to_date.beginning_of_month.beginning_of_week %>
+<% end_date = Time.today.to_date.end_of_month.end_of_week %>
+<% date_range = (start_date..end_date).to_a %>
 
 <p>https://tailwindcomponents.com/component/calendar-ui-with-tailwindcss-and-alpinejs - We're making this</p>
 
