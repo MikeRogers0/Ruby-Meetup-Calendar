@@ -6,12 +6,32 @@
 - name: Melbourne Ruby
   source: Meetup
   meetup_id: Ruby-On-Rails-Oceania-Melbourne
-  url: https://www.meetup.com/Ruby-On-Rails-Oceania-Melbourne
+  url: https://www.meetup.com/Ruby-On-Rails-Oceania-Melbourne/
 
 - name: Ruby on Rails Oceania Sydney
   source: Meetup
   meetup_id: Ruby-On-Rails-Oceania-Sydney
-  url: https://www.meetup.com/Ruby-On-Rails-Oceania-Sydney
+  url: https://www.meetup.com/Ruby-On-Rails-Oceania-Sydney/
+
+- name: Chicago Ruby
+  source: Meetup
+  meetup_id: ChicagoRuby
+  url: https://www.meetup.com/ChicagoRuby/
+
+- name: NYC.rb
+  source: Meetup
+  meetup_id: NYC-rb
+  url: https://www.meetup.com/NYC-rb/
+
+- name: Philly.rb
+  source: Meetup
+  meetup_id: Phillyrb
+  url: https://www.meetup.com/Phillyrb/
+
+- name: Charlotte Ruby Meetup Group
+  source: Meetup
+  meetup_id: charlotte-rb
+  url: https://www.meetup.com/charlotte-rb/
 
 - name: RUG::B
   source: OnRubyFeed
