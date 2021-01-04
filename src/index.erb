@@ -1,5 +1,5 @@
 ---
-title: Event Calender
+title: Ruby Event Calender
 layout: page
 ---
 
@@ -36,7 +36,7 @@ layout: page
     <div class="grid grid-cols-7">
       <% date_range.slice(0, 7).each do |date| %>
         <div class="py-2 px-6 text-center border-l border-b border-t">
-          <div class="text-gray-600 text-sm uppercase tracking-wide font-bold text-center">
+          <div class="text-gray-600 text-sm uppercase font-bold text-center">
             <%= t('date.abbr_day_names')[date.wday] %>
           </div>
         </div>
@@ -45,14 +45,20 @@ layout: page
 
     <div class="grid grid-cols-7">
       <% date_range.each do |date| %>
-        <div class="py-2 px-6 border-l border-b min-h-28">
+        <div class="py-2 px-2 border-l border-b min-h-28">
           <div class="inline-flex w-6 h-6 leading-none text-gray-700">
             <%= date.day %>
           </div>
 
-          <ul class="list-disc list-inside text-gray-700">
-            <li class="text-xs mb-1"><a href="#">Sample Event</a></li>
-            <li class="text-xs">Sample Event</li>
+          <ul class="text-gray-700">
+            <% site.posts.docs.each do |post| %>
+              <% if post.date.to_date == date %>
+                <li class="text-xs mb-1"><a href="<%= post.external_url %>">
+                    <%= post.name %>
+                    <time datetime="<%= post.datetime %>"><%= post.datetime.strftime('%H:%M %z') %></time>
+                  </a></li>
+              <% end %>
+            <% end %>
           </ul>
         </div>
       <% end %>
