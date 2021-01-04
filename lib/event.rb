@@ -12,7 +12,7 @@ class Event
         'layout' => 'post',
         'title' => "#{@name} - #{date}",
         'datetime' => @datetime,
-        'url' => @url
+        'external_url' => @url
       }) )
       file.write('---')
     end
