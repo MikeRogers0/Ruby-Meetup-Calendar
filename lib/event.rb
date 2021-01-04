@@ -7,6 +7,8 @@ class Event
   end
 
   def save
+    return unless valid?
+
     File.open(file_path, (File::CREAT|File::TRUNC|File::WRONLY)) do |file|
       file.write(YAML.dump({
         'layout' => 'post',
@@ -20,6 +22,10 @@ class Event
   end
 
   private
+
+  def valid?
+    @datetime <= (Time.now + 3.months)
+  end
 
   def slug
     @name.parameterize
