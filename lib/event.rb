@@ -15,7 +15,8 @@ class Event
         'title' => "#{@name} - #{date}",
         'datetime' => @datetime,
         'name' => @name,
-        'external_url' => @url
+        'external_url' => @url,
+        'year_month' => @datetime.strftime('%Y-%m'),
       }) )
       file.write('---')
     end
@@ -36,6 +37,6 @@ class Event
   end
 
   def file_path
-    @file_path ||= File.join(File.dirname(__FILE__), '../src/_posts/', "#{date}-#{slug}.md")
+    @file_path ||= File.join(File.dirname(__FILE__), '../src/_events/', "#{date}-#{slug}.md")
   end
 end

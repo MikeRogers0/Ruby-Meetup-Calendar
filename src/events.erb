@@ -1,0 +1,16 @@
+---
+layout: page
+title: Events
+permalink: /events/
+collection: events
+template_engine: erb
+---
+
+
+<ul>
+  <% site.collections.events.docs.collect { |event| event[:year_month] }.uniq.each do |event_month| %>
+    <li>
+      <a href="/events/<%= event_month %>"><%= event_month %></a>
+    </li>
+  <% end %>
+</ul>

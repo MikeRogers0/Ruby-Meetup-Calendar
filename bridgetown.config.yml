@@ -24,5 +24,7 @@ future: true
 pagination:
   enabled: true
 
+collections:
+  events:
 
 # timezone: America/Los_Angeles

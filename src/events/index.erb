@@ -1,22 +1,28 @@
 ---
 title: Ruby Event Calender
 layout: page
+permalink: /events/:term/
+template_engine: erb
+prototype:
+  collection: events
+  term: year_month
 ---
 
 <%
   require 'active_support/core_ext/time'
 %>
 
-<% start_date = Time.now.to_date.beginning_of_month.beginning_of_week %>
-<% end_date = Time.now.to_date.end_of_month.end_of_week %>
+<% month = Time.parse("#{page.data[:year_month]}-01") %>
+<% start_date = month.to_date.beginning_of_month.beginning_of_week %>
+<% end_date = month.to_date.end_of_month.end_of_week %>
 <% date_range = (start_date..end_date).to_a %>
 
 <div class="py-2 md:py-6">
   <div class="bg-white rounded-lg shadow overflow-hidden">
     <div class="flex items-center justify-between py-2 px-6 border-l border-t">
       <div>
-        <span class="text-lg font-bold text-gray-800">January</span>
-        <span class="ml-1 text-lg text-gray-600 font-normal">2021</span>
+        <span class="text-lg font-bold text-gray-800"><%= t('date.month_names')[month.month] %></span>
+        <span class="ml-1 text-lg text-gray-600 font-normal"><%= month.year %></span>
       </div>
       <div class="border rounded-lg px-1" style="padding-top: 2px;">
         <button type="button" class="leading-none rounded-lg transition ease-in-out duration-100 inline-flex cursor-pointer hover:bg-gray-200 p-1 items-center cursor-not-allowed opacity-25" disabled="disabled">
@@ -51,7 +57,7 @@ layout: page
           </div>
 
           <ul class="text-gray-700">
-            <% site.collections.events.docs.each do |event| %>
+            <% paginator.documents.each do |event| %>
               <% if event[:date].to_date == date %>
                 <li class="text-xs mb-1"><a href="<%= event[:external_url] %>">
                     <%= event[:name] %>
