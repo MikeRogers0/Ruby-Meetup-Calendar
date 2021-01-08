@@ -9,7 +9,7 @@ prototype:
 ---
 
 <%
-  require 'active_support/core_ext/time'
+  require 'active_support/core_ext'
 %>
 
 <%= partial 'calender', locals: { month: Time.parse("#{page.data[:year_month]}-01") } %>

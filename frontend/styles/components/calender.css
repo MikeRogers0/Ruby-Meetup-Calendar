@@ -1,0 +1,15 @@
+.calender {
+  @apply my-2 md:my-6;
+  @apply bg-white rounded-lg shadow overflow-hidden;
+}
+
+.calender__header {
+  @apply flex items-center justify-between py-2 px-6 border-l border-t;
+}
+
+.calender-day {
+  @apply py-2 px-3 border-l border-b;
+}
+
+.calender-day__title {
+}

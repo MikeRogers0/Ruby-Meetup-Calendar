@@ -1,0 +1,7 @@
+.btn {
+  @apply leading-none rounded-lg transition ease-in-out duration-100 inline-flex items-center cursor-pointer hover:bg-gray-200 p-1;
+}
+
+.btn--disabled {
+  @apply opacity-25 hover:bg-transparent;
+}
