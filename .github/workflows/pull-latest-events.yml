@@ -38,6 +38,8 @@ jobs:
         yarn
         bundle install --jobs ${nproc}
     - name: Update event data
+      env:
+        MEETUP_API_KEY: "Add-a-key-as-a-secret-to-the-repo"
       run: |
         bundle exec rake update_data:all
     - name: Commit files
