@@ -1,0 +1,53 @@
+name: Pull Latest Events
+
+on:
+  schedule:
+    - cron:  '0 3 * * 1,3,5'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+    - uses: actions/checkout@master
+
+    - uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.7
+
+    - uses: actions/cache@v1.1.2
+      with:
+        path: vendor/bundle
+        key: ${{ runner.os }}-gem-${{ hashFiles('**/Gemfile.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-gem-
+
+    - name: Node Modules Cache
+      uses: actions/cache@v2
+      id: node-modules-cache
+      with:
+        path: node_modules
+        key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-yarn-
+
+    - name: Build Environment
+      run: |
+        bundle config path vendor/bundle
+        yarn
+        bundle install --jobs ${nproc}
+    - name: Update event data
+      run: |
+        bundle exec rake update_data:all
+    - name: Commit files
+      run: |
+        git config --local user.email "github-actions@example.com"
+        git config --local user.name "GitHub Actions"
+        git add .
+        git commit -am "[nodoc] Updating Data files: `date`" || echo "No changes to commit"
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.ref }}
