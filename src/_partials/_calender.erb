@@ -1,64 +1,59 @@
 <%
-  require 'active_support/core_ext/time'
-%>
+    require 'active_support/core_ext'
+  %>
 
 <% current_month ||= locals[:month] || Time.now %>
 <% start_date = current_month.to_date.beginning_of_month.beginning_of_week %>
 <% end_date = current_month.to_date.end_of_month.end_of_week %>
 <% date_range = (start_date..end_date).to_a %>
 
-<div class="py-2 md:py-6">
-  <div class="bg-white rounded-lg shadow overflow-hidden">
-    <div class="flex items-center justify-between py-2 px-6 border-l border-t">
-      <div>
-        <span class="text-lg font-bold text-gray-800"><%= t('date.month_names')[current_month.month] %></span>
-        <span class="ml-1 text-lg text-gray-600 font-normal"><%= current_month.year %></span>
-      </div>
-      <div class="border rounded-lg px-1" style="padding-top: 2px;">
-        <button type="button" class="leading-none rounded-lg transition ease-in-out duration-100 inline-flex cursor-pointer hover:bg-gray-200 p-1 items-center cursor-not-allowed opacity-25" disabled="disabled">
-          <svg class="h-6 w-6 text-gray-500 inline-flex leading-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-          </svg>  
-        </button>
-        <div class="border-r inline-flex h-6"></div>		
-        <button type="button" class="leading-none rounded-lg transition ease-in-out duration-100 inline-flex items-center cursor-pointer hover:bg-gray-200 p-1" >
-          <svg class="h-6 w-6 text-gray-500 inline-flex leading-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-          </svg>									  
-        </button>
-      </div>
-    </div>	
+<div class="calender">
 
-    <div class="grid grid-cols-7">
-      <% date_range.slice(0, 7).each do |date| %>
-        <div class="py-2 px-6 text-center border-l border-b border-t">
-          <div class="text-gray-600 text-sm uppercase font-bold text-center">
-            <%= t('date.abbr_day_names')[date.wday] %>
-          </div>
-        </div>
-      <% end %>
+  <div class="calender__header">
+    <div class="h3">
+      <%= t('date.month_names')[current_month.month] %>
+      <span class="muted"><%= current_month.year %></span>
     </div>
 
-    <div class="grid grid-cols-7">
-      <% date_range.each do |date| %>
-        <div class="py-2 px-2 border-l border-b min-h-28">
-          <div class="inline-flex w-6 h-6 leading-none text-gray-700">
-            <%= date.day %>
-          </div>
+    <div class="border rounded-lg px-1">
 
-          <ul class="text-gray-700">
-            <% site.collections.events.docs.each do |event| %>
-              <% if event[:date].to_date == date %>
-                <li class="text-xs mb-1"><a href="<%= event[:external_url] %>">
-                    <%= event[:name] %>
-                    <time datetime="<%= event[:datetime] %>"><%= event[:datetime].strftime('%H:%M %z') %></time>
-                  </a></li>
-              <% end %>
-            <% end %>
-          </ul>
-        </div>
-      <% end %>
+      <%= partial 'calender/nav_button', month: current_month - 1.months, forward_svg: false %>
+
+      <div class="border-r inline-flex h-6"></div>
+
+      <%= partial 'calender/nav_button', month: current_month + 1.months, forward_svg: true %>
     </div>
+  </div>	
 
+  <div class="grid grid-cols-7 text-center border-t">
+    <% date_range.slice(0, 7).each do |date| %>
+      <div class="calender-day">
+        <div class="h4 uppercase">
+          <%= t('date.abbr_day_names')[date.wday] %>
+        </div>
+      </div>
+    <% end %>
   </div>
+
+  <div class="grid grid-cols-7">
+    <% date_range.each do |date| %>
+      <div class="calender-day min-h-28">
+        <div class="inline-flex w-6 h-6 leading-none text-gray-700">
+          <%= date.day %>
+        </div>
+
+        <ul>
+          <% site.collections.events.docs.select { |event| event[:date].to_date == date }.each do |event| %>
+            <li class="text-xs mb-1">
+              <a href="<%= event[:external_url] %>">
+                <%= event[:name] %>
+                <time datetime="<%= event[:datetime] %>"><%= event[:datetime].strftime('%H:%M %z') %></time>
+              </a>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+
 </div>

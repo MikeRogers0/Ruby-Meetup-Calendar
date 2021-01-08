@@ -1,15 +1,24 @@
 @tailwind base;
 
 @layer base {
-  h1 {
-    @apply text-2xl font-bold text-gray-800;
+  h1, .h1 {
+    @apply text-3xl font-bold text-gray-800;
   }
-  h2 {
+  h2, .h2 {
     @apply text-xl;
   }
-  h3 {
-    @apply text-lg;
+  h3, .h3 {
+    @apply text-lg font-bold text-gray-800;
   }
+
+  h3 .muted, .h3 .muted {
+    @apply text-lg text-gray-600 font-normal;
+  }
+
+  h4, .h4 {
+    @apply text-gray-600 text-sm font-bold;
+  }
+
   a {
     @apply text-blue-600 underline;
   }
@@ -18,3 +27,8 @@
 @tailwind components;
 
 @tailwind utilities;
+
+@layer components {
+  @import "components/btn.css";
+  @import "components/calender.css";
+}
