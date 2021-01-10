@@ -25,7 +25,7 @@
     </div>
   </div>	
 
-  <div class="grid grid-cols-7 text-center border-gray-800 border-t">
+  <div class="grid grid-cols-7 text-center border-gray-800 border-t calender-days">
     <% date_range.slice(0, 7).each do |date| %>
       <div class="calender-day">
         <div class="h4 uppercase">
@@ -35,7 +35,7 @@
     <% end %>
   </div>
 
-  <div class="grid grid-cols-7">
+  <div class="grid grid-cols-7 calender-days">
     <% date_range.each do |date| %>
       <div class="calender-day min-h-28">
         <div class="inline-flex w-6 h-6 leading-none">

@@ -1,15 +1,33 @@
 .calender {
-  @apply my-2 md:my-6;
-  @apply rounded-lg shadow overflow-hidden border border-gray-800;
-  /*@apply bg-gray-800;*/
+  @apply my-2 md:my-6 p-2;
+  @apply rounded-lg shadow overflow-hidden;
+  @apply bg-gray-800;
 }
 
 .calender__header {
-  @apply flex items-center justify-between py-2 px-6 border-gray-800 border-l border-t;
+  @apply flex items-center justify-between px-4;
 }
 
 .calender-day {
-  @apply py-2 px-3 border-gray-800 border-l border-b;
+  @apply py-2 px-3 border-gray-900 border-l border-b;
+}
+
+.calender-days > .calender-day:nth-child(1),
+.calender-days > .calender-day:nth-child(8),
+.calender-days > .calender-day:nth-child(15),
+.calender-days > .calender-day:nth-child(22),
+.calender-days > .calender-day:nth-child(29) {
+  @apply border-l-0;
+}
+
+.calender-days > .calender-day:nth-child(29),
+.calender-days > .calender-day:nth-child(30),
+.calender-days > .calender-day:nth-child(31),
+.calender-days > .calender-day:nth-child(32),
+.calender-days > .calender-day:nth-child(33),
+.calender-days > .calender-day:nth-child(34),
+.calender-days > .calender-day:nth-child(35) {
+  @apply border-b-0;
 }
 
 .calender-day__title {

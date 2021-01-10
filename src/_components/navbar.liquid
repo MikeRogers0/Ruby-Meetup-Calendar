@@ -3,11 +3,7 @@
   <h1>
     <a href="/">
       <span class="mr-2">💎</span>
-      {% if page_title != "" %}
-        {{ page_title | escape }}
-      {% else %}
         {{ metadata.title | escape }}
-      {% endif %}
     </a>
   </h1>
 </nav>

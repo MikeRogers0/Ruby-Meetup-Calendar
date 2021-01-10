@@ -2,7 +2,7 @@
 
 @layer base {
   body {
-    @apply font-sans text-gray-50 bg-gray-800;
+    @apply font-sans text-gray-50 bg-gray-800 antialiased;
   }
 
   h1, .h1 {
