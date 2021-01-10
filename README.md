@@ -33,7 +33,7 @@ Not all groups use the same platform, so I'm writing parsers to collect data fro
 
 1. [X] Meetup
 2. [X] OnRuby
-3. [] EventBrite - I need an API key, but it can be parsed from https://www.eventbriteapi.com/v3/organizations/28936506513/events/ :)
+3. [ ] EventBrite - I need an API key, but it can be parsed from https://www.eventbriteapi.com/v3/organizations/28936506513/events/ :)
 
 ### Localising Event times
 
