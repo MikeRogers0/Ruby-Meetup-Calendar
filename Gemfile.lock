@@ -39,6 +39,9 @@ GEM
       thor (~> 1.0)
       tilt (~> 2.0)
       webrick (~> 1.7)
+    bridgetown-minify-html (1.0.1)
+      bridgetown (>= 0.15, < 2.0)
+      htmlcompressor (>= 0.4, < 1.0)
     bridgetown-paginate (0.19.1)
       bridgetown-core (= 0.19.1)
     colorator (1.1.0)
@@ -56,6 +59,7 @@ GEM
     forwardable-extended (2.6.0)
     hash_with_dot_access (1.1.0)
       activesupport (>= 5.0.0, < 7.0)
+    htmlcompressor (0.4.0)
     i18n (1.8.7)
       concurrent-ruby (~> 1.0)
     kramdown (2.3.0)
@@ -99,6 +103,7 @@ PLATFORMS
 DEPENDENCIES
   activesupport
   bridgetown (~> 0.19.1)
+  bridgetown-minify-html (~> 1.0)
   dotenv
   rake
 
