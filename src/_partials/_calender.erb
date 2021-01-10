@@ -47,7 +47,11 @@
             <li class="text-xs mb-1 list-disc list-inside">
               <a href="<%= event[:external_url] %>">
                 <%= event[:name] %>
-                <time datetime="<%= event[:datetime] %>"><%= event[:datetime].strftime('%H:%M %z') %></time>
+                <time
+                 data-format="%l:%M%P"
+                 data-local="time"
+                 datetime="<%= event[:datetime].iso8601 %>"
+                 ><%= event[:datetime].strftime('%H:%M %z') %></time>
               </a>
             </li>
           <% end %>
