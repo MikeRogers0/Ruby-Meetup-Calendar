@@ -1,6 +1,7 @@
 ---
-title: Ruby Event Calender
 layout: page
 ---
+
+<% page.data[:title] = "#{t('date.month_names')[Time.now.month]} #{Time.now.year}" %>
 
 <%= partial 'calender', locals: { month: Time.now } %>
