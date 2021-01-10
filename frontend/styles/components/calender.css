@@ -16,6 +16,14 @@
   @apply py-2 px-3 border-gray-900 border-r border-b;
 }
 
+.calender-day--past {
+  @apply text-gray-500;
+}
+
+.calender-day--today {
+  @apply bg-gray-700;
+}
+
 .calender-days > .calender-day:nth-child(7n) {
   @apply border-r-0;
 }

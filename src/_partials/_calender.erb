@@ -37,7 +37,7 @@
 
   <div class="grid grid-cols-7 calender-days">
     <% date_range.each do |date| %>
-      <div class="calender-day min-h-28">
+      <div class="calender-day <%= 'calender-day--past' if date < Date.today %> <%= 'calender-day--today' if date == Date.today %> min-h-28">
         <div class="inline-flex w-6 h-6 leading-none">
           <%= date.day %>
         </div>
