@@ -1,26 +1,31 @@
 @tailwind base;
 
 @layer base {
-  h1, .h1 {
-    @apply text-3xl font-bold text-gray-800;
+  body {
+    @apply font-sans text-gray-50 bg-indigo-800 antialiased;
   }
+
+  h1, .h1 {
+    @apply text-3xl font-bold text-gray-100;
+  }
+
   h2, .h2 {
     @apply text-xl;
   }
   h3, .h3 {
-    @apply text-lg font-bold text-gray-800;
+    @apply text-lg font-bold text-gray-100;
   }
 
   h3 .muted, .h3 .muted {
-    @apply text-lg text-gray-600 font-normal;
+    @apply text-lg text-gray-100 font-normal;
   }
 
   h4, .h4 {
-    @apply text-gray-600 text-sm font-bold;
+    @apply text-sm font-bold;
   }
 
   a {
-    @apply text-blue-600 underline;
+    @apply text-indigo-200 underline;
   }
 }
 
@@ -31,4 +36,7 @@
 @layer components {
   @import "components/btn.css";
   @import "components/calender.css";
+  @import "components/content.css";
+  @import "components/navbar.css";
+  @import "components/footer.css";
 }

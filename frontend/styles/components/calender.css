@@ -1,14 +1,27 @@
 .calender {
-  @apply my-2 md:my-6;
-  @apply bg-white rounded-lg shadow overflow-hidden;
+  @apply my-2 md:my-4 p-4;
+  @apply rounded-lg shadow-lg overflow-hidden;
+  @apply bg-gray-800;
 }
 
 .calender__header {
-  @apply flex items-center justify-between py-2 px-6 border-l border-t;
+  @apply flex items-center justify-between px-2 pb-2;
+}
+
+.calender-days-title > .calender-day:nth-child(7n) {
+  @apply border-r-0;
 }
 
 .calender-day {
-  @apply py-2 px-3 border-l border-b;
+  @apply py-2 px-3 border-gray-900 border-r border-b;
+}
+
+.calender-days > .calender-day:nth-child(7n) {
+  @apply border-r-0;
+}
+
+.calender-days > .calender-day:nth-last-child(-n+7) {
+  @apply border-b-0;
 }
 
 .calender-day__title {

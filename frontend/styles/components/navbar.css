@@ -1,0 +1,7 @@
+.navbar {
+  @apply pt-6 pb-4 px-4 container mx-auto;
+}
+
+.navbar h1 a {
+  @apply text-2xl text-gray-100 no-underline;
+}

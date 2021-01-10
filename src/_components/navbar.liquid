@@ -1,5 +1,9 @@
-<nav class="container mx-auto pt-6">
-  <a href="/">Home</a>
-  <a href="/about">About</a>
-  <a href="/events">Events</a>
+<nav class="navbar">
+  {% capture page_title %}{{ page.title | strip_html | strip_newlines }}{% endcapture %}
+  <h1>
+    <a href="/">
+      <span class="mr-2">💎</span>
+        {{ metadata.title | escape }}
+    </a>
+  </h1>
 </nav>

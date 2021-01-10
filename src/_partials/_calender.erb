@@ -15,17 +15,17 @@
       <span class="muted"><%= current_month.year %></span>
     </div>
 
-    <div class="border rounded-lg px-1">
+    <div>
 
       <%= partial 'calender/nav_button', month: current_month - 1.months, forward_svg: false %>
 
-      <div class="border-r inline-flex h-6"></div>
+      <div class="border-r border-gray-800 inline-flex h-6"></div>
 
       <%= partial 'calender/nav_button', month: current_month + 1.months, forward_svg: true %>
     </div>
   </div>	
 
-  <div class="grid grid-cols-7 text-center border-t">
+  <div class="grid grid-cols-7 text-center calender-days-title">
     <% date_range.slice(0, 7).each do |date| %>
       <div class="calender-day">
         <div class="h4 uppercase">
@@ -35,19 +35,23 @@
     <% end %>
   </div>
 
-  <div class="grid grid-cols-7">
+  <div class="grid grid-cols-7 calender-days">
     <% date_range.each do |date| %>
       <div class="calender-day min-h-28">
-        <div class="inline-flex w-6 h-6 leading-none text-gray-700">
+        <div class="inline-flex w-6 h-6 leading-none">
           <%= date.day %>
         </div>
 
         <ul>
           <% site.collections.events.docs.select { |event| event[:date].to_date == date }.each do |event| %>
-            <li class="text-xs mb-1">
+            <li class="text-xs mb-1 list-disc list-inside">
               <a href="<%= event[:external_url] %>">
                 <%= event[:name] %>
-                <time datetime="<%= event[:datetime] %>"><%= event[:datetime].strftime('%H:%M %z') %></time>
+                <time
+                 data-format="%l:%M%P"
+                 data-local="time"
+                 datetime="<%= event[:datetime].iso8601 %>"
+                 ><%= event[:datetime].strftime('%H:%M %z') %></time>
               </a>
             </li>
           <% end %>

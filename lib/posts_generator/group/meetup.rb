@@ -9,7 +9,7 @@ class PostsGenerator::Group::Meetup < PostsGenerator::Group
     @events ||= source_data.collect do |event_data|
       Event.new(
         title: event_data['title'],
-        datetime: Time.parse(event_data['local_time']),
+        datetime: Time.parse(event_data['servertime']),
         url: event_data['event_url'],
         name: name
       )
