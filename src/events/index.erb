@@ -1,5 +1,4 @@
 ---
-title: Ruby Event Calender
 layout: page
 permalink: /events/:term/
 template_engine: erb
@@ -12,4 +11,5 @@ prototype:
   require 'active_support/core_ext'
 %>
 
+<% page.data[:title] = "#{t('date.month_names')[Time.parse("#{page.data[:year_month]}-01").month]} #{Time.parse("#{page.data[:year_month]}-01").year}" %>
 <%= partial 'calender', locals: { month: Time.parse("#{page.data[:year_month]}-01") } %>
