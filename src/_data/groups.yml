@@ -33,6 +33,26 @@
   meetup_id: charlotte-rb
   url: https://www.meetup.com/charlotte-rb/
 
+- name: Columbus Ruby Brigade
+  source: Meetup
+  meetup_id: columbusrb
+  url: https://www.meetup.com/columbusrb/
+
+- name: Boulder Ruby Group
+  source: Meetup
+  meetup_id: boulder_ruby_group
+  url: https://www.meetup.com/boulder_ruby_group/
+
+- name: South West Ruby
+  source: Meetup
+  meetup_id: south-west-ruby
+  url: https://www.meetup.com/south-west-ruby/
+
+- name: North West Ruby User Group
+  source: Meetup
+  meetup_id: North-West-Ruby-User-Group
+  url: https://www.meetup.com/North-West-Ruby-User-Group/
+
 - name: RUG::B
   source: OnRubyFeed
   feed_url: https://www.rug-b.de/events.json
