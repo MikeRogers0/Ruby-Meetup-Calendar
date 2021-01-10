@@ -10,10 +10,10 @@ class PostsGenerator::Group
   private
 
   def name
-    @group['name']
+    @group["name"]
   end
 end
 
-require './lib/posts_generator/group/meetup'
-require './lib/posts_generator/group/eventbrite'
-require './lib/posts_generator/group/on_ruby_feed'
+require "./lib/posts_generator/group/meetup"
+require "./lib/posts_generator/group/eventbrite"
+require "./lib/posts_generator/group/on_ruby_feed"

@@ -9,16 +9,16 @@ class Event
   def save
     return unless valid?
 
-    File.open(file_path, (File::CREAT|File::TRUNC|File::WRONLY)) do |file|
+    File.open(file_path, (File::CREAT | File::TRUNC | File::WRONLY)) do |file|
       file.write(YAML.dump({
-        'layout' => 'post',
-        'title' => "#{@name} - #{date}",
-        'datetime' => @datetime,
-        'name' => @name,
-        'external_url' => @url,
-        'year_month' => @datetime.strftime('%Y-%m'),
-      }) )
-      file.write('---')
+        "layout" => "post",
+        "title" => "#{@name} - #{date}",
+        "datetime" => @datetime,
+        "name" => @name,
+        "external_url" => @url,
+        "year_month" => @datetime.strftime("%Y-%m")
+      }))
+      file.write("---")
     end
   end
 
@@ -37,6 +37,6 @@ class Event
   end
 
   def file_path
-    @file_path ||= File.join(File.dirname(__FILE__), '../src/_events/', "#{date}-#{slug}.md")
+    @file_path ||= File.join(File.dirname(__FILE__), "../src/_events/", "#{date}-#{slug}.md")
   end
 end

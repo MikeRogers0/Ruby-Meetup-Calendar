@@ -1,0 +1,27 @@
+name: Standard
+
+on:
+  push:
+    branches-ignore:
+      - master
+jobs:
+  standard:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Ruby 2.7
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.7
+    - name: Cache gems
+      uses: actions/cache@v2
+      with:
+        path: vendor/bundle
+        key: ${{ runner.os }}-rubocop
+    - name: Install gems
+      run: |
+        bundle config path vendor/bundle
+        gem install standardrb
+    - name: Run Standard
+      run: standardrb
