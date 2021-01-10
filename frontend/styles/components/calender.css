@@ -5,28 +5,22 @@
 }
 
 .calender__header {
-  @apply flex items-center justify-between px-4;
+  @apply flex items-center justify-between px-2 pb-2;
+}
+
+.calender-days-title > .calender-day:nth-child(7n) {
+  @apply border-r-0;
 }
 
 .calender-day {
-  @apply py-2 px-3 border-gray-900 border-l border-b;
+  @apply py-2 px-3 border-gray-900 border-r border-b;
 }
 
-.calender-days > .calender-day:nth-child(1),
-.calender-days > .calender-day:nth-child(8),
-.calender-days > .calender-day:nth-child(15),
-.calender-days > .calender-day:nth-child(22),
-.calender-days > .calender-day:nth-child(29) {
-  @apply border-l-0;
+.calender-days > .calender-day:nth-child(7n) {
+  @apply border-r-0;
 }
 
-.calender-days > .calender-day:nth-child(29),
-.calender-days > .calender-day:nth-child(30),
-.calender-days > .calender-day:nth-child(31),
-.calender-days > .calender-day:nth-child(32),
-.calender-days > .calender-day:nth-child(33),
-.calender-days > .calender-day:nth-child(34),
-.calender-days > .calender-day:nth-child(35) {
+.calender-days > .calender-day:nth-last-child(-n+7) {
   @apply border-b-0;
 }
 
