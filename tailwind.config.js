@@ -8,6 +8,8 @@ module.exports = {
     standardFontWeights: true
   },
   theme: {
+    clear: [],
+    float: [],
     spacing: {
       px: '1px',
       0: '0',
@@ -34,16 +36,13 @@ module.exports = {
       28: '7rem',
       32: '8rem'
     },
-    screens: {
-      md: '768px',
-    },
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
-      black: colors.black,
       white: colors.white,
-      gray: colors.gray,
+      gray: colors.coolGray,
       blue: colors.blue,
+      indigo: colors.indigo,
     },
     extend: {
       minHeight: {

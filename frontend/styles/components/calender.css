@@ -1,6 +1,6 @@
 .calender {
-  @apply my-2 md:my-6 p-2;
-  @apply rounded-lg shadow overflow-hidden;
+  @apply my-2 md:my-4 p-4;
+  @apply rounded-lg shadow-lg overflow-hidden;
   @apply bg-gray-800;
 }
 

@@ -2,7 +2,7 @@
 
 @layer base {
   body {
-    @apply font-sans text-gray-50 bg-gray-800 antialiased;
+    @apply font-sans text-gray-50 bg-indigo-800 antialiased;
   }
 
   h1, .h1 {
@@ -25,7 +25,7 @@
   }
 
   a {
-    @apply text-blue-300 underline;
+    @apply text-indigo-200 underline;
   }
 }
 
