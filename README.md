@@ -23,11 +23,11 @@ $ yarn start
 
 ## TODO (Please help with this!)
 
-### Adding groups
+### Adding groups
 
 Currently the events are stored in the [`src/_data/groups.yml`](https://github.com/MikeRogers0/Ruby-World/blob/main/src/_data/groups.yml) file. I want to add as many active communities as I can.
 
-### Parsers
+### Parsers
 
 Not all groups use the same platform, so I'm writing parsers to collect data from the main platforms.
 
