@@ -1,5 +1,5 @@
 .navbar {
-  @apply py-6 px-4 container mx-auto;
+  @apply pt-6 pb-4 px-4 container mx-auto;
 }
 
 .navbar h1 a {
