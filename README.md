@@ -35,6 +35,10 @@ Not all groups use the same platform, so I'm writing parsers to collect data fro
 2. [X] OnRuby
 3. [] EventBrite - I need an API key, but it can be parsed from https://www.eventbriteapi.com/v3/organizations/28936506513/events/ :)
 
+### Localising Event times
+
+Right now I'm using `local_time` to display the times of the events local to the current user, though if something is right on midnight it might display on the wrong day in the calender. I'd love a fix for that.
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at [MikeRogers0/Ruby-World](https://github.com/MikeRogers0/Ruby-World). This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
