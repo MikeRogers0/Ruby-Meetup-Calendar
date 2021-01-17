@@ -27,14 +27,6 @@ $ yarn start
 
 Currently the events are stored in the [`src/_data/groups.yml`](https://github.com/MikeRogers0/Ruby-World/blob/main/src/_data/groups.yml) file. I want to add as many active communities as I can.
 
-### Parsers
-
-Not all groups use the same platform, so I'm writing parsers to collect data from the main platforms.
-
-1. [X] Meetup
-2. [X] OnRuby
-3. [ ] EventBrite - I need an API key, but it can be parsed from https://www.eventbriteapi.com/v3/organizations/28936506513/events/ :)
-
 ### Localising Event times
 
 Right now I'm using `local_time` to display the times of the events local to the current user, though if something is right on midnight it might display on the wrong day in the calender. I'd love a fix for that.
