@@ -12,34 +12,33 @@ jobs:
     steps:
     - uses: actions/checkout@master
 
-    - uses: ruby/setup-ruby@v1
+    # Setup Ruby
+    # https://github.com/ruby/setup-ruby#single-job
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 2.7
+        ruby-version: 2.7.2
+        bundler-cache: true
 
-    - uses: actions/cache@v1.1.2
-      with:
-        path: vendor/bundle
-        key: ${{ runner.os }}-gem-${{ hashFiles('**/Gemfile.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-gem-
-
-    - name: Node Modules Cache
+    # Setup Yarn
+    # https://github.com/actions/cache/blob/main/examples.md#node---yarn
+    - name: Get yarn cache directory path
+      id: yarn-cache-dir-path
+      run: echo "::set-output name=dir::$(yarn cache dir)"
+    - name: Restoring Yarn Cache
       uses: actions/cache@v2
-      id: node-modules-cache
+      id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
       with:
-        path: node_modules
-        key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+        path: |
+          ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          node_modules
+        key: ${{ runner.os }}-yarn_modules-${{ hashFiles('**/yarn.lock') }}
         restore-keys: |
           ${{ runner.os }}-yarn-
+    - name: Install Yarn Dependencies
+      run: yarn install --prefer-offline --check-files
 
-    - name: Build Environment
-      run: |
-        bundle config path vendor/bundle
-        yarn
-        bundle install --jobs ${nproc}
     - name: Update event data
-      env:
-        MEETUP_API_KEY: "Add-a-key-as-a-secret-to-the-repo"
       run: |
         bundle exec rake update_data:all
     - name: Commit files
