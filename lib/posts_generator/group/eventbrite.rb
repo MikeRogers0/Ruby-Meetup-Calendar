@@ -7,6 +7,7 @@ class PostsGenerator::Group::Eventbrite < PostsGenerator::Group
         title: event_data["name"],
         datetime: Time.parse(event_data["start_date"] + " " + event_data["start_time"] + " " + event_data["timezone"]),
         url: event_data["url"],
+        online_event: event_data["is_online_event"],
         name: name
       )
     }

@@ -1,9 +1,10 @@
 class Event
-  def initialize(title:, datetime:, url:, name:)
+  def initialize(title:, datetime:, url:, name:, online_event: false)
     @title = title
     @datetime = datetime
     @url = url
     @name = name
+    @online_event = online_event
   end
 
   def save
@@ -16,6 +17,7 @@ class Event
         "datetime" => @datetime,
         "name" => @name,
         "external_url" => @url,
+        "online_event" => @online_event,
         "year_month" => @datetime.strftime("%Y-%m")
       }))
       file.write("---")

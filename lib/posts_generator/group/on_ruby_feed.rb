@@ -11,6 +11,7 @@ class PostsGenerator::Group::OnRubyFeed < PostsGenerator::Group
         title: event_data["name"],
         datetime: Time.parse(event_data["date"]),
         url: "#{@group["url"]}events/#{event_data["name"].parameterize}-#{event_data["id"]}",
+        online_event: event_data["location"].nil? || event_data["location"]["name"].include?("Twitch"),
         name: name
       )
     }
