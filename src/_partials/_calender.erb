@@ -50,8 +50,8 @@
                 <time
                  data-format="%l:%M%P"
                  data-local="time"
-                 datetime="<%= event[:datetime].iso8601 %>"
-                 ><%= event[:datetime].strftime('%H:%M %z') %></time>
+                 datetime="<%= Time.parse(event[:datetime]).iso8601 %>"
+                 ><%= Time.parse(event[:datetime]).strftime('%H:%M %z') %></time>
               </a>
             </li>
           <% end %>

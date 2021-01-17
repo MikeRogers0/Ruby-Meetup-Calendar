@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Columbus Ruby Brigade - 2021-03-15
-datetime: 2021-03-15 18:00:00.000000000 -04:00
+datetime: '2021-03-15 18:00:00 -0400'
 name: Columbus Ruby Brigade
 external_url: https://www.meetup.com/columbusrb/events/275081451/
 online_event: true

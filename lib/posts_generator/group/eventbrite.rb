@@ -5,7 +5,7 @@ class PostsGenerator::Group::Eventbrite < PostsGenerator::Group
     @events ||= source_data.collect { |event_data|
       Event.new(
         title: event_data["name"],
-        datetime: Time.parse(event_data["start_date"] + " " + event_data["start_time"] + " " + event_data["timezone"]),
+        datetime: Time.find_zone(event_data["timezone"]).parse(event_data["start_date"] + " " + event_data["start_time"]),
         url: event_data["url"],
         online_event: event_data["is_online_event"],
         name: name

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Melbourne Ruby - 2021-03-31
-datetime: 2021-03-31 03:00:00.000000000 -04:00
+datetime: '2021-03-31 03:00:00 -0400'
 name: Melbourne Ruby
 external_url: https://www.meetup.com/Ruby-On-Rails-Oceania-Melbourne/events/268079367/
 online_event: true
