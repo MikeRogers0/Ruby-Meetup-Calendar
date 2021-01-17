@@ -25,7 +25,7 @@
     </div>
   </div>	
 
-  <div class="grid grid-cols-7 text-center calender-days-title">
+  <div class="calender-days calender-days--title text-center">
     <% date_range.slice(0, 7).each do |date| %>
       <div class="calender-day">
         <div class="h4 uppercase">
@@ -35,10 +35,17 @@
     <% end %>
   </div>
 
-  <div class="grid grid-cols-7 calender-days">
+  <div class="calender-days">
     <% date_range.each do |date| %>
-      <div class="calender-day <%= 'calender-day--past' if date < Date.today %> <%= 'calender-day--today' if date == Date.today %> min-h-28">
+      <div class="calender-day
+        <%= 'calender-day--with-events' if site.collections.events.docs.any? { |event| event[:date].to_date == date } %> 
+        <%= 'calender-day--not-in-current-month' unless (current_month.to_date.beginning_of_month..current_month.to_date.end_of_month).cover?(date) %>
+        <%= 'calender-day--past' if date < Date.today %>
+        <%= 'calender-day--today' if date == Date.today %>
+        md:min-h-28
+        ">
         <div class="inline-flex w-6 h-6 leading-none">
+          <span class="inline-block md:hidden"><%= t('date.day_names')[date.wday] %>&nbsp;</span>
           <%= date.day %>
         </div>
 
