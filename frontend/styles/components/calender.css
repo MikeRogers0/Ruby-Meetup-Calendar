@@ -8,10 +8,6 @@
   @apply flex items-center justify-between px-2 pb-2;
 }
 
-.calender__grid {
-
-}
-
 .calender-days {
   @apply grid grid-cols-1;
 
