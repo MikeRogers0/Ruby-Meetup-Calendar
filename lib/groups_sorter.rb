@@ -1,4 +1,4 @@
-require 'yaml'
+require "yaml"
 
 class GroupsSorter
   GROUP_FILE_PATH = "src/_data/groups.yml"
@@ -18,6 +18,6 @@ class GroupsSorter
   end
 
   def groups_sorted_yaml
-    @groups_sorted_yaml ||= YAML.dump(groups.sort_by { |group| group['name'] }).gsub("\n-", "\n\n-")
+    @groups_sorted_yaml ||= YAML.dump(groups.sort_by { |group| group["name"] }).gsub("\n-", "\n\n-")
   end
 end
