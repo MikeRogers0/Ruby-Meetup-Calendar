@@ -4,6 +4,12 @@
   source: OnRubyFeed
   feed_url: https://andalucia.onruby.eu/events.json
   url: https://andalucia.onruby.eu/
+  twitter_handle: malagarb
+
+- name: Bangkok.rb
+  source: Meetup
+  meetup_id: bangkok-rb
+  url: https://www.meetup.com/bangkok-rb/
 
 - name: Boulder Ruby Group
   source: Meetup
@@ -24,6 +30,7 @@
   source: OnRubyFeed
   feed_url: https://www.colognerb.de/events.json
   url: https://www.colognerb.de/
+  twitter_handle: colognerb
 
 - name: Columbus Ruby Brigade
   source: Meetup
@@ -39,6 +46,7 @@
   source: Eventbrite
   eventbrite_id: 28936506513
   url: https://lrug.org/
+  twitter_handle: lrug
 
 - name: Leipzig on Rails
   source: OnRubyFeed
@@ -54,6 +62,7 @@
   source: Meetup
   meetup_id: Ruby-On-Rails-Oceania-Melbourne
   url: https://www.meetup.com/Ruby-On-Rails-Oceania-Melbourne/
+  twitter_handle: roromelb
 
 - name: NYC.rb
   source: Meetup
@@ -70,20 +79,33 @@
   meetup_id: Phillyrb
   url: https://www.meetup.com/Phillyrb/
 
+- name: Portland Ruby Brigade
+  source: Meetup
+  meetup_id: Portland-Ruby-Brigade
+  url: https://www.meetup.com/Portland-Ruby-Brigade/
+  twitter_handle: pdxruby
+
 - name: RUG::B
   source: OnRubyFeed
   feed_url: https://www.rug-b.de/events.json
   url: https://www.rug-b.de/
+  twitter_handle: rug_b
 
 - name: Ruby & Friends
   source: OnRubyFeed
   feed_url: https://ruby.barcelona/events.json
   url: https://ruby.barcelona/
 
+- name: Ruby Perú
+  source: Meetup
+  meetup_id: rubyperu
+  url: https://www.meetup.com/rubyperu/
+
 - name: Ruby on Rails Oceania Sydney
   source: Meetup
   meetup_id: Ruby-On-Rails-Oceania-Sydney
   url: https://www.meetup.com/Ruby-On-Rails-Oceania-Sydney/
+  twitter_handle: rorosyd
 
 - name: South West Ruby
   source: Meetup
