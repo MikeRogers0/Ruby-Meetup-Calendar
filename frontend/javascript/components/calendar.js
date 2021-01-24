@@ -10,7 +10,7 @@ class ReactCalendarDays extends React.Component {
   }
 
   listCalendarDays() {
-    return this.props.dateRange.map((day) => <CalendarDay key={day} day={ day } events={ this.props.events }/>);
+    return this.props.dateRange.map((day) => <CalendarDay key={ day } day={ day } currentMonth={ this.props.currentMonth } events={ this.props.events }/>);
   }
 }
 
@@ -20,6 +20,7 @@ class CalendarDays extends HTMLElement {
 
     ReactDOM.render(<ReactCalendarDays
       dateRange={ data['date_range'] }
+      currentMonth={ data['current_month'] }
       events={ data['events'] }
       />, this)
   }
