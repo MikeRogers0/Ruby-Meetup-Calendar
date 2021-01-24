@@ -7,9 +7,9 @@
 <% end_date = current_month.to_date.end_of_month.end_of_week %>
 <% date_range = (start_date..end_date).to_a %>
 
-<div class="calender">
+<div class="calendar">
 
-  <div class="calender__header">
+  <div class="calendar__header">
     <div class="h3">
       <%= t('date.month_names')[current_month.month] %>
       <span class="muted"><%= current_month.year %></span>
@@ -17,17 +17,17 @@
 
     <div>
 
-      <%= partial 'calender/nav_button', month: current_month - 1.months, forward_svg: false %>
+      <%= partial 'calendar/nav_button', month: current_month - 1.months, forward_svg: false %>
 
       <div class="border-r border-gray-800 inline-flex h-6"></div>
 
-      <%= partial 'calender/nav_button', month: current_month + 1.months, forward_svg: true %>
+      <%= partial 'calendar/nav_button', month: current_month + 1.months, forward_svg: true %>
     </div>
   </div>	
 
-  <div class="calender-days calender-days--title text-center">
+  <div class="calendar-days calendar-days--title text-center">
     <% date_range.slice(0, 7).each do |date| %>
-      <div class="calender-day">
+      <div class="calendar-day">
         <div class="h4 uppercase">
           <%= t('date.abbr_day_names')[date.wday] %>
         </div>
@@ -35,7 +35,7 @@
     <% end %>
   </div>
 
-  <my-calender>
+  <my-calendar>
     <% events = site
       .collections
       .events
@@ -44,15 +44,15 @@
       .collect { |event| event.data.slice(:title, :datetime, :name, :external_url, :online_event) }
     %>
     <%= { date_range: date_range, events: events }.to_json %>
-  </my-calender>
+  </my-calendar>
 
-  <div class="calender-days">
+  <div class="calendar-days">
     <% date_range.each do |date| %>
-      <div class="calender-day
-        <%= 'calender-day--with-events' if site.collections.events.docs.any? { |event| event[:date].to_date == date } %> 
-        <%= 'calender-day--not-in-current-month' unless (current_month.beginning_of_month..current_month.end_of_month).cover?(date) %>
-        <%= 'calender-day--past' if date < Date.today %>
-        <%= 'calender-day--today' if date == Date.today %>
+      <div class="calendar-day
+        <%= 'calendar-day--with-events' if site.collections.events.docs.any? { |event| event[:date].to_date == date } %> 
+        <%= 'calendar-day--not-in-current-month' unless (current_month.beginning_of_month..current_month.end_of_month).cover?(date) %>
+        <%= 'calendar-day--past' if date < Date.today %>
+        <%= 'calendar-day--today' if date == Date.today %>
         md:min-h-28
         ">
         <div class="inline-flex w-6 h-6 leading-none">

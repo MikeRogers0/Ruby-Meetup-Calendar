@@ -1,13 +1,13 @@
 import React from "react"
 import ReactDOM from "react-dom"
 
-class CalenderDay extends React.Component {
+class CalendarDay extends React.Component {
   render() {
     return (
-      <div class="calender-day
-        calender-day--with-events 
-        calender-day--not-in-current-month
-        calender-day--past
+      <div class="calendar-day
+        calendar-day--with-events 
+        calendar-day--not-in-current-month
+        calendar-day--past
 
         md:min-h-28
         ">

@@ -1,59 +1,59 @@
-.calender {
+.calendar {
   @apply my-2 md:my-4 p-4;
   @apply md:rounded-lg shadow-lg overflow-hidden;
   @apply bg-gray-800;
 }
 
-.calender__header {
+.calendar__header {
   @apply flex items-center justify-between px-2 pb-2;
 }
 
-.calender-days {
+.calendar-days {
   @apply grid grid-cols-1;
 
   @apply md:grid-cols-7;
 }
 
-.calender-days--title > .calender-day:nth-child(7n) {
+.calendar-days--title > .calendar-day:nth-child(7n) {
   @apply md:border-r-0;
 }
 
-.calender-day {
+.calendar-day {
   @apply py-2 px-3 border-gray-900 border-r border-b;
 
   @apply hidden;
   @apply md:block;
 }
 
-.calender-day--with-events {
+.calendar-day--with-events {
   @apply block;
 }
 
-.calender-day--past {
+.calendar-day--past {
   @apply text-gray-500;
 }
 
-.calender-day--today {
+.calendar-day--today {
   @apply bg-gray-700;
 }
 
-.calender-day--not-in-current-month {
+.calendar-day--not-in-current-month {
   @apply hidden;
   @apply md:block;
 }
 
-.calender-days > .calender-day {
+.calendar-days > .calendar-day {
   @apply border-r-0;
   @apply md:border-r;
 }
 
-.calender-days > .calender-day:nth-child(7n) {
+.calendar-days > .calendar-day:nth-child(7n) {
   @apply border-r-0;
 }
 
-.calender-days > .calender-day:nth-last-child(-n+7) {
+.calendar-days > .calendar-day:nth-last-child(-n+7) {
   @apply border-b-0;
 }
 
-.calender-day__title {
+.calendar-day__title {
 }
