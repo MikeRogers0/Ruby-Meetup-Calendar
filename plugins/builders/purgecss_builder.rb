@@ -12,6 +12,7 @@ class PurgeCSS < SiteBuilder
           PURGE
           File.write(purgecss_file, config_js.strip)
         end
+
         manifest_file = site.in_root_dir(".bridgetown-webpack", "manifest.json")
         if File.exist?(manifest_file)
           manifest = JSON.parse(File.read(manifest_file))
