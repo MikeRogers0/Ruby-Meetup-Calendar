@@ -1,14 +1,14 @@
 require "yaml"
 require "active_support"
 require "active_support/core_ext"
-require "event"
+require "./lib/event.rb"
 
 class EventsReformatter
   EVENTS_PATH = "src/_events/*.md"
 
   def call
     events.each do |event_path|
-      event_data = YAML.safe_load(event_path)
+      event_data = YAML.safe_load(File.open(event_path))
       Event.new(
         title: event_data['title'],
         datetime: Time.parse(event_data['datetime']),
