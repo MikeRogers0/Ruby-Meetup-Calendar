@@ -1,4 +1,8 @@
-# Ruby Meetups Events Calendar
+<div align="center">
+
+# [Ruby Meetups Calendar](https://ruby-meetup-calendar.mikerogers.io/)
+
+</div>
 
 This pulls a list of Ruby Events which are currently happening & displays them on a calendar.
 
@@ -21,15 +25,11 @@ $ bundle && yarn
 $ yarn start
 ```
 
-## TODO (Please help with this!)
+## TODO (Please open PRs if you'd like to help with this)
 
 ### Adding groups
 
 Currently the events are stored in the [`src/_data/groups.yml`](https://github.com/MikeRogers0/Ruby-World/blob/main/src/_data/groups.yml) file. I want to add as many active communities as I can.
-
-### Localising Event times
-
-Right now I'm using `local_time` to display the times of the events local to the current user, though if something is right on midnight it might display on the wrong day in the calendar. I'd love a fix for that.
 
 ## Contributing
 
