@@ -9,7 +9,7 @@ export default class CalendarDay extends React.Component {
   }
 
   _dayInCurrentMonth() {
-    return this._date().toFormat('y-MM') == DateTime.local().toFormat('y-MM')
+    return this._date().toFormat('y-MM') == DateTime.fromISO(this.props.currentMonth).toFormat('y-MM')
   }
 
   _dayHasPast() {

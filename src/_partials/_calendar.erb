@@ -44,37 +44,13 @@
         .select { |event| (current_month.beginning_of_month..current_month.end_of_month).cover?(event[:date]) }
         .collect { |event| event.data.slice(:title, :datetime, :name, :external_url, :online_event) }
       %>
-      <%= { date_range: date_range, events: events }.to_json %>
+      <%= { current_month: current_month.iso8601, date_range: date_range, events: events }.to_json %>
     </script>
-
-    <% date_range.each do |date| %>
-      <div class="calendar-day
-        <%= 'calendar-day--with-events' if site.collections.events.docs.any? { |event| event[:date].to_date == date } %>
-        <%= 'calendar-day--not-in-current-month' unless (current_month.to_date.beginning_of_month..current_month.to_date.end_of_month).cover?(date) %>
-        <%= 'calendar-day--past' if date < Date.today %>
-        <%= 'calendar-day--today' if date == Date.today %>
-        md:min-h-28
-        ">
-        <div class="inline-flex w-6 h-6 leading-none">
-          <span class="inline-block md:hidden"><%= t('date.day_names')[date.wday] %>&nbsp;</span>
-          <%= date.day %>
+    <div class="calendar-days">
+      <% date_range.each do |date| %>
+        <div class="calendar-day calendar-day--body">
         </div>
-
-        <ul>
-          <% site.collections.events.docs.select { |event| event[:date].to_date == date }.each do |event| %>
-            <li class="text-xs mb-1 list-disc list-inside">
-              <a href="<%= event[:external_url] %>">
-                <%= event[:name] %>
-                <time
-                  data-format="%l:%M%P"
-                  data-local="time"
-                  datetime="<%= Time.parse(event[:datetime]).iso8601 %>"
-                  ><%= Time.parse(event[:datetime]).strftime('%H:%M %z') %></time>
-              </a>
-            </li>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </calendar-days>
 </div>
