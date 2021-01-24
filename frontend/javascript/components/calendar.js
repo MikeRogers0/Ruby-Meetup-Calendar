@@ -16,7 +16,7 @@ class ReactCalendarDays extends React.Component {
 
 class CalendarDays extends HTMLElement {
   connectedCallback() {
-    const data = JSON.parse(this.innerText)
+    const data = JSON.parse(this.querySelector('[type="application/json"]').innerHTML)
 
     ReactDOM.render(<ReactCalendarDays
       dateRange={ data['date_range'] }
