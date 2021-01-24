@@ -1,7 +1,6 @@
 <div align="center">
 
-# Ruby Meetups Calendar
-[https://ruby-meetup-calendar.mikerogers.io/](https://ruby-meetup-calendar.mikerogers.io/)
+# [Ruby Meetups Calendar](https://ruby-meetup-calendar.mikerogers.io/)
 
 </div>
 
