@@ -18,6 +18,8 @@ module.exports = {
   },
   resolve: {
     extensions: [".js", ".jsx"],
+    alias: {
+    },
     modules: [
       path.resolve(__dirname, 'frontend', 'javascript'),
       path.resolve(__dirname, 'frontend', 'styles'),
@@ -44,6 +46,8 @@ module.exports = {
           options: {
             presets: ["@babel/preset-env"],
             plugins: [
+              ["@babel/plugin-transform-react-jsx", {
+              }],
               ["@babel/plugin-proposal-decorators", { "legacy": true }],
               ["@babel/plugin-proposal-class-properties", { "loose" : true }],
               [
