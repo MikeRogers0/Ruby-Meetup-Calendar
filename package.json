@@ -41,8 +41,8 @@
   },
   "dependencies": {
     "@babel/plugin-transform-react-jsx": "^7.12.12",
-    "date-fns": "^2.16.1",
     "local-time": "^2.1.0",
+    "luxon": "^1.25.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   }

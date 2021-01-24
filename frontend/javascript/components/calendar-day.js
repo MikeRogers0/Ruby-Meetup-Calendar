@@ -1,31 +1,31 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import { format, parse } from 'date-fns'
+import { DateTime } from "luxon"
 import CalendarEvent from "./calendar-event"
 
 export default class CalendarDay extends React.Component {
   _date = () => {
-    return parse(this.props.day, 'yyyy-MM-dd', new Date());
+    return DateTime.fromISO(this.props.day)
   }
 
   _dayInCurrentMonth() {
-    return format(this._date(), 'yyyy-MM') != format(new Date(), 'yyyy-MM')
+    return this._date().toFormat('y-MM') != DateTime.local().toFormat('y-MM')
   }
 
   _dayHasPast() {
-    return this._date() <= new Date()
+    return this._date() < DateTime.local();
   }
 
   _dayHasEvents() {
     return this._eventsOnDay().length > 0;
   }
 
+  _dayIsToday() {
+    return this._date().toLocaleString(DateTime.DATE_SHORT) == DateTime.local().toLocaleString(DateTime.DATE_SHORT);
+  }
+
   _eventsOnDay = () => {
-    return this.props.events.filter(event => {
-      //var dateTime = parse(event.datetime, 'yyyy-MM-dd hh:mm:ss xx', new Date());
-      var dateTime = new Date();
-      format(dateTime, 'yyyy-mm') == this._date()
-    });
+    return this.props.events.filter(event => DateTime.fromISO(event.datetime).toLocaleString(DateTime.DATE_SHORT) == this._date().toLocaleString(DateTime.DATE_SHORT));
   }
 
   _classNames() {
@@ -34,6 +34,7 @@ export default class CalendarDay extends React.Component {
     if ( this._dayHasEvents() ) { classes.push('calendar-day--with-events') }
     if ( !this._dayInCurrentMonth() ) { classes.push('calendar-day--not-in-current-month') }
     if ( this._dayHasPast() ) { classes.push('calendar-day--past') }
+    if ( this._dayIsToday() ) { classes.push('calendar-day--today') }
     
     return classes.join(' ');
   }
@@ -43,7 +44,7 @@ export default class CalendarDay extends React.Component {
 
     return (
       <ul>
-        { this._eventsOnDay.map((event) => <CalendarEvent key={event.title + event.datetime} event={ event } />) }
+        { this._eventsOnDay().map((event) => <CalendarEvent key={event.title + event.datetime} event={ event } />) }
       </ul>
     )
   }
@@ -53,8 +54,8 @@ export default class CalendarDay extends React.Component {
     return (
       <div className={ this._classNames() }>
         <div className="inline-flex w-6 h-6 leading-none">
-          <span className="inline-block md:hidden">{ format(this._date(), 'eeee') }&nbsp;</span>
-          { format(this._date(), 'dd') }
+          <span className="inline-block md:hidden">{ this._date().toFormat('cccc') }&nbsp;</span>
+          { this._date().toFormat('d') }
         </div>
 
         { this._renderEvents() }
