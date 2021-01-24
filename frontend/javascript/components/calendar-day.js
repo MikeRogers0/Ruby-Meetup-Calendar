@@ -29,7 +29,7 @@ export default class CalendarDay extends React.Component {
   }
 
   _classNames() {
-    var classes = ['calendar-day md:min-h-28']
+    var classes = ['calendar-day calendar-day--body']
 
     if ( this._dayHasEvents() ) { classes.push('calendar-day--with-events') }
     if ( !this._dayInCurrentMonth() ) { classes.push('calendar-day--not-in-current-month') }
@@ -53,8 +53,8 @@ export default class CalendarDay extends React.Component {
   render() {
     return (
       <div className={ this._classNames() }>
-        <div className="inline-flex w-6 h-6 leading-none">
-          <span className="inline-block md:hidden">{ this._date().toFormat('cccc') }&nbsp;</span>
+        <div className="calendar-day__date">
+          <span className="calendar-day__day_of_week">{ this._date().toFormat('cccc') }&nbsp;</span>
           { this._date().toFormat('d') }
         </div>
 
