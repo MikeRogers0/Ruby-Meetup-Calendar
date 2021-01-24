@@ -1,17 +1,16 @@
 import React from "react"
 import ReactDOM from "react-dom"
+import CalendarDay from "./calendar-day"
 
 class Calendar extends React.Component {
   render() {
-    const listItems = 
-
     return (
-      <div class="calendar-days">{this.listDays}</div>
+      <div className="calendar-days">{this.listCalendarDays()}</div>
     );
   }
 
-  listDays() {
-    return this.props.dateRange.map((day) => <CalendarDay>{number}</li>);
+  listCalendarDays() {
+    return [this.props.dateRange[1]].map((day) => <CalendarDay key={day} day={ day } events={ this.props.events }/>);
   }
 }
 

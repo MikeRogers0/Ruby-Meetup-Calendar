@@ -14,7 +14,7 @@ class Event
       file.write(YAML.dump({
         "layout" => "post",
         "title" => "#{@name} - #{date}",
-        "datetime" => @datetime.to_s,
+        "datetime" => @datetime.iso8601,
         "name" => @name,
         "external_url" => @url,
         "online_event" => @online_event,
