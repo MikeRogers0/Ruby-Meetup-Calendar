@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Chicago Ruby - 2021-04-06
-datetime: '2021-04-06 19:00:00 -0400'
+datetime: '2021-04-06T19:00:00-04:00'
 name: Chicago Ruby
 external_url: https://www.meetup.com/ChicagoRuby/events/pjfxvryccgbjb/
 online_event: false

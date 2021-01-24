@@ -1,0 +1,48 @@
+<%
+    require 'active_support/core_ext'
+  %>
+
+<% current_month = (locals[:month] || Time.now).to_date %>
+<% start_date = current_month.to_date.beginning_of_month.beginning_of_week %>
+<% end_date = current_month.to_date.end_of_month.end_of_week %>
+<% date_range = (start_date..end_date).to_a %>
+
+<div class="calendar">
+
+  <div class="calendar__header">
+    <div class="h3">
+      <%= t('date.month_names')[current_month.month] %>
+      <span class="muted"><%= current_month.year %></span>
+    </div>
+
+    <div>
+
+      <%= partial 'calendar/nav_button', month: current_month - 1.months, forward_svg: false %>
+
+      <div class="border-r border-gray-800 inline-flex h-6"></div>
+
+      <%= partial 'calendar/nav_button', month: current_month + 1.months, forward_svg: true %>
+    </div>
+  </div>	
+
+  <div class="calendar-days calendar-days--title text-center">
+    <% date_range.slice(0, 7).each do |date| %>
+      <div class="calendar-day">
+        <div class="h4 uppercase">
+          <%= t('date.abbr_day_names')[date.wday] %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <calendar-days>
+    <% events = site
+      .collections
+      .events
+      .docs
+      .select { |event| (current_month.beginning_of_month..current_month.end_of_month).cover?(event[:date]) }
+      .collect { |event| event.data.slice(:title, :datetime, :name, :external_url, :online_event) }
+    %>
+    <%= { date_range: date_range, events: events }.to_json %>
+  </calendar-days>
+</div>

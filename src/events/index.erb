@@ -12,4 +12,4 @@ prototype:
 %>
 
 <% page.data[:title] = "#{t('date.month_names')[Time.parse("#{page.data[:year_month]}-01").month]} #{Time.parse("#{page.data[:year_month]}-01").year}" %>
-<%= partial 'calender', locals: { month: Time.parse("#{page.data[:year_month]}-01") } %>
+<%= partial 'calendar', locals: { month: Time.parse("#{page.data[:year_month]}-01") } %>

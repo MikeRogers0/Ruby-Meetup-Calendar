@@ -1,6 +1,6 @@
-# Ruby Meetups Events Calender
+# Ruby Meetups Events Calendar
 
-This pulls a list of Ruby Events which are currently happening & displays them on a calender.
+This pulls a list of Ruby Events which are currently happening & displays them on a calendar.
 
 ## How it works
 
@@ -29,7 +29,7 @@ Currently the events are stored in the [`src/_data/groups.yml`](https://github.c
 
 ### Localising Event times
 
-Right now I'm using `local_time` to display the times of the events local to the current user, though if something is right on midnight it might display on the wrong day in the calender. I'd love a fix for that.
+Right now I'm using `local_time` to display the times of the events local to the current user, though if something is right on midnight it might display on the wrong day in the calendar. I'd love a fix for that.
 
 ## Contributing
 
