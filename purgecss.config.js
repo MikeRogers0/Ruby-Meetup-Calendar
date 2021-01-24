@@ -1,6 +1,6 @@
 module.exports = {
-  content: ["frontend/javascript/*.js", "./build/**/*.html"],
-  build: "./build/_bridgetown/static/css",
+  content: ["frontend/javascript/*.js", "./output/**/*.html"],
+  build: "./output/_bridgetown/static/css",
   defaultExtractor: content => {
     // Capture as liberally as possible, including things like `h-(screen-1.5)`
     const broadMatches = content.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || []
