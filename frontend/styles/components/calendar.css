@@ -33,6 +33,10 @@
   @apply text-gray-500;
 }
 
+.calendar-day--past a {
+  @apply text-gray-500;
+}
+
 .calendar-day--today {
   @apply bg-gray-700;
 }
