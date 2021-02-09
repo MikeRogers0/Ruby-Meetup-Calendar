@@ -13,7 +13,7 @@ export default class CalendarDay extends React.Component {
   }
 
   _dayHasPast() {
-    return this._date() < DateTime.local();
+    return this._date() < DateTime.local() && !this._dayIsToday();
   }
 
   _dayHasEvents() {
