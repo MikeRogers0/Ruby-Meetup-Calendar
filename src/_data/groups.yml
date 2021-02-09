@@ -6,6 +6,11 @@
   url: https://andalucia.onruby.eu/
   twitter_handle: malagarb
 
+- name: Atlanta Ruby Meetup Group
+  source: Meetup
+  meetup_id: atlantaruby
+  url: https://www.meetup.com/atlantaruby/
+
 - name: Bangkok.rb
   source: Meetup
   meetup_id: bangkok-rb
