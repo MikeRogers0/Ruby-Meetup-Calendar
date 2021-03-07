@@ -42,6 +42,7 @@
         .events
         .docs
         .select { |event| (current_month.beginning_of_month..current_month.end_of_month).cover?(event[:date]) }
+        .sort_by { |event| event[:datetime] }
         .collect { |event| event.data.slice(:title, :datetime, :name, :external_url, :online_event) }
       %>
       <%= { current_month: current_month.iso8601, date_range: date_range, events: events }.to_json %>
