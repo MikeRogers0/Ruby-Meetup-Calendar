@@ -101,6 +101,11 @@
   feed_url: https://ruby.barcelona/events.json
   url: https://ruby.barcelona/
 
+- name: Ruby Ireland
+  source: Meetup
+  meetup_id: rubyireland
+  url: https://www.meetup.com/rubyireland/
+
 - name: Ruby Malaysia
   source: Meetup
   meetup_id: ruby-malaysia
