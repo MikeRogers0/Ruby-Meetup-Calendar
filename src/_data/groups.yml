@@ -31,6 +31,11 @@
   meetup_id: ChicagoRuby
   url: https://www.meetup.com/ChicagoRuby/
 
+- name: Christchurch Ruby Group
+  source: Meetup
+  meetup_id: Christchurch-Ruby-Group
+  url: https://www.meetup.com/Christchurch-Ruby-Group/
+
 - name: Cologne.rb
   source: OnRubyFeed
   feed_url: https://www.colognerb.de/events.json
@@ -111,10 +116,20 @@
   meetup_id: ruby-malaysia
   url: https://www.meetup.com/ruby-malaysia/
 
+- name: 'Ruby Nights: The Auckland Ruby Group'
+  source: Meetup
+  meetup_id: aucklandruby
+  url: https://www.meetup.com/aucklandruby/
+
 - name: Ruby Perú
   source: Meetup
   meetup_id: rubyperu
   url: https://www.meetup.com/rubyperu/
+
+- name: Ruby and Rails Perth
+  source: Meetup
+  meetup_id: Ruby-On-Rails-Oceania-Perth
+  url: https://www.meetup.com/Ruby-On-Rails-Oceania-Perth/
 
 - name: Ruby on Rails Oceania Sydney
   source: Meetup
