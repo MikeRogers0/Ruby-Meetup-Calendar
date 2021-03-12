@@ -2,7 +2,7 @@ name: Pull Latest Events
 
 on:
   schedule:
-    - cron:  '0 3 * * 1,3,5'
+    - cron:  '0 3 * * *'
   workflow_dispatch:
 
 jobs:
