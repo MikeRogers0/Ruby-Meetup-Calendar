@@ -77,6 +77,11 @@
   website:
   email:
 
+- name: Christchurch Ruby Group
+  source: Meetup
+  meetup_id: Christchurch-Ruby-Group
+  url: https://www.meetup.com/Christchurch-Ruby-Group/
+
 - name: Cologne.rb
   source: OnRubyFeed
   feed_url: https://www.colognerb.de/events.json
@@ -246,6 +251,11 @@
   website:
   email:
 
+- name: Ruby Ireland
+  source: Meetup
+  meetup_id: rubyireland
+  url: https://www.meetup.com/rubyireland/
+
 - name: Ruby Malaysia
   source: Meetup
   meetup_id: ruby-malaysia
@@ -259,6 +269,11 @@
   website:
   email:
 
+- name: 'Ruby Nights: The Auckland Ruby Group'
+  source: Meetup
+  meetup_id: aucklandruby
+  url: https://www.meetup.com/aucklandruby/
+
 - name: Ruby Perú
   source: Meetup
   meetup_id: rubyperu
@@ -271,6 +286,11 @@
   github:
   website: https://ruby.pe/
   email:
+
+- name: Ruby and Rails Perth
+  source: Meetup
+  meetup_id: Ruby-On-Rails-Oceania-Perth
+  url: https://www.meetup.com/Ruby-On-Rails-Oceania-Perth/
 
 - name: Ruby on Rails Oceania Sydney
   source: Meetup
