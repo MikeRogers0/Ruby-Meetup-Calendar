@@ -1,0 +1,15 @@
+---
+layout: page
+title: Groups
+permalink: /groups/
+template_engine: erb
+---
+
+
+<ul>
+  <% site.data.groups.each do |group| %>
+    <li>
+      <%= group.name %>
+    </li>
+  <% end %>
+</ul>
