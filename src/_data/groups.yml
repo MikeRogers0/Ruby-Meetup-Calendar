@@ -146,6 +146,19 @@
   website: http://columbusrb.com/
   email: board@columbusrb.com
 
+- name: fleur de ruby
+  source:
+  meetup_id:
+  url:
+  twitter_handle: fleur_de_ruby
+  slack:
+  discord: https://t.co/evnwkAuHWe
+  youtube:
+  twitch:
+  github:
+  website:
+  email:
+
 - name: Hamburg on Ruby
   source: OnRubyFeed
   feed_url: https://hamburg.onruby.de/events.json
