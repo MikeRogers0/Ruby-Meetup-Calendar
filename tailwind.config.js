@@ -21,6 +21,7 @@ module.exports = {
     extend: {
       minHeight: {
         '28': '7rem'
+        // What are you trying to do here? This doesn't make sense with the documentation: https://tailwindcss.com/docs/min-height#customizing.
       }
     }
   },
