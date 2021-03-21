@@ -107,6 +107,19 @@
   website: https://ruby.nz/
   email: committee@ruby.nz
 
+- name: Cincy.rb
+  source: Meetup
+  meetup_id: TechLife-Cincinnati
+  url: https://www.meetup.com/TechLife-Cincinnati/
+  twitter_handle: cincinnatirb
+  slack:
+  discord:
+  youtube:
+  twitch:
+  github: https://github.com/cincinnatirb
+  website: https://cincyrb.com/
+  email: cincinnatirb@googlegroups.com
+
 - name: Cologne.rb/Kölsch.rb
   source: OnRubyFeed
   feed_url: https://www.colognerb.de/events.json
