@@ -7,9 +7,11 @@ module.exports = {
     removeDeprecatedGapUtilities: true,
     standardFontWeights: true
   },
+  corePlugins: {
+    clear: false,
+    float: false
+  },
   theme: {
-    clear: [],
-    float: [],
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
