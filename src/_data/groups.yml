@@ -1,4 +1,18 @@
 ---
+## Template set of params for easy copy/paste
+# - name:
+#   source:
+#   meetup_id:
+#   url:
+#   twitter_handle:
+#   slack:
+#   discord:
+#   youtube:
+#   twitch:
+#   github:
+#   website:
+#   email:
+
 - name: Andalucia.rb
   source: OnRubyFeed
   feed_url: https://andalucia.onruby.eu/events.json
