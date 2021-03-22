@@ -329,6 +329,19 @@
   website: https://rubygalaxy.io/
   email:
 
+- name: Ruby LoCo
+  source: Meetup
+  meetup_id: Ruby-LoCo
+  url: https://www.meetup.com/Ruby-LoCo/
+  twitter_handle: ruby_loco
+  slack:
+  discord:
+  youtube:
+  twitch:
+  github: https://github.com/rubyloco
+  website: http://rubyloco.com/
+  email:
+
 - name: Ruby Malaysia
   source: Meetup
   meetup_id: ruby-malaysia
