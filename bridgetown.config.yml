@@ -16,7 +16,7 @@
 #
 
 baseurl: "" # OPTIONAL: the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. https://example.com
+url: "https://ruby-meetup-calendar.mikerogers.io" # the base hostname & protocol for your site, e.g. https://example.com
 
 permalink: pretty
 future: true
@@ -27,4 +27,12 @@ pagination:
 collections:
   events:
 
-# timezone: America/Los_Angeles
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /images/default-card.png
+
+lang: en
+
+timezone: Other/UTC

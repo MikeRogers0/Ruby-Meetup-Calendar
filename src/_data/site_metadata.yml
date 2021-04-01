@@ -7,3 +7,9 @@
 title: Ruby Meetup Calendar
 description: >- # this means to ignore newlines until "baseurl:"
   Discover Ruby (and Ruby on Rails) events happening right now.
+
+author: Mike Rogers
+
+lang: en
+twitter:
+  username: MikeRogers0
