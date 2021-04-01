@@ -41,7 +41,7 @@
         .collections
         .events
         .docs
-        .select { |event| (current_month.beginning_of_month..current_month.end_of_month).cover?(event[:date]) }
+        .select { |event| ((current_month.beginning_of_month - 1.week)..(current_month.end_of_month + 1.week)).cover?(event[:date]) }
         .sort_by { |event| event[:datetime] }
         .collect { |event| event.data.slice(:title, :datetime, :name, :external_url, :online_event) }
       %>

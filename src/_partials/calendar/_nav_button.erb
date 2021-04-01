@@ -3,7 +3,8 @@
 
 <% if site.collections.events.docs.select { |event| (month.beginning_of_month...month.end_of_month).cover?(event[:date].to_date) }.any? %>
   <a href="/events/<%= (month).strftime('%Y-%m') %>" class="btn">
-    <svg class="h-6 w-6 text-gray-500 inline-flex leading-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <span class="sr-only"><%= forward_svg ? 'Next' : 'Prev' %></span>
+    <svg class="h-6 w-6 inline-flex leading-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <% if forward_svg %>
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
       <% else %>
@@ -13,7 +14,8 @@
   </a>
 <% else %>
   <div class="btn btn--disabled cursor-not-allowed">
-    <svg class="h-6 w-6 text-gray-500 inline-flex leading-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <span class="sr-only"><%= forward_svg ? 'Next' : 'Prev' %></span>
+    <svg class="h-6 w-6 inline-flex leading-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <% if forward_svg %>
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
       <% else %>

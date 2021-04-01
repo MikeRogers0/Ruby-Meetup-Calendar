@@ -30,11 +30,11 @@
 }
 
 .calendar-day--past {
-  @apply text-gray-500;
+  @apply text-true-gray-400;
 }
 
 .calendar-day--past a {
-  @apply text-gray-500;
+  @apply text-true-gray-400;
 }
 
 .calendar-day--today {

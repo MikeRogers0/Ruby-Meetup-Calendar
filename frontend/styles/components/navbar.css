@@ -1,7 +1,31 @@
 .navbar {
   @apply pt-6 pb-4 px-4 container mx-auto;
+  @apply grid gap-4 grid-cols-1 md:grid-cols-2;
 }
 
-.navbar h1 a {
+.navbar__brand h1 a {
   @apply text-2xl text-gray-100 no-underline;
+}
+
+.navbar__links {
+  @apply flex -mx-3 mt-2;
+  align-items: center;
+  width: 100%;
+}
+
+@screen md {
+  .navbar__links {
+    @apply mt-0;
+    width: auto;
+    justify-content: end;
+  }
+}
+
+.navbar__link {
+  @apply px-3;
+}
+
+.navbar__link .feather {
+  width: 16px;
+  height: 16px;
 }

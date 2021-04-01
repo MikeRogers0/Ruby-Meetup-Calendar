@@ -1,8 +1,6 @@
 .footer {
-  @apply py-8 px-4 container mx-auto text-gray-100;
-  @apply grid gap-4 grid-cols-1 md:grid-cols-2;
+  @apply py-8 px-4 container mx-auto text-gray-100 text-center;
 }
 
-.footer_support {
-  @apply md:text-right;
+.footer__links {
 }
