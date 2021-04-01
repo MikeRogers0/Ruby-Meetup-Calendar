@@ -420,19 +420,6 @@
   website:
   email:
 
-- name: WNB.rb
-  source: Eventbrite
-  eventbrite_id: 32770260241
-  url:
-  twitter_handle: wnb_rb
-  slack:
-  discord:
-  youtube:
-  twitch:
-  github:
-  website:
-  email:
-
 - name: WellRailed
   source: Meetup
   meetup_id: wellrailed
