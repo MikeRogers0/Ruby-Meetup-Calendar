@@ -13,10 +13,10 @@ template_engine: erb
         <%= group.name %>
       </h2>
 
-      <ul class="mt-3">
+      <ul class="mt-4">
         <% group.links.compact.each do |name, url| %>
           <li class="inline-block mr-4">
-            <a href="<%= url %>" target="_blank" rel="noopenner" class="bg-gray-200 text-gray-900 hover:bg-gray-400 p-3 block rounded-full">
+            <a href="<%= url %>" title="<%= name.capitalize %>: <%= url %>" target="_blank" rel="noopenner" class="bg-gray-200 text-gray-900 hover:bg-gray-400 p-3 block rounded-full">
               <i data-feather="<%= name %>"></i>
               <span class="sr-only"><%= name %></span>
             </a>
