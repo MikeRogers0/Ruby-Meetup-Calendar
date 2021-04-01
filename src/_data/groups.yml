@@ -1,4 +1,18 @@
 ---
+## Template set of params for easy copy/paste
+# - name:
+#   source:
+#   meetup_id:
+#   url:
+#   twitter_handle:
+#   slack:
+#   discord:
+#   youtube:
+#   twitch:
+#   github:
+#   website:
+#   email:
+
 - name: Andalucia.rb
   source: OnRubyFeed
   feed_url: https://andalucia.onruby.eu/events.json
@@ -107,6 +121,19 @@
   website: https://ruby.nz/
   email: committee@ruby.nz
 
+- name: Cincy.rb
+  source: Meetup
+  meetup_id: TechLife-Cincinnati
+  url: https://www.meetup.com/TechLife-Cincinnati/
+  twitter_handle: cincinnatirb
+  slack:
+  discord:
+  youtube:
+  twitch:
+  github: https://github.com/cincinnatirb
+  website: https://cincyrb.com/
+  email: cincinnatirb@googlegroups.com
+
 - name: Cologne.rb/Kölsch.rb
   source: OnRubyFeed
   feed_url: https://www.colognerb.de/events.json
@@ -132,6 +159,19 @@
   github: https://github.com/columbusrb/
   website: http://columbusrb.com/
   email: board@columbusrb.com
+
+- name: fleur de ruby
+  source:
+  meetup_id:
+  url:
+  twitter_handle: fleur_de_ruby
+  slack:
+  discord: https://t.co/evnwkAuHWe
+  youtube:
+  twitch:
+  github:
+  website:
+  email:
 
 - name: Hamburg on Ruby
   source: OnRubyFeed
@@ -289,6 +329,19 @@
   website: https://rubygalaxy.io/
   email:
 
+- name: Ruby LoCo
+  source: Meetup
+  meetup_id: Ruby-LoCo
+  url: https://www.meetup.com/Ruby-LoCo/
+  twitter_handle: ruby_loco
+  slack:
+  discord:
+  youtube:
+  twitch:
+  github: https://github.com/rubyloco
+  website: http://rubyloco.com/
+  email:
+
 - name: Ruby Malaysia
   source: Meetup
   meetup_id: ruby-malaysia
@@ -362,6 +415,19 @@
   slack:
   discord:
   youtube: https://www.youtube.com/channel/UCqJNznEtrBiKB3M6Ue5zuEw
+  twitch:
+  github:
+  website:
+  email:
+
+- name: WNB.rb
+  source: Eventbrite
+  eventbrite_id: 32770260241
+  url:
+  twitter_handle: wnb_rb
+  slack:
+  discord:
+  youtube:
   twitch:
   github:
   website:
