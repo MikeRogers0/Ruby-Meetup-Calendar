@@ -1,5 +1,7 @@
 import "index.css"
 
+import * as Turbo from "@hotwired/turbo"
+
 import LocalTime from "local-time"
 LocalTime.start()
 

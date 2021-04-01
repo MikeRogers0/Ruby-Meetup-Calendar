@@ -2,7 +2,7 @@
 <% forward_svg ||= locals[:forward] %>
 
 <% if site.collections.events.docs.select { |event| (month.beginning_of_month...month.end_of_month).cover?(event[:date].to_date) }.any? %>
-  <a href="/events/<%= (month).strftime('%Y-%m') %>" class="btn">
+  <a href="/events/<%= (month).strftime('%Y-%m') %>/" class="btn">
     <span class="sr-only"><%= forward_svg ? 'Next' : 'Prev' %></span>
     <svg class="h-6 w-6 inline-flex leading-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <% if forward_svg %>
