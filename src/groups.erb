@@ -6,10 +6,20 @@ template_engine: erb
 ---
 
 
-<ul>
+<ul class="grid md:grid-cols-2 gap-5">
   <% site.data.groups.each do |group| %>
-    <li>
-      <%= group.name %>
+    <li class="border rounded bg-white p-4 text-gray-900">
+      <h2>
+        <%= group.name %>
+      </h2>
+
+      <ul class="mt-2">
+        <% group.links.compact.each do |name, url| %>
+          <li class="text-gray-900">
+            <a href="<%= url %>" target="_blank" rel="noopenner" class="text-indigo-800"><%= name %></a>
+          </li>
+        <% end if group.links.present? %>
+      </ul>
     </li>
   <% end %>
 </ul>

@@ -3,430 +3,295 @@
 - name: Andalucia.rb
   source: OnRubyFeed
   feed_url: https://andalucia.onruby.eu/events.json
-  url: https://andalucia.onruby.eu/#events
-  twitter_handle: malagarb
-  slack:
-  discord:
-  youtube:
-  twitch:
-  github: https://github.com/phoet/on_ruby
-  website: https://andalucia.onruby.eu/
-  email: andaluciarb@googlegroups.com
+  links:
+    url: https://andalucia.onruby.eu/#events
+    twitter_handle: malagarb
+    github: https://github.com/phoet/on_ruby
+    website: https://andalucia.onruby.eu/
 
 - name: Atlanta Ruby Meetup Group
   source: Meetup
   meetup_id: atlantaruby
-  url: https://www.meetup.com/atlantaruby/
-  twitter_handle: altrug
-  slack:
-  discord:
-  youtube: https://www.youtube.com/channel/UC5t3bcjKRxEYkGWEm5z9rTw
-  twitch:
-  github: https://github.com/atlrug
-  website:
-  email:
+  links:
+    url: https://www.meetup.com/atlantaruby/
+    twitter_handle: altrug
+    youtube: https://www.youtube.com/channel/UC5t3bcjKRxEYkGWEm5z9rTw
+    github: https://github.com/atlrug
 
 - name: Bangkok.rb
   source: Meetup
   meetup_id: bangkok-rb
-  url: https://www.meetup.com/bangkok-rb/
-  twitter_handle:
-  slack:
-  discord:
-  youtube:
-  twitch:
-  github: https://github.com/bangkokrb
-  website: https://rubyconfth.com/
-  email: rubyconfth@gmail.com
-  facebook: https://www.facebook.com/bangkok.rb/
-  instagram: https://www.instagram.com/rubyconfth/
+  links:
+    url: https://www.meetup.com/bangkok-rb/
+    github: https://github.com/bangkokrb
+    website: https://rubyconfth.com/
+    facebook: https://www.facebook.com/bangkok.rb/
+    instagram: https://www.instagram.com/rubyconfth/
 
 - name: Boulder Ruby Group
   source: Meetup
   meetup_id: boulder_ruby_group
-  url: https://www.meetup.com/boulder_ruby_group/
-  twitter_handle: boulderruby
-  slack:
-  discord:
-  youtube: https://www.youtube.com/channel/UCGb9Q9r7fsrNs-eL7txwLDg
-  twitch:
-  github: https://github.com/rylanb/boulder-ruby-org
-  website: https://boulder-ruby.org/
-  email: organizers@boulder-ruby.org
+  links:
+    url: https://www.meetup.com/boulder_ruby_group/
+    twitter_handle: boulderruby
+    youtube: https://www.youtube.com/channel/UCGb9Q9r7fsrNs-eL7txwLDg
+    github: https://github.com/rylanb/boulder-ruby-org
+    website: https://boulder-ruby.org/
 
 - name: BrisRuby
   source: Meetup
   meetup_id: brisRuby
-  url: https://www.meetup.com/brisRuby/
-  twitter_handle: brisruby
-  slack: https://ruby.org.au/slack
-  discord:
-  youtube: https://www.youtube.com/c/RubyAustralia
-  twitch:
-  github: https://github.com/BrisRuby
-  website: http://brisruby.org/
-  email: hello@brisruby.org
+  links:
+    url: https://www.meetup.com/brisRuby/
+    twitter_handle: brisruby
+    slack: https://ruby.org.au/slack
+    youtube: https://www.youtube.com/c/RubyAustralia
+    github: https://github.com/BrisRuby
+    website: http://brisruby.org/
 
 - name: Charlotte Ruby Meetup Group
   source: Meetup
   meetup_id: charlotte-rb
-  url: https://www.meetup.com/charlotte-rb/
-  twitter_handle: cltrb
-  slack:
-  discord:
-  youtube:
-  twitch:
-  github: https://github.com/charlotte-ruby
-  website: https://charlotte-ruby.github.io/
-  email: team@charlotte-ruby.org
+  links:
+    url: https://www.meetup.com/charlotte-rb/
+    twitter_handle: cltrb
+    github: https://github.com/charlotte-ruby
+    website: https://charlotte-ruby.github.io/
 
 - name: Chicago Ruby
   source: Meetup
   meetup_id: ChicagoRuby
-  url: https://www.meetup.com/ChicagoRuby/
-  twitter_handle: ChicagoRuby
-  slack:
-  discord:
-  youtube:
-  twitch:
-  github:
-  website: https://chicagoruby.org/
-  email:
-  facebook: https://www.facebook.com/ChicagoRuby/
-  medium: https://medium.com/@chicagoruby
+  links:
+    url: https://www.meetup.com/ChicagoRuby/
+    twitter_handle: ChicagoRuby
+    website: https://chicagoruby.org/
+    facebook: https://www.facebook.com/ChicagoRuby/
+    medium: https://medium.com/@chicagoruby
 
 - name: Christchurch Ruby Group
   source: Meetup
   meetup_id: Christchurch-Ruby-Group
-  url: https://www.meetup.com/Christchurch-Ruby-Group/
-  twitter_handle: chchruby
-  slack: http://slack.ruby.nz/
-  discord:
-  youtube:
-  twitch:
-  github:
-  website: https://ruby.nz/
-  email: committee@ruby.nz
+  links:
+    url: https://www.meetup.com/Christchurch-Ruby-Group/
+    twitter_handle: chchruby
+    slack: http://slack.ruby.nz/
+    website: https://ruby.nz/
 
 - name: Cincy.rb
   source: Meetup
   meetup_id: TechLife-Cincinnati
-  url: https://www.meetup.com/TechLife-Cincinnati/
-  twitter_handle: cincinnatirb
-  slack:
-  discord:
-  youtube:
-  twitch:
-  github: https://github.com/cincinnatirb
-  website: https://cincyrb.com/
-  email: cincinnatirb@googlegroups.com
+  links:
+    url: https://www.meetup.com/TechLife-Cincinnati/
+    twitter_handle: cincinnatirb
+    github: https://github.com/cincinnatirb
+    website: https://cincyrb.com/
 
 - name: Cologne.rb/Kölsch.rb
   source: OnRubyFeed
   feed_url: https://www.colognerb.de/events.json
-  url: https://www.colognerb.de/#events
-  twitter_handle: colognerb
-  slack:
-  discord:
-  youtube:
-  twitch:
-  github: https://github.com/phoet/on_ruby
-  website: https://www.colognerb.de/
-  email: colognerb@googlegroups.com
+  links:
+    url: https://www.colognerb.de/#events
+    twitter_handle: colognerb
+    github: https://github.com/phoet/on_ruby
+    website: https://www.colognerb.de/
 
 - name: Columbus Ruby Brigade
   source: Meetup
   meetup_id: columbusrb
-  url: https://www.meetup.com/columbusrb/
-  twitter_handle: columbusrb
-  slack: https://crb-slack-invite.herokuapp.com/
-  discord:
-  youtube:
-  twitch:
-  github: https://github.com/columbusrb/
-  website: http://columbusrb.com/
-  email: board@columbusrb.com
+  links:
+    url: https://www.meetup.com/columbusrb/
+    twitter_handle: columbusrb
+    slack: https://crb-slack-invite.herokuapp.com/
+    github: https://github.com/columbusrb/
+    website: http://columbusrb.com/
 
 - name: Hamburg on Ruby
   source: OnRubyFeed
   feed_url: https://hamburg.onruby.de/events.json
-  url: https://hamburg.onruby.de/#events
-  twitter_handle: HamburgOnRuby
-  slack:
-  discord:
-  youtube:
-  twitch:
-  github: https://github.com/rughh/planning
-  website: https://hamburg.onruby.de/
-  email: hamburg@onruby.de
+  links:
+    url: https://hamburg.onruby.de/#events
+    twitter_handle: HamburgOnRuby
+    github: https://github.com/rughh/planning
+    website: https://hamburg.onruby.de/
 
 - name: LRUG
   source: Eventbrite
   eventbrite_id: 28936506513
-  url: https://lrug.org/
-  twitter_handle: lrug
-  slack:
-  discord:
-  youtube:
-  twitch:
-  github: https://github.com/lrug
-  website: https://lrug.org/
-  email: chat@lrug.org
+  links:
+    url: https://lrug.org/
+    twitter_handle: lrug
+    github: https://github.com/lrug
+    website: https://lrug.org/
 
 - name: Leipzig on Rails
   source: OnRubyFeed
   feed_url: https://leipzig.onruby.de/events.json
-  url: https://leipzig.onruby.de/#events
-  twitter_handle: LeipzigOnRails
-  slack:
-  discord:
-  youtube:
-  twitch:
-  github: https://github.com/phoet/on_ruby
-  website: https://leipzig.onruby.de/
-  email: leipzigonrails@googlegroups.com
+  links:
+    url: https://leipzig.onruby.de/#events
+    twitter_handle: LeipzigOnRails
+    github: https://github.com/phoet/on_ruby
+    website: https://leipzig.onruby.de/
 
 - name: Madrid.rb
   source: OnRubyFeed
   feed_url: https://www.madridrb.com/events.json
-  url: https://www.madridrb.com/#events
-  twitter_handle: madridrb
-  slack:
-  discord:
-  youtube:
-  twitch: https://twitch.com/madridrb
-  github: http://github.com/phoet/on_ruby
-  website: https://www.madridrb.com/
-  email: hello@madridrb.com
+  links:
+    url: https://www.madridrb.com/#events
+    twitter_handle: madridrb
+    twitch: https://twitch.com/madridrb
+    github: http://github.com/phoet/on_ruby
+    website: https://www.madridrb.com/
 
 - name: Melbourne Ruby
   source: Meetup
   meetup_id: Ruby-On-Rails-Oceania-Melbourne
-  url: https://www.meetup.com/Ruby-On-Rails-Oceania-Melbourne/
-  twitter_handle: roromelb
-  slack: https://ruby.org.au/slack
-  discord:
-  youtube: https://www.youtube.com/c/RubyAustralia
-  twitch:
-  github: https://github.com/rails-oceania/melbourne-ruby
-  website: https://ruby.org.au/
-  email: contact@ruby.org.au
+  links:
+    url: https://www.meetup.com/Ruby-On-Rails-Oceania-Melbourne/
+    twitter_handle: roromelb
+    slack: https://ruby.org.au/slack
+    youtube: https://www.youtube.com/c/RubyAustralia
+    github: https://github.com/rails-oceania/melbourne-ruby
+    website: https://ruby.org.au/
 
 - name: NYC.rb
   source: Meetup
   meetup_id: NYC-rb
-  url: https://www.meetup.com/NYC-rb/
-  twitter_handle:
-  slack:
-  discord:
-  youtube:
-  twitch:
-  github: https://github.com/NYCrb
-  website:
-  email:
+  links:
+    url: https://www.meetup.com/NYC-rb/
+    github: https://github.com/NYCrb
 
 - name: North West Ruby User Group
   source: Meetup
   meetup_id: North-West-Ruby-User-Group
-  url: https://www.meetup.com/North-West-Ruby-User-Group/
-  twitter_handle: nwrug
-  slack:
-  discord:
-  youtube:
-  twitch:
-  github: https://github.com/nwrug
-  website: https://nwrug.org/
-  email: info@nwrug.org
+  links:
+    url: https://www.meetup.com/North-West-Ruby-User-Group/
+    twitter_handle: nwrug
+    github: https://github.com/nwrug
+    website: https://nwrug.org/
 
 - name: Philly.rb
   source: Meetup
   meetup_id: Phillyrb
-  url: https://www.meetup.com/Phillyrb/
-  twitter_handle: phillyrb
-  slack: http://phillydev.org/
-  discord:
-  youtube:
-  twitch:
-  github: https://github.com/phillyrb
-  website: http://www.phillyrb.org/
-  email:
+  links:
+    url: https://www.meetup.com/Phillyrb/
+    twitter_handle: phillyrb
+    slack: http://phillydev.org/
+    github: https://github.com/phillyrb
+    website: http://www.phillyrb.org/
 
 - name: Portland Ruby Brigade
   source: Meetup
   meetup_id: Portland-Ruby-Brigade
-  url: https://www.meetup.com/Portland-Ruby-Brigade/
-  twitter_handle: pdxruby
-  slack:
-  discord:
-  youtube: https://www.youtube.com/channel/UCgEEluMvb1Fp3FExqh-YZmw
-  twitch:
-  github: https://github.com/pdxruby
-  website: https://pdxruby.org/
-  email:
+  links:
+    url: https://www.meetup.com/Portland-Ruby-Brigade/
+    twitter_handle: pdxruby
+    youtube: https://www.youtube.com/channel/UCgEEluMvb1Fp3FExqh-YZmw
+    github: https://github.com/pdxruby
+    website: https://pdxruby.org/
 
 - name: RUG::B
   source: OnRubyFeed
   feed_url: https://www.rug-b.de/events.json
-  url: https://www.rug-b.de/#events
-  twitter_handle: rug_b
-  slack:
-  discord:
-  youtube:
-  twitch:
-  github:
-  website: https://www.rug-b.de/
-  email: rug-b@googlegroups.com
+  links:
+    url: https://www.rug-b.de/#events
+    twitter_handle: rug_b
+    website: https://www.rug-b.de/
 
 - name: Ruby & Friends
   source: OnRubyFeed
   feed_url: https://ruby.barcelona/events.json
-  url: https://ruby.barcelona/#events
-  twitter_handle: bcnrails
-  slack:
-  discord:
-  youtube:
-  twitch:
-  github: https://github.com/RubyAndFriends
-  website: https://ruby.barcelona/
-  email: webmaster@mediafinger.com
+  links:
+    url: https://ruby.barcelona/#events
+    twitter_handle: bcnrails
+    github: https://github.com/RubyAndFriends
+    website: https://ruby.barcelona/
 
 - name: Ruby Galaxy
-  source:
-  url:
-  twitter_handle: therubygalaxy
-  slack:
-  discord:
-  youtube:
-  twitch: https://www.twitch.tv/therubygalaxy
-  github:
-  website: https://rubygalaxy.io/
-  email:
+  links:
+    twitter_handle: therubygalaxy
+    twitch: https://www.twitch.tv/therubygalaxy
+    website: https://rubygalaxy.io/
 
 - name: Ruby LoCo
   source: Meetup
   meetup_id: Ruby-LoCo
-  url: https://www.meetup.com/Ruby-LoCo/
-  twitter_handle: ruby_loco
-  slack:
-  discord:
-  youtube:
-  twitch:
-  github: https://github.com/rubyloco
-  website: http://rubyloco.com/
-  email:
+  links:
+    url: https://www.meetup.com/Ruby-LoCo/
+    twitter_handle: ruby_loco
+    github: https://github.com/rubyloco
+    website: http://rubyloco.com/
 
 - name: Ruby Malaysia
   source: Meetup
   meetup_id: ruby-malaysia
-  url: https://www.meetup.com/ruby-malaysia/
-  twitter_handle:
-  slack:
-  discord:
-  youtube:
-  twitch:
-  github:
-  website:
-  email:
+  links:
+    url: https://www.meetup.com/ruby-malaysia/
 
 - name: 'Ruby Nights: The Auckland Ruby Group'
   source: Meetup
   meetup_id: aucklandruby
-  url: https://www.meetup.com/aucklandruby/
-  twitter_handle:
-  slack: http://slack.ruby.nz/
-  discord:
-  youtube:
-  twitch:
-  github:
-  website: https://ruby.nz/
-  email: committee@ruby.nz
+  links:
+    url: https://www.meetup.com/aucklandruby/
+    twitter_handle:
+    slack: http://slack.ruby.nz/
+    website: https://ruby.nz/
 
 - name: Ruby Perú
   source: Meetup
   meetup_id: rubyperu
-  url: https://www.meetup.com/rubyperu/
-  twitter_handle: rubyperu
-  slack: http://bit.ly/rubyperu-slack
-  discord:
-  youtube: https://www.youtube.com/channel/UC8O1RTDK93NT-f2eTjY3p5A/featured
-  twitch:
-  github:
-  website: https://ruby.pe/
-  email:
+  links:
+    url: https://www.meetup.com/rubyperu/
+    twitter_handle: rubyperu
+    slack: http://bit.ly/rubyperu-slack
+    youtube: https://www.youtube.com/channel/UC8O1RTDK93NT-f2eTjY3p5A/featured
+    website: https://ruby.pe/
 
 - name: Ruby and Rails Perth
   source: Meetup
   meetup_id: Ruby-On-Rails-Oceania-Perth
-  url: https://www.meetup.com/Ruby-On-Rails-Oceania-Perth/
-  twitter_handle: rubyaustralia
-  slack: https://ruby.org.au/slack
-  discord:
-  youtube: https://www.youtube.com/c/RubyAustralia
-  twitch:
-  github: https://github.com/rubyaustralia
-  website: https://ruby.org.au/
-  email: contact@ruby.org.au
+  links:
+    url: https://www.meetup.com/Ruby-On-Rails-Oceania-Perth/
+    twitter_handle: rubyaustralia
+    slack: https://ruby.org.au/slack
+    youtube: https://www.youtube.com/c/RubyAustralia
+    github: https://github.com/rubyaustralia
+    website: https://ruby.org.au/
 
 - name: Ruby on Rails Oceania Sydney
   source: Meetup
   meetup_id: Ruby-On-Rails-Oceania-Sydney
-  url: https://www.meetup.com/Ruby-On-Rails-Oceania-Sydney/
-  twitter_handle: rorosyd
-  slack: https://ruby.org.au/slack
-  discord:
-  youtube: https://www.youtube.com/c/RubyAustralia
-  twitch:
-  github: https://github.com/rails-oceania/roro
-  website: https://ruby.org.au/
-  email: contact@ruby.org.au
+  links:
+    url: https://www.meetup.com/Ruby-On-Rails-Oceania-Sydney/
+    twitter_handle: rorosyd
+    slack: https://ruby.org.au/slack
+    youtube: https://www.youtube.com/c/RubyAustralia
+    github: https://github.com/rails-oceania/roro
+    website: https://ruby.org.au/
 
 - name: South West Ruby
   source: Meetup
   meetup_id: south-west-ruby
-  url: https://www.meetup.com/south-west-ruby/
-  twitter_handle: southwestruby
-  slack:
-  discord:
-  youtube: https://www.youtube.com/channel/UCqJNznEtrBiKB3M6Ue5zuEw
-  twitch:
-  github:
-  website:
-  email:
+  links:
+    url: https://www.meetup.com/south-west-ruby/
+    twitter_handle: southwestruby
+    youtube: https://www.youtube.com/channel/UCqJNznEtrBiKB3M6Ue5zuEw
 
 - name: WNB.rb
   source: Eventbrite
   eventbrite_id: 32770260241
-  url: https://www.eventbrite.com/o/wnbrb-32770260241
-  twitter_handle: wnb_rb
-  slack:
-  discord:
-  youtube:
-  twitch:
-  github:
-  website:
-  email: womennonbinary.rb@gmail.com
+  links:
+    url: https://www.eventbrite.com/o/wnbrb-32770260241
+    twitter_handle: wnb_rb
 
 - name: WellRailed
   source: Meetup
   meetup_id: wellrailed
-  url: https://www.meetup.com/wellrailed/
-  twitter_handle:
-  slack: http://slack.ruby.nz/
-  discord:
-  youtube:
-  twitch:
-  github:
-  website: https://ruby.nz/
-  email: committee@ruby.nz
+  links:
+    url: https://www.meetup.com/wellrailed/
+    slack: http://slack.ruby.nz/
+    website: https://ruby.nz/
 
 - name: fleur de ruby
-  source:
-  url:
-  twitter_handle: fleur_de_ruby
-  slack:
-  discord: https://t.co/evnwkAuHWe
-  youtube:
-  twitch:
-  github:
-  website:
-  email:
+  links:
+    twitter_handle: fleur_de_ruby
+    discord: https://discord.com/invite/xFp5GQhVtf
