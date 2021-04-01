@@ -10,11 +10,15 @@ class PostsGenerator::Group::OnRubyFeed < PostsGenerator::Group
       Event.new(
         title: event_data["name"],
         datetime: Time.parse(event_data["date"]),
-        url: "#{@group["url"]}events/#{event_data["name"].parameterize}-#{event_data["id"]}",
+        url: "#{base_url}events/#{event_data["name"].parameterize}-#{event_data["id"]}",
         online_event: event_data["location"].nil? || event_data["location"]["name"].include?("Twitch"),
         name: name
       )
     }
+  end
+
+  def base_url
+    @base_url ||= @group["feed_url"].delete_suffix("events.json")
   end
 
   def source_data
