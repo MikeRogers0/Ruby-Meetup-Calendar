@@ -72,6 +72,8 @@
 - name: Cincy.rb
   source: Meetup
   meetup_id: TechLife-Cincinnati
+  meetup_filter:
+    title_includes: Cincy.rb
   links:
     link: https://cincyrb.com/
     twitter: https://twitter.com/cincinnatirb

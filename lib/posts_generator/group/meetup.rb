@@ -6,7 +6,13 @@ class PostsGenerator::Group::Meetup < PostsGenerator::Group
   private
 
   def events
-    @events ||= source_data.collect { |event_data|
+    @events ||= source_data
+      .select { |event_data|
+        event_data["confirmCount"] > 1 && (
+          @group["meetup_filter"].nil? || event_data["title"].include?(@group["meetup_filter"]["title_includes"])
+        )
+      }
+      .collect { |event_data|
       Event.new(
         title: event_data["title"],
         datetime: Time.parse(event_data["servertime"]),
