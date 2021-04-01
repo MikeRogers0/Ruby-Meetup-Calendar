@@ -379,3 +379,16 @@
   github:
   website: https://ruby.nz/
   email: committee@ruby.nz
+
+- name: WNB.rb
+  source: Eventbrite
+  eventbrite_id: 32770260241
+  url: https://www.eventbrite.com/o/wnbrb-32770260241
+  twitter_handle: wnb_rb
+  slack:
+  discord:
+  youtube:
+  twitch:
+  github:
+  website:
+  email: womennonbinary.rb@gmail.com
