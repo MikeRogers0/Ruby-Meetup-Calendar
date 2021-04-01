@@ -2,7 +2,7 @@ require "yaml"
 
 class PostsGenerator
   def call
-    groups.each do |group|
+    groups.select { |group| group["source"].present? }.each do |group|
       Group.const_get(group["source"]).new(group).call
     end
   end
