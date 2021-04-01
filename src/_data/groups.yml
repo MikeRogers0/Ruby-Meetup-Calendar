@@ -292,7 +292,6 @@
 
 - name: Ruby Galaxy
   source:
-  meetup_id:
   url:
   twitter_handle: therubygalaxy
   slack:
@@ -422,7 +421,6 @@
 
 - name: fleur de ruby
   source:
-  meetup_id:
   url:
   twitter_handle: fleur_de_ruby
   slack:
