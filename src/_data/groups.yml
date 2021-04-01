@@ -1,17 +1,4 @@
 ---
-## Template set of params for easy copy/paste
-# - name:
-#   source:
-#   meetup_id:
-#   url:
-#   twitter_handle:
-#   slack:
-#   discord:
-#   youtube:
-#   twitch:
-#   github:
-#   website:
-#   email:
 
 - name: Andalucia.rb
   source: OnRubyFeed
@@ -159,19 +146,6 @@
   github: https://github.com/columbusrb/
   website: http://columbusrb.com/
   email: board@columbusrb.com
-
-- name: fleur de ruby
-  source:
-  meetup_id:
-  url:
-  twitter_handle: fleur_de_ruby
-  slack:
-  discord: https://t.co/evnwkAuHWe
-  youtube:
-  twitch:
-  github:
-  website:
-  email:
 
 - name: Hamburg on Ruby
   source: OnRubyFeed
@@ -355,7 +329,7 @@
   website:
   email:
 
-- name: "Ruby Nights: The Auckland Ruby Group"
+- name: 'Ruby Nights: The Auckland Ruby Group'
   source: Meetup
   meetup_id: aucklandruby
   url: https://www.meetup.com/aucklandruby/
@@ -420,6 +394,19 @@
   website:
   email:
 
+- name: WNB.rb
+  source: Eventbrite
+  eventbrite_id: 32770260241
+  url: https://www.eventbrite.com/o/wnbrb-32770260241
+  twitter_handle: wnb_rb
+  slack:
+  discord:
+  youtube:
+  twitch:
+  github:
+  website:
+  email: womennonbinary.rb@gmail.com
+
 - name: WellRailed
   source: Meetup
   meetup_id: wellrailed
@@ -433,15 +420,15 @@
   website: https://ruby.nz/
   email: committee@ruby.nz
 
-- name: WNB.rb
-  source: Eventbrite
-  eventbrite_id: 32770260241
-  url: https://www.eventbrite.com/o/wnbrb-32770260241
-  twitter_handle: wnb_rb
+- name: fleur de ruby
+  source:
+  meetup_id:
+  url:
+  twitter_handle: fleur_de_ruby
   slack:
-  discord:
+  discord: https://t.co/evnwkAuHWe
   youtube:
   twitch:
   github:
   website:
-  email: womennonbinary.rb@gmail.com
+  email:
