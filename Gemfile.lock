@@ -44,6 +44,8 @@ GEM
       htmlcompressor (>= 0.4, < 1.0)
     bridgetown-paginate (0.19.1)
       bridgetown-core (= 0.19.1)
+    bridgetown-seo-tag (3.0.5)
+      bridgetown (>= 0.15.0, < 2.0)
     colorator (1.1.0)
     concurrent-ruby (1.1.7)
     dotenv (2.7.6)
@@ -103,9 +105,10 @@ PLATFORMS
 DEPENDENCIES
   activesupport
   bridgetown (~> 0.19.1)
-  bridgetown-minify-html (~> 1.0)
+  bridgetown-minify-html
+  bridgetown-seo-tag
   dotenv
   rake
 
 BUNDLED WITH
-   2.1.4
+   2.2.3
