@@ -41,6 +41,7 @@
   },
   "dependencies": {
     "@babel/plugin-transform-react-jsx": "^7.12.12",
+    "feather-icons": "^4.28.0",
     "local-time": "^2.1.0",
     "luxon": "^1.25.0",
     "react": "^17.0.1",
