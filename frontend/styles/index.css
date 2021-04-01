@@ -36,6 +36,7 @@
 @layer components {
   @import "components/btn.css";
   @import "components/calendar.css";
+  @import "components/card.css";
   @import "components/content.css";
   @import "components/navbar.css";
   @import "components/footer.css";
