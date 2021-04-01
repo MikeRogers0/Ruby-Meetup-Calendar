@@ -2,12 +2,11 @@
 
 - name: Andalucia.rb
   source: OnRubyFeed
-  feed_link: https://andalucia.onruby.eu/events.json
+  feed_url: https://andalucia.onruby.eu/events.json
   links:
-    link: https://andalucia.onruby.eu/#events
+    link: https://andalucia.onruby.eu/
     twitter: https://twitter.com/malagarb
     github: https://github.com/phoet/on_ruby
-    link: https://andalucia.onruby.eu/
 
 - name: Atlanta Ruby Meetup Group
   source: Meetup
@@ -22,9 +21,8 @@
   source: Meetup
   meetup_id: bangkok-rb
   links:
-    link: https://www.meetup.com/bangkok-rb/
-    github: https://github.com/bangkokrb
     link: https://rubyconfth.com/
+    github: https://github.com/bangkokrb
     facebook: https://www.facebook.com/bangkok.rb/
     instagram: https://www.instagram.com/rubyconfth/
 
@@ -32,87 +30,77 @@
   source: Meetup
   meetup_id: boulder_ruby_group
   links:
-    link: https://www.meetup.com/boulder_ruby_group/
+    link: https://boulder-ruby.org/
     twitter: https://twitter.com/boulderruby
     youtube: https://www.youtube.com/channel/UCGb9Q9r7fsrNs-eL7txwLDg
     github: https://github.com/rylanb/boulder-ruby-org
-    link: https://boulder-ruby.org/
 
 - name: BrisRuby
   source: Meetup
   meetup_id: brisRuby
   links:
-    link: https://www.meetup.com/brisRuby/
+    link: http://brisruby.org/
     twitter: https://twitter.com/brisruby
     slack: https://ruby.org.au/slack
     youtube: https://www.youtube.com/c/RubyAustralia
     github: https://github.com/BrisRuby
-    link: http://brisruby.org/
 
 - name: Charlotte Ruby Meetup Group
   source: Meetup
   meetup_id: charlotte-rb
   links:
-    link: https://www.meetup.com/charlotte-rb/
+    link: https://charlotte-ruby.github.io/
     twitter: https://twitter.com/cltrb
     github: https://github.com/charlotte-ruby
-    link: https://charlotte-ruby.github.io/
 
 - name: Chicago Ruby
   source: Meetup
   meetup_id: ChicagoRuby
   links:
-    link: https://www.meetup.com/ChicagoRuby/
-    twitter: https://twitter.com/ChicagoRuby
-    link: https://chicagoruby.org/
-    facebook: https://www.facebook.com/ChicagoRuby/
     link: https://medium.com/@chicagoruby
+    twitter: https://twitter.com/ChicagoRuby
+    facebook: https://www.facebook.com/ChicagoRuby/
 
 - name: Christchurch Ruby Group
   source: Meetup
   meetup_id: Christchurch-Ruby-Group
   links:
-    link: https://www.meetup.com/Christchurch-Ruby-Group/
+    link: https://ruby.nz/
     twitter: https://twitter.com/chchruby
     slack: http://slack.ruby.nz/
-    link: https://ruby.nz/
 
 - name: Cincy.rb
   source: Meetup
   meetup_id: TechLife-Cincinnati
   links:
-    link: https://www.meetup.com/TechLife-Cincinnati/
+    link: https://cincyrb.com/
     twitter: https://twitter.com/cincinnatirb
     github: https://github.com/cincinnatirb
-    link: https://cincyrb.com/
 
 - name: Cologne.rb/Kölsch.rb
   source: OnRubyFeed
-  feed_link: https://www.colognerb.de/events.json
+  feed_url: https://www.colognerb.de/events.json
   links:
-    link: https://www.colognerb.de/#events
+    link: https://www.colognerb.de/
     twitter: https://twitter.com/colognerb
     github: https://github.com/phoet/on_ruby
-    link: https://www.colognerb.de/
 
 - name: Columbus Ruby Brigade
   source: Meetup
   meetup_id: columbusrb
   links:
-    link: https://www.meetup.com/columbusrb/
+    link: http://columbusrb.com/
     twitter: https://twitter.com/columbusrb
     slack: https://crb-slack-invite.herokuapp.com/
     github: https://github.com/columbusrb/
-    link: http://columbusrb.com/
 
 - name: Hamburg on Ruby
   source: OnRubyFeed
-  feed_link: https://hamburg.onruby.de/events.json
+  feed_url: https://hamburg.onruby.de/events.json
   links:
-    link: https://hamburg.onruby.de/#events
+    link: https://hamburg.onruby.de/
     twitter: https://twitter.com/HamburgOnRuby
     github: https://github.com/rughh/planning
-    link: https://hamburg.onruby.de/
 
 - name: LRUG
   source: Eventbrite
@@ -121,37 +109,33 @@
     link: https://lrug.org/
     twitter: https://twitter.com/lrug
     github: https://github.com/lrug
-    link: https://lrug.org/
 
 - name: Leipzig on Rails
   source: OnRubyFeed
-  feed_link: https://leipzig.onruby.de/events.json
+  feed_url: https://leipzig.onruby.de/events.json
   links:
-    link: https://leipzig.onruby.de/#events
+    link: https://leipzig.onruby.de/
     twitter: https://twitter.com/LeipzigOnRails
     github: https://github.com/phoet/on_ruby
-    link: https://leipzig.onruby.de/
 
 - name: Madrid.rb
   source: OnRubyFeed
-  feed_link: https://www.madridrb.com/events.json
+  feed_url: https://www.madridrb.com/events.json
   links:
-    link: https://www.madridrb.com/#events
+    link: https://www.madridrb.com/
     twitter: https://twitter.com/madridrb
     twitch: https://twitch.com/madridrb
     github: http://github.com/phoet/on_ruby
-    link: https://www.madridrb.com/
 
 - name: Melbourne Ruby
   source: Meetup
   meetup_id: Ruby-On-Rails-Oceania-Melbourne
   links:
-    link: https://www.meetup.com/Ruby-On-Rails-Oceania-Melbourne/
+    link: https://ruby.org.au/
     twitter: https://twitter.com/roromelb
     slack: https://ruby.org.au/slack
     youtube: https://www.youtube.com/c/RubyAustralia
     github: https://github.com/rails-oceania/melbourne-ruby
-    link: https://ruby.org.au/
 
 - name: NYC.rb
   source: Meetup
@@ -164,47 +148,42 @@
   source: Meetup
   meetup_id: North-West-Ruby-User-Group
   links:
-    link: https://www.meetup.com/North-West-Ruby-User-Group/
+    link: https://nwrug.org/
     twitter: https://twitter.com/nwrug
     github: https://github.com/nwrug
-    link: https://nwrug.org/
 
 - name: Philly.rb
   source: Meetup
   meetup_id: Phillyrb
   links:
-    link: https://www.meetup.com/Phillyrb/
+    link: http://www.phillyrb.org/
     twitter: https://twitter.com/phillyrb
     slack: http://phillydev.org/
     github: https://github.com/phillyrb
-    link: http://www.phillyrb.org/
 
 - name: Portland Ruby Brigade
   source: Meetup
   meetup_id: Portland-Ruby-Brigade
   links:
-    link: https://www.meetup.com/Portland-Ruby-Brigade/
+    link: https://pdxruby.org/
     twitter: https://twitter.com/pdxruby
     youtube: https://www.youtube.com/channel/UCgEEluMvb1Fp3FExqh-YZmw
     github: https://github.com/pdxruby
-    link: https://pdxruby.org/
 
 - name: RUG::B
   source: OnRubyFeed
-  feed_link: https://www.rug-b.de/events.json
+  feed_url: https://www.rug-b.de/events.json
   links:
-    link: https://www.rug-b.de/#events
-    twitter: https://twitter.com/rug_b
     link: https://www.rug-b.de/
+    twitter: https://twitter.com/rug_b
 
 - name: Ruby & Friends
   source: OnRubyFeed
-  feed_link: https://ruby.barcelona/events.json
+  feed_url: https://ruby.barcelona/events.json
   links:
-    link: https://ruby.barcelona/#events
+    link: https://ruby.barcelona/
     twitter: https://twitter.com/bcnrails
     github: https://github.com/RubyAndFriends
-    link: https://ruby.barcelona/
 
 - name: Ruby Galaxy
   links:
@@ -216,10 +195,9 @@
   source: Meetup
   meetup_id: Ruby-LoCo
   links:
-    link: https://www.meetup.com/Ruby-LoCo/
+    link: http://rubyloco.com/
     twitter: https://twitter.com/ruby_loco
     github: https://github.com/rubyloco
-    link: http://rubyloco.com/
 
 - name: Ruby Malaysia
   source: Meetup
@@ -231,42 +209,38 @@
   source: Meetup
   meetup_id: aucklandruby
   links:
-    link: https://www.meetup.com/aucklandruby/
+    link: https://ruby.nz/
     twitter_handle:
     slack: http://slack.ruby.nz/
-    link: https://ruby.nz/
 
 - name: Ruby Perú
   source: Meetup
   meetup_id: rubyperu
   links:
-    link: https://www.meetup.com/rubyperu/
+    link: https://ruby.pe/
     twitter: https://twitter.com/rubyperu
     slack: http://bit.ly/rubyperu-slack
     youtube: https://www.youtube.com/channel/UC8O1RTDK93NT-f2eTjY3p5A/featured
-    link: https://ruby.pe/
 
 - name: Ruby and Rails Perth
   source: Meetup
   meetup_id: Ruby-On-Rails-Oceania-Perth
   links:
-    link: https://www.meetup.com/Ruby-On-Rails-Oceania-Perth/
+    link: https://ruby.org.au/
     twitter: https://twitter.com/rubyaustralia
     slack: https://ruby.org.au/slack
     youtube: https://www.youtube.com/c/RubyAustralia
     github: https://github.com/rubyaustralia
-    link: https://ruby.org.au/
 
 - name: Ruby on Rails Oceania Sydney
   source: Meetup
   meetup_id: Ruby-On-Rails-Oceania-Sydney
   links:
-    link: https://www.meetup.com/Ruby-On-Rails-Oceania-Sydney/
+    link: https://ruby.org.au/
     twitter: https://twitter.com/rorosyd
     slack: https://ruby.org.au/slack
     youtube: https://www.youtube.com/c/RubyAustralia
     github: https://github.com/rails-oceania/roro
-    link: https://ruby.org.au/
 
 - name: South West Ruby
   source: Meetup
@@ -287,9 +261,8 @@
   source: Meetup
   meetup_id: wellrailed
   links:
-    link: https://www.meetup.com/wellrailed/
-    slack: http://slack.ruby.nz/
     link: https://ruby.nz/
+    slack: http://slack.ruby.nz/
 
 - name: fleur de ruby
   links:
