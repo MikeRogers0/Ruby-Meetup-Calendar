@@ -1,0 +1,5 @@
+.card {
+  @apply bg-white p-4;
+  @apply md:rounded-lg shadow-lg overflow-hidden;
+  @apply bg-gray-800;
+}

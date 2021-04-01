@@ -7,6 +7,6 @@
 }
 
 .btn--navbar {
-  @apply leading-none rounded-lg inline-flex items-center cursor-pointer bg-gray-800 hover:bg-gray-200 hover:text-gray-500;
+  @apply leading-none rounded-lg inline-flex items-center cursor-pointer bg-gray-800 hover:bg-gray-900 hover:shadow-lg;
   @apply no-underline text-white font-bold py-3 px-4 rounded;
 }
