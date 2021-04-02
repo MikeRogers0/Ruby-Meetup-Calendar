@@ -1,5 +1,12 @@
 ---
 
+- name: Omaha Ruby and Open Source Meetup
+  source: Meetup
+  meetup_id: Omaha-Ruby-Meetup
+  links:
+    link: https://www.meetup.com/Omaha-Ruby-Meetup/
+    twitter: https://twitter.com/omaharuby
+
 - name: Amsterdam.rb
   source: Meetup
   meetup_id: Amsterdam-rb
