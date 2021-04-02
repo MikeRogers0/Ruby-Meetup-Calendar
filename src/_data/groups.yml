@@ -24,6 +24,13 @@
     youtube: https://www.youtube.com/channel/UC5t3bcjKRxEYkGWEm5z9rTw
     github: https://github.com/atlrug
 
+- name: Austin on Rails
+  source: Meetup
+  meetup_id: Austin-on-Rails
+  links:
+    link: https://www.meetup.com/Austin-on-Rails
+    twitter: https://twitter.com/austinonrails
+
 - name: Bangkok.rb
   source: Meetup
   meetup_id: bangkok-rb
@@ -161,6 +168,13 @@
     twitter: https://twitter.com/nwrug
     github: https://github.com/nwrug
 
+- name: Omaha Ruby and Open Source Meetup
+  source: Meetup
+  meetup_id: Omaha-Ruby-Meetup
+  links:
+    link: https://www.meetup.com/Omaha-Ruby-Meetup/
+    twitter: https://twitter.com/omaharuby
+
 - name: Paris.rb
   source: Meetup
   meetup_id: parisrb
@@ -265,6 +279,13 @@
     link: https://www.meetup.com/south-west-ruby/
     twitter: https://twitter.com/southwestruby
     youtube: https://www.youtube.com/channel/UCqJNznEtrBiKB3M6Ue5zuEw
+
+- name: Vancouver Ruby Meetup Group
+  source: Meetup
+  meetup_id: vancouver-ruby
+  links:
+    link: http://vanruby.org/
+    github: https://github.com/vanruby
 
 - name: WNB.rb
   source: Eventbrite
