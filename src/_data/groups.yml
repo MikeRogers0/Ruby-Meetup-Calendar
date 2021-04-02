@@ -1,5 +1,20 @@
 ---
 
+- name: Vancouver Ruby Meetup Group
+  source: Meetup
+  meetup_id: vancouver-ruby
+  links:
+    link: https://www.meetup.com/vancouver-ruby/
+    link: http://vanruby.org/
+    github: https://github.com/vanruby
+
+- name: Austin on Rails
+  source: Meetup
+  meetup_id: Austin-on-Rails
+  links:
+    link: https://www.meetup.com/Austin-on-Rails
+    twitter: https://twitter.com/austinonrails
+
 - name: Omaha Ruby and Open Source Meetup
   source: Meetup
   meetup_id: Omaha-Ruby-Meetup
