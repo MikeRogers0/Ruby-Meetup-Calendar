@@ -1,5 +1,12 @@
 ---
 
+- name: Amsterdam.rb
+  source: Meetup
+  meetup_id: Amsterdam-rb
+  links:
+    link: https://www.meetup.com/Amsterdam-rb
+    twitter: https://twitter.com/amsrb
+
 - name: Andalucia.rb
   source: OnRubyFeed
   feed_url: https://andalucia.onruby.eu/events.json
@@ -153,6 +160,13 @@
     link: https://nwrug.org/
     twitter: https://twitter.com/nwrug
     github: https://github.com/nwrug
+
+- name: Paris.rb
+  source: Meetup
+  meetup_id: parisrb
+  links:
+    link: https://rubyparis.org/
+    github: https://github.com/parisrb
 
 - name: Philly.rb
   source: Meetup
