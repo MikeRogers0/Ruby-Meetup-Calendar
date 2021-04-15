@@ -10,3 +10,5 @@ group :bridgetown_plugins do
   gem "bridgetown-seo-tag"
   gem "bridgetown-minify-html"
 end
+
+gem "icalendar", "~> 2.7"

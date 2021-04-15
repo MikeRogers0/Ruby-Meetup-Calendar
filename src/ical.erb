@@ -1,0 +1,27 @@
+---
+layout: false
+permalink: /ical
+collection: events
+template_engine: erb
+---
+<% require 'icalendar' %>
+<% cal = Icalendar::Calendar.new %>
+<%
+    event = Icalendar::Event.new
+  event.dtstart = DateTime.civil(2006, 6, 23, 8, 30)
+  event.summary = "A great event!"
+  cal.add_event(event)
+%>
+
+<% site.collections.events.docs.each do |event| %>
+  <%
+      event = Icalendar::Event.new
+  event.dtstart     = Icalendar::Values::Date.new('20050428')
+  event.dtend       = Icalendar::Values::Date.new('20050429')
+  event.summary     = "Meeting with the man."
+  event.description = "Have a long lunch meeting and decide nothing..."
+  cal.add_event(event)
+  %>
+<% end %>
+
+<%= cal.to_ical %>
