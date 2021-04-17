@@ -6,20 +6,14 @@ template_engine: erb
 output_ext: ics
 ---
 <% require 'icalendar' %>
-<% require 'icalendar/tzinfo' %>
 <% cal = Icalendar::Calendar.new %>
-
-<%
-  tz = TZInfo::Timezone.get("UTC")
-  cal.add_timezone(tz.ical_timezone(Time.now))
-%>
 
 <% site.collections.events.docs.each do |event| %>
   <%
   ical_event = Icalendar::Event.new
   ical_event.uid = event.url
-  ical_event.dtstart = event[:datetime].to_datetime.utc
-  ical_event.dtend = event[:datetime].to_datetime.utc + 1.hour
+  ical_event.dtstart = event[:datetime].to_datetime
+  ical_event.dtend = event[:datetime].to_datetime + 1.hour
   ical_event.summary = event[:title]
   ical_event.location = event[:name]
   ical_event.url = event[:external_url]

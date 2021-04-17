@@ -113,7 +113,6 @@ DEPENDENCIES
   dotenv
   icalendar (~> 2.7)
   rake
-  tzinfo-data
 
 BUNDLED WITH
    2.2.3
