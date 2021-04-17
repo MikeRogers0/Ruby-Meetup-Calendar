@@ -11,4 +11,5 @@ group :bridgetown_plugins do
   gem "bridgetown-minify-html"
 end
 
+gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 gem "icalendar", "~> 2.7"
