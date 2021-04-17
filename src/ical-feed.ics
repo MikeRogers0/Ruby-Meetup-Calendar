@@ -1,9 +1,8 @@
 ---
 layout: false
-permalink: /ical
+permalink: /ical-feed
 collection: events
 template_engine: erb
-output_ext: ics
 ---
 <% require 'icalendar' %>
 <% cal = Icalendar::Calendar.new %>
@@ -19,10 +18,11 @@ output_ext: ics
   ical_event.uid = event.url
   ical_event.dtstart = event[:datetime].to_datetime
   ical_event.dtend = event[:datetime].to_datetime + 1.hour
-  ical_event.summary = event[:external_url]
+  ical_event.summary = event[:title]
+  ical_event.description = event[:external_url]
   ical_event.url = event[:external_url]
   ical_event.status = "CONFIRMED"
-  ical_event.transp = "TRANSPARENT"
+  ical_event.transp = "OPAQUE"
   ical_event.sequence = 0
   cal.add_event(ical_event)
   %>
