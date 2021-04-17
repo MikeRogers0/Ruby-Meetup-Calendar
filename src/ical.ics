@@ -6,7 +6,14 @@ template_engine: erb
 output_ext: ics
 ---
 <% require 'icalendar' %>
+<% require 'icalendar/tzinfo' %>
 <% cal = Icalendar::Calendar.new %>
+
+<%
+  tz = TZInfo::Timezone.get("UTC")
+  cal.add_timezone(tz.ical_timezone(Time.now.utc))
+%>
+
 <% site.collections.events.docs.each do |event| %>
   <%
   ical_event = Icalendar::Event.new
@@ -20,4 +27,5 @@ output_ext: ics
   %>
 <% end %>
 
+<% cal.publish %>
 <%= cal.to_ical %>
