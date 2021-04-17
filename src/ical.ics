@@ -18,8 +18,8 @@ output_ext: ics
   <%
   ical_event = Icalendar::Event.new
   ical_event.uid = event.url
-  ical_event.dtstart = event[:datetime].to_datetime
-  ical_event.dtend = event[:datetime].to_datetime + 1.hour
+  ical_event.dtstart = event[:datetime].to_datetime.utc
+  ical_event.dtend = event[:datetime].to_datetime.utc + 1.hour
   ical_event.summary = event[:title]
   ical_event.location = event[:name]
   ical_event.url = event[:external_url]
