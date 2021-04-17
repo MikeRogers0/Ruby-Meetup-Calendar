@@ -11,7 +11,7 @@ output_ext: ics
 
 <%
   tz = TZInfo::Timezone.get("UTC")
-  cal.add_timezone(tz.ical_timezone(Time.now.utc))
+  cal.add_timezone(tz.ical_timezone(Time.now))
 %>
 
 <% site.collections.events.docs.each do |event| %>
