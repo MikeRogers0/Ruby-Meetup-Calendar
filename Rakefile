@@ -14,7 +14,7 @@ task :environment do
 end
 
 namespace :update_data do
-  desc "Updates the current know events & converts them into posts"
+  desc "Updates the currently known events & converts them into posts"
   task all: :environment do
     PostsGenerator.new.call
   end
