@@ -3,11 +3,14 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem "activesupport"
 gem "bridgetown", "~> 0.19.1"
-gem "bridgetown-minify-html"
-gem "bridgetown-seo-tag"
 gem "dotenv"
-gem "icalendar", "~> 2.7"
+gem "icalendar", "~> 2.7", require: false
 gem "rake"
+
+group :bridgetown_plugins do
+  gem "bridgetown-seo-tag"
+  gem "bridgetown-minify-html"
+end
 
 group :development do
   gem "standardrb"
