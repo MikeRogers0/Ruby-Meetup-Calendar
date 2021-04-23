@@ -11,7 +11,7 @@ class PostsGenerator::Group::MeetingPlace < PostsGenerator::Group
         title: event_data["name"],
         datetime: Time.parse(event_data["start_time"]),
         url: event_data["url"],
-        online_event: event_data["location"] == 'Online Event',
+        online_event: event_data["location"] == "Online Event",
         name: name
       )
     }
