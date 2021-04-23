@@ -1,4 +1,4 @@
-require 'icalendar'
+require "icalendar"
 
 class IcalBuilder < SiteBuilder
   def build
@@ -15,7 +15,6 @@ class IcalBuilder < SiteBuilder
     return if file_exists?(file_path)
     make_ical_file
   end
-
 
   def make_ical_file
     File.write(file_path, ical_output)
@@ -35,13 +34,13 @@ class IcalBuilder < SiteBuilder
     cal.prodid = "-//Ruby Meetup Calendar//Calendar 1.0//EN"
     cal.append_custom_property("X-WR-CALNAME", "Ruby Meetup Calendar")
     cal.append_custom_property("X-WR-TIMEZONE", "Etc/UTC")
-    cal.append_custom_property("X-PUBLISHED-TTL","PT24H")
+    cal.append_custom_property("X-PUBLISHED-TTL", "PT24H")
     cal.append_custom_property("X-WR-CALDESC", "Find Ruby Meetup Events")
 
     @site.collections.events.docs.each do |event|
       ical_event = Icalendar::Event.new
       ical_event.uid = event.url
-      ical_event.dtstart = Icalendar::Values::DateTime.new(event[:datetime].to_datetime.utc, tzid: 'UTC')
+      ical_event.dtstart = Icalendar::Values::DateTime.new(event[:datetime].to_datetime.utc, tzid: "UTC")
       ical_event.summary = event[:title]
       ical_event.description = event[:external_url]
       ical_event.url = event[:external_url]
