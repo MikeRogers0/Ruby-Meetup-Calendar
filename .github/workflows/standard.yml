@@ -3,8 +3,6 @@ name: Standard
 on:
   pull-request:
   push:
-    branches-ignore:
-      - master
 jobs:
   standard:
     runs-on: ubuntu-latest
