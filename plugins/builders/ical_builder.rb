@@ -34,15 +34,14 @@ class IcalBuilder < SiteBuilder
     cal = Icalendar::Calendar.new
     cal.prodid = "-//Ruby Meetup Calendar//Calendar 1.0//EN"
     cal.append_custom_property("X-WR-CALNAME", "Ruby Meetup Calendar")
-    #cal.append_custom_property("X-WR-TIMEZONE", "Etc/GMT")
+    cal.append_custom_property("X-WR-TIMEZONE", "Etc/UTC")
     cal.append_custom_property("X-PUBLISHED-TTL","PT24H")
     cal.append_custom_property("X-WR-CALDESC", "Find Ruby Meetup Events")
 
     @site.collections.events.docs.each do |event|
       ical_event = Icalendar::Event.new
       ical_event.uid = event.url
-      ical_event.dtstart = event[:datetime].to_datetime.utc
-      ical_event.dtend = event[:datetime].to_datetime.utc + 1.hour
+      ical_event.dtstart = Icalendar::Values::DateTime.new(event[:datetime].to_datetime.utc, tzid: 'UTC')
       ical_event.summary = event[:title]
       ical_event.description = event[:external_url]
       ical_event.url = event[:external_url]
