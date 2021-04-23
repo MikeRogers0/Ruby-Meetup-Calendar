@@ -15,7 +15,7 @@ template_engine: erb
       <ul class="mt-4">
         <% group.links.compact.each do |name, url| %>
           <li class="inline-block mr-4">
-            <a href="<%= url %>" title="<%= name.capitalize %>: <%= url %>" target="_blank" rel="noopenner" class="bg-gray-300 text-gray-900 hover:bg-white p-3 block rounded-full text-xl">
+            <a href="<%= url %>" title="<%= name.capitalize %>: <%= url %>" target="_blank" rel="noopenner" class="bg-gray-300 text-gray-900 hover:bg-white p-3 block rounded-full text-2xl">
               <i data-feather="<%= name %>"></i>
               <span class="sr-only"><%= name %></span>
             </a>
