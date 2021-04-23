@@ -305,3 +305,12 @@
   links:
     twitter: https://twitter.com/fleur_de_ruby
     link: https://discord.com/invite/xFp5GQhVtf
+
+- name: indy.rb
+  source: MeetingPlace
+  meeting_place_id: indyrb
+  links:
+    link: https://meetingplace.io/indyrb
+    slack: https://indyhackers-slack.herokuapp.com/
+    twitter: https://twitter.com/indyrb
+    youtube: https://www.youtube.com/channel/UCuwZgyA6KVErxK3mCf2Wzdg
