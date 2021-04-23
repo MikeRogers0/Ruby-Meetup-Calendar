@@ -10,3 +10,7 @@ group :bridgetown_plugins do
   gem "bridgetown-seo-tag"
   gem "bridgetown-minify-html"
 end
+
+group :development do
+  gem "standardrb"
+end
