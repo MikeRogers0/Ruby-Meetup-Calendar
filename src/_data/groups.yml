@@ -1,5 +1,12 @@
 ---
 
+- name: Amsterdam.rb
+  source: Meetup
+  meetup_id: Amsterdam-rb
+  links:
+    link: https://www.meetup.com/Amsterdam-rb
+    twitter: https://twitter.com/amsrb
+
 - name: Andalucia.rb
   source: OnRubyFeed
   feed_url: https://andalucia.onruby.eu/events.json
@@ -16,6 +23,13 @@
     twitter: https://twitter.com/altrug
     youtube: https://www.youtube.com/channel/UC5t3bcjKRxEYkGWEm5z9rTw
     github: https://github.com/atlrug
+
+- name: Austin on Rails
+  source: Meetup
+  meetup_id: Austin-on-Rails
+  links:
+    link: https://www.meetup.com/Austin-on-Rails
+    twitter: https://twitter.com/austinonrails
 
 - name: Bangkok.rb
   source: Meetup
@@ -154,6 +168,20 @@
     twitter: https://twitter.com/nwrug
     github: https://github.com/nwrug
 
+- name: Omaha Ruby and Open Source Meetup
+  source: Meetup
+  meetup_id: Omaha-Ruby-Meetup
+  links:
+    link: https://www.meetup.com/Omaha-Ruby-Meetup/
+    twitter: https://twitter.com/omaharuby
+
+- name: Paris.rb
+  source: Meetup
+  meetup_id: parisrb
+  links:
+    link: https://rubyparis.org/
+    github: https://github.com/parisrb
+
 - name: Philly.rb
   source: Meetup
   meetup_id: Phillyrb
@@ -252,6 +280,13 @@
     twitter: https://twitter.com/southwestruby
     youtube: https://www.youtube.com/channel/UCqJNznEtrBiKB3M6Ue5zuEw
 
+- name: Vancouver Ruby Meetup Group
+  source: Meetup
+  meetup_id: vancouver-ruby
+  links:
+    link: http://vanruby.org/
+    github: https://github.com/vanruby
+
 - name: WNB.rb
   source: Eventbrite
   eventbrite_id: 32770260241
@@ -270,3 +305,12 @@
   links:
     twitter: https://twitter.com/fleur_de_ruby
     link: https://discord.com/invite/xFp5GQhVtf
+
+- name: indy.rb
+  source: MeetingPlace
+  meeting_place_id: indyrb
+  links:
+    link: https://meetingplace.io/indyrb
+    slack: https://indyhackers-slack.herokuapp.com/
+    twitter: https://twitter.com/indyrb
+    youtube: https://www.youtube.com/channel/UCuwZgyA6KVErxK3mCf2Wzdg

@@ -17,3 +17,4 @@ end
 require "./lib/posts_generator/group/meetup"
 require "./lib/posts_generator/group/eventbrite"
 require "./lib/posts_generator/group/on_ruby_feed"
+require "./lib/posts_generator/group/meeting_place"
