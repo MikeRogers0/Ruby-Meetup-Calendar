@@ -1,0 +1,53 @@
+/* purgecss start ignore */
+[data-feather] {
+  width: 1em;
+  height: 1em;
+  display: block;
+  background: currentColor no-repeat;
+  mask-size: cover;
+}
+
+[data-feather="link"] {
+  mask-image: url('~feather-icons/dist/icons/link.svg');
+}
+
+[data-feather="twitter"] {
+  mask-image: url('~feather-icons/dist/icons/twitter.svg');
+}
+
+[data-feather="github"] {
+  mask-image: url('~feather-icons/dist/icons/github.svg');
+}
+
+[data-feather="youtube"] {
+  mask-image: url('~feather-icons/dist/icons/youtube.svg');
+}
+
+[data-feather="facebook"] {
+  mask-image: url('~feather-icons/dist/icons/facebook.svg');
+}
+
+[data-feather="instagram"] {
+  mask-image: url('~feather-icons/dist/icons/instagram.svg');
+}
+
+[data-feather="slack"] {
+  mask-image: url('~feather-icons/dist/icons/slack.svg');
+}
+
+[data-feather="plus"] {
+  mask-image: url('~feather-icons/dist/icons/plus.svg');
+}
+
+[data-feather="twitch"] {
+  mask-image: url('~feather-icons/dist/icons/twitch.svg');
+}
+
+[data-feather="chevron-left"] {
+  mask-image: url('~feather-icons/dist/icons/chevron-left.svg');
+}
+
+[data-feather="chevron-right"] {
+  mask-image: url('~feather-icons/dist/icons/chevron-right.svg');
+}
+/* purgecss end ignore */
