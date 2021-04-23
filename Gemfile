@@ -12,3 +12,7 @@ group :bridgetown_plugins do
 end
 
 gem "icalendar", "~> 2.7"
+
+group :development do
+  gem "standardrb"
+end

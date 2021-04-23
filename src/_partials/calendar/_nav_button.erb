@@ -2,25 +2,14 @@
 <% forward_svg ||= locals[:forward] %>
 
 <% if site.collections.events.docs.select { |event| (month.beginning_of_month...month.end_of_month).cover?(event[:date].to_date) }.any? %>
-  <a href="/events/<%= (month).strftime('%Y-%m') %>" class="btn">
-    <span class="sr-only"><%= forward_svg ? 'Next' : 'Prev' %></span>
-    <svg class="h-6 w-6 inline-flex leading-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <% if forward_svg %>
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-      <% else %>
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-      <% end %>
-    </svg>
+  <a href="/events/<%= (month).strftime('%Y-%m') %>/" class="btn text-2xl">
+    <i data-feather="chevron-<%= forward_svg ? 'right' : 'left' %>"></i>
+    <span class="sr-only"><%= forward_svg ? 'Next Month' : 'Prev Month' %></span>
   </a>
 <% else %>
-  <div class="btn btn--disabled cursor-not-allowed">
-    <span class="sr-only"><%= forward_svg ? 'Next' : 'Prev' %></span>
-    <svg class="h-6 w-6 inline-flex leading-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <% if forward_svg %>
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-      <% else %>
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-      <% end %>
+  <div class="btn btn--disabled cursor-not-allowed text-2xl">
+    <i data-feather="chevron-<%= forward_svg ? 'right' : 'left' %>"></i>
+    <span class="sr-only"><%= forward_svg ? 'Next Month' : 'Prev Month' %></span>
     </svg>
   </div>
 <% end %>

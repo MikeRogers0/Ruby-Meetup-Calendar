@@ -39,5 +39,6 @@
   @import "components/card.css";
   @import "components/content.css";
   @import "components/navbar.css";
+  @import "components/feather.css";
   @import "components/footer.css";
 }
