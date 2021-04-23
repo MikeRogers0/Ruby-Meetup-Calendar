@@ -5,9 +5,6 @@ import * as Turbo from "@hotwired/turbo"
 import LocalTime from "local-time"
 LocalTime.start()
 
-import feather from "feather-icons"
-feather.replace();
-
 // Import all javascript files from src/_components
 const componentsContext = require.context("bridgetownComponents", true, /.js$/)
 componentsContext.keys().forEach(componentsContext)
