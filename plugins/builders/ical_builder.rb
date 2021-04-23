@@ -21,7 +21,7 @@ class IcalBuilder < SiteBuilder
   end
 
   def file_path
-    File.join(site.dest, "ical-22.ical")
+    File.join(site.dest, "ical.ical")
   end
 
   # Checks if a file already exists in the site source
