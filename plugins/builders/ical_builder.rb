@@ -1,5 +1,4 @@
 require 'icalendar'
-require "fileutils"
 
 class IcalBuilder < SiteBuilder
   def build
