@@ -1,6 +1,7 @@
 name: Standard
 
 on:
+  pull-request:
   push:
     branches-ignore:
       - master
