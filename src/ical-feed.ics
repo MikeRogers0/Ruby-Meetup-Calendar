@@ -1,7 +1,0 @@
----
-layout: false
-permalink: /ical-feed
-collection: events
-template_engine: erb
----
-
