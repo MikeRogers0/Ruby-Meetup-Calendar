@@ -1,12 +1,50 @@
+.btn:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
+}
 .btn {
-  @apply leading-none rounded-lg inline-flex items-center cursor-pointer text-gray-400 hover:bg-gray-100 p-1;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+  padding: 0.25rem;
+  --tw-text-opacity: 1;
+  color: rgba(156, 163, 175, var(--tw-text-opacity));
 }
-
+.btn--disabled:hover {
+  background-color: transparent;
+}
 .btn--disabled {
-  @apply opacity-50 hover:bg-transparent;
+  opacity: 0.5;
 }
-
 .btn--navbar {
-  @apply leading-none rounded-lg inline-flex items-center cursor-pointer bg-gray-800 hover:bg-gray-900 hover:shadow-lg;
-  @apply no-underline text-white font-bold py-3 px-4 rounded;
+  --tw-bg-opacity: 1;
+  background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
+}
+.btn--navbar:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgba(17, 24, 39, var(--tw-bg-opacity));
+}
+.btn--navbar {
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+}
+.btn--navbar:hover {
+  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.btn--navbar {
+  border-radius: 0.25rem;
+  font-weight: 700;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  text-decoration: none;
 }

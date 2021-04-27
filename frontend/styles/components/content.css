@@ -1,3 +1,6 @@
 .content {
-  @apply text-gray-50 bg-indigo-800;
+  --tw-bg-opacity: 1;
+  background-color: rgba(55, 48, 163, var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgba(249, 250, 251, var(--tw-text-opacity));
 }

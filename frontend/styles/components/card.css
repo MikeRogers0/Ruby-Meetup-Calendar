@@ -1,5 +1,17 @@
 .card {
-  @apply bg-white p-4;
-  @apply md:rounded-lg shadow-lg overflow-hidden;
-  @apply bg-gray-800;
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+  padding: 1rem;
+  overflow: hidden;
+  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+@media (min-width: 768px) {
+  .card {
+    border-radius: 0.5rem;
+  }
+}
+.card {
+  --tw-bg-opacity: 1;
+  background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
 }

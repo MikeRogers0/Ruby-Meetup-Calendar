@@ -1,6 +1,39 @@
 .footer {
-  @apply py-8 px-4 container mx-auto text-gray-100 text-center;
+  width: 100%;
 }
-
-.footer__links {
+@media (min-width: 640px) {
+  .footer {
+    max-width: 640px;
+  }
+}
+@media (min-width: 768px) {
+  .footer {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+  .footer {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+  .footer {
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1536px) {
+  .footer {
+    max-width: 1536px;
+  }
+}
+.footer {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  --tw-text-opacity: 1;
+  color: rgba(243, 244, 246, var(--tw-text-opacity));
 }
