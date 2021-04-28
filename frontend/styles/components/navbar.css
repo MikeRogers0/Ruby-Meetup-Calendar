@@ -42,12 +42,20 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-.navbar__brand h1 a {
+
+.navbar__brand  {
+  margin: 0;
+}
+.navbar__brand a {
   font-size: 1.5rem;
   line-height: 2rem;
   --tw-text-opacity: 1;
   color: rgba(243, 244, 246, var(--tw-text-opacity));
   text-decoration: none;
+}
+
+.navbar__brand__icon {
+  margin-right: 0.5rem;
 }
 .navbar__links {
   display: flex;
@@ -56,6 +64,8 @@
   margin-top: 0.5rem;
   align-items: center;
   width: 100%;
+  list-style: none;
+  padding: 0;
 }
 @media (min-width: 768px) {
   .navbar__links {
