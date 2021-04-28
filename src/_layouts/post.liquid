@@ -2,12 +2,10 @@
 layout: default
 ---
 
-<div class="antialiased border-gray-100 container mx-auto py-2 md:py-12">
-  <h1 class="text-center mb-5">{{ page.title }}</h1>
+<h1>{{ page.title }}</h1>
 
-  <p>{{ page.name }}</p>
-  <p>{{ page.datetime }}</p>
-  <p>{{ page.external_url }}</p>
+<p>{{ page.name }}</p>
+<p>{{ page.datetime }}</p>
+<p>{{ page.external_url }}</p>
 
-  {{ content }}
-</div>
+{{ content }}
