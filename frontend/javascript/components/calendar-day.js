@@ -35,7 +35,6 @@ export default class CalendarDay extends React.Component {
     if ( !this._dayInCurrentMonth() ) { classes.push('calendar-day--not-in-current-month') }
     if ( this._dayHasPast() ) { classes.push('calendar-day--past') }
     if ( this._dayIsToday() ) { classes.push('calendar-day--today') }
-    
     return classes.join(' ');
   }
 
@@ -43,12 +42,11 @@ export default class CalendarDay extends React.Component {
     if(!this._dayHasEvents()) { return; }
 
     return (
-      <ul>
+      <ul className="calendar-events">
         { this._eventsOnDay().map((event) => <CalendarEvent key={event.title + event.datetime} event={ event } />) }
       </ul>
     )
   }
-
 
   render() {
     return (

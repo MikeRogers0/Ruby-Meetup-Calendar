@@ -15,14 +15,14 @@
       <span class="muted"><%= current_month.year %></span>
     </div>
 
-    <div>
-
-      <%= partial 'calendar/nav_button', month: current_month - 1.months, forward_svg: false %>
-
-      <div class="border-r border-gray-800 inline-flex h-6"></div>
-
-      <%= partial 'calendar/nav_button', month: current_month + 1.months, forward_svg: true %>
-    </div>
+    <ul class="calendar__navigation">
+      <li class="calendar__navigation__item">
+        <%= partial 'calendar/nav_button', month: current_month - 1.months, forward_svg: false %>
+      </li>
+      <li class="calendar__navigation__item">
+        <%= partial 'calendar/nav_button', month: current_month + 1.months, forward_svg: true %>
+      </li>
+    </ul>
   </div>
 
   <div class="calendar-days calendar-days--title text-center">

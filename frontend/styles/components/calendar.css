@@ -31,6 +31,18 @@
   padding-right: 0.5rem;
   padding-bottom: 0.5rem;
 }
+
+.calendar__navigation {
+  margin: 0;
+  list-style: none;
+}
+
+.calendar__navigation__item {
+  display: inline-block;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .calendar-days {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -46,6 +58,9 @@
   }
 }
 .calendar-day {
+  border-width: 0;
+  border-style: solid;
+  border-color: #e5e7eb;
   --tw-border-opacity: 1;
   border-color: rgba(17, 24, 39, var(--tw-border-opacity));
   border-right-width: 1px;

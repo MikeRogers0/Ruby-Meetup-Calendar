@@ -9,10 +9,10 @@ export default class CalendarEvent extends React.Component {
 
   render() {
     return (
-      <li className="text-xs mb-1 list-disc list-inside">
+      <li className="calendar-events__item">
         <a href={ this.props.event.external_url } target="_blank">
-          { this.props.event.name } 
-          <span> - </span> 
+          { this.props.event.name }
+          <span> - </span>
           <time
             data-format="%l:%M%P"
             data-local="time"
