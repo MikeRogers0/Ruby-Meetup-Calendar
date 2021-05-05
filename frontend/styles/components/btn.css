@@ -13,11 +13,14 @@
   color: var(--background-secondary);
 }
 
-.btn--disabled:hover {
-  background-color: transparent;
-}
 .btn--disabled {
-  opacity: 0.5;
+  color: var(--text-primary-darker);
+  cursor: not-allowed;
+
+  &:hover, :focus {
+    color: var(--text-primary-darker);
+    background-color: var(--background-secondary);
+  }
 }
 
 .btn--navbar {
