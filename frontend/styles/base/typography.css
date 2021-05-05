@@ -1,6 +1,6 @@
 body {
   background: var(--background-primary);
-  font-family: var(--primary-fonts);
+  font-family: var(--fonts-serif);
   font-size: var(--font-size-4);
   color: var(--text-primary);
   -webkit-font-smoothing: antialiased;
