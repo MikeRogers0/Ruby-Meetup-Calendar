@@ -8,10 +8,10 @@ module.exports = {
     'postcss-nested': {},
     'postcss-preset-env': {
       importFrom: [
-        './frontend/styles/config/breakpoints.json',
-        './frontend/styles/config/colours.css',
-        './frontend/styles/config/fonts.css',
-        './frontend/styles/config/spacing.css',
+        './frontend/styles/variables/breakpoints.json',
+        './frontend/styles/variables/colours.css',
+        './frontend/styles/variables/fonts.css',
+        './frontend/styles/variables/spacing.css',
       ],
       stage: 1
     },

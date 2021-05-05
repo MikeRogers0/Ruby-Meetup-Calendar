@@ -1,4 +1,4 @@
-@import-glob "config/*.css";
+@import-glob "variables/*.css";
 
 @import 'normalize.css';
 
