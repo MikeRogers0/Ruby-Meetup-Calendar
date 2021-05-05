@@ -2,6 +2,7 @@
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   padding: 1rem;
+  background-color: var(--background-secondary);
 }
 @media (min-width: 768px) {
   .calendar {
@@ -21,10 +22,7 @@
     border-radius: 0.5rem;
   }
 }
-.calendar {
-  --tw-bg-opacity: 1;
-  background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
-}
+
 .calendar__header {
   display: flex;
   align-items: center;

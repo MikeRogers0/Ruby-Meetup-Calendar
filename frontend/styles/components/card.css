@@ -6,8 +6,7 @@
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
     var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 
-  --tw-bg-opacity: 1;
-  background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
+  background-color: var(--background-secondary);
 }
 @media (min-width: 768px) {
   .card {
@@ -31,20 +30,15 @@
 }
 
 .card__icon {
-  /*bg-gray-300 text-gray-900 hover:bg-white p-3 block rounded-full text-2xl*/
-
   display: block;
-  --tw-text-opacity: 1;
-  color: rgba(17, 24, 39, var(--tw-text-opacity));
+  color: var(--text-secondary);
   padding: 0.75rem;
   font-size: 1.5rem;
   line-height: 2rem;
   border-radius: 9999px;
-  --tw-bg-opacity: 1;
-  background-color: rgba(209, 213, 219, var(--tw-bg-opacity));
+  background-color: var(--background-tertiary);
 }
 
 .card__icon:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+  background-color: var(--background-tertiary-light);
 }

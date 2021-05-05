@@ -1,0 +1,10 @@
+:root {
+  --primary-fonts: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+  --font-size-1: 0.25rem;
+  --font-size-2: 0.5rem;
+  --font-size-3: 0.75rem;
+  --font-size-4: 1rem;
+}
