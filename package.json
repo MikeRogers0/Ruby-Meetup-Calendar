@@ -28,8 +28,10 @@
     "postcss-flexbugs-fixes": "^4.1.0",
     "postcss-import-ext-glob": "^2.0.1",
     "postcss-loader": "^4.1.0",
+    "postcss-nested": "^5.0.5",
     "postcss-preset-env": "^6.7.0",
     "prettier-standard": "^16.4.1",
+    "postcss-mixins": "^7.0.3",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.11",
     "webpack-manifest-plugin": "^2.1.0"
@@ -40,7 +42,6 @@
     "local-time": "^2.1.0",
     "luxon": "^1.25.0",
     "normalize.css": "^8.0.1",
-    "postcss-mixins": "^7.0.3",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   }

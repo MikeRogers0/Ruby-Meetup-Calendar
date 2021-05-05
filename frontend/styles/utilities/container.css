@@ -1,1 +1,3 @@
-@mixin container .container;
+.container {
+  @mixin container;
+}

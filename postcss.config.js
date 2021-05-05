@@ -5,6 +5,7 @@ module.exports = {
     'postcss-mixins': {
       mixinsDir: './frontend/styles/mixins/'
     },
+    'postcss-nested': {},
     'postcss-preset-env': {
       importFrom: [
         './frontend/styles/config/breakpoints.json',
@@ -12,9 +13,6 @@ module.exports = {
         './frontend/styles/config/fonts.css',
         './frontend/styles/config/spacing.css',
       ],
-      autoprefixer: {
-        flexbox: 'no-2009'
-      },
       stage: 1
     },
   }

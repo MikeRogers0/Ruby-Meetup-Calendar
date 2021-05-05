@@ -6,12 +6,12 @@
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(1, minmax(0, 1fr));
-}
-@media (--viewport-md) {
-  .navbar {
+
+  @media (--viewport-md) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
 
 .navbar__brand {
   margin: 0;
@@ -28,15 +28,14 @@
 .navbar__links {
   padding: 0;
   display: none;
+
+  @media (--viewport-md) {
+    display: block;
+    margin-left: auto;
+  }
 }
 .navbar__links .list-inline {
   margin-top: 0;
   margin-bottom: 0;
 }
 
-@media (--viewport-md) {
-  .navbar__links {
-    display: block;
-    margin-left: auto;
-  }
-}
