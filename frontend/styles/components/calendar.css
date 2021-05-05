@@ -1,21 +1,16 @@
 .calendar {
+  @mixin shadow;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   padding: 1rem;
   background-color: var(--background-secondary);
-}
-@media (--viewport-md) {
-  .calendar {
+  overflow: hidden;
+
+  @media (--viewport-md) {
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
-}
-.calendar {
-  overflow: hidden;
-  @mixin shadow;
-}
-@media (--viewport-sm) {
-  .calendar {
+  @media (--viewport-sm) {
     border-radius: 0.5rem;
   }
 }
@@ -43,17 +38,18 @@
 .calendar-days {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
-}
-@media (--viewport-lg) {
-  .calendar-days {
+
+  @media (--viewport-lg) {
     grid-template-columns: repeat(7, minmax(0, 1fr));
   }
 }
+
 @media (--viewport-lg) {
   .calendar-days--title > .calendar-day:nth-child(7n) {
     border-right-width: 0;
   }
 }
+
 .calendar-day {
   border-width: 0;
   border-style: solid;
@@ -67,15 +63,15 @@
   padding-left: 0.75rem;
   padding-right: 0.75rem;
   display: none;
-}
-@media (--viewport-lg) {
-  .calendar-day {
+
+  @media (--viewport-lg) {
     display: block;
   }
 }
-.calendar-day--with-events {
+.calendar-days .calendar-day--with-events {
   display: block;
 }
+
 .calendar-day--past {
   --tw-text-opacity: 1;
   color: rgba(161, 161, 170, var(--tw-text-opacity));
@@ -91,20 +87,19 @@
 }
 .calendar-day--not-in-current-month {
   display: none;
-}
-@media (--viewport-lg) {
-  .calendar-day--not-in-current-month {
+
+  @media (--viewport-lg) {
     display: block;
   }
 }
 .calendar-days > .calendar-day {
   border-right-width: 0;
-}
-@media (--viewport-lg) {
-  .calendar-days > .calendar-day {
+
+  @media (--viewport-lg) {
     border-right-width: 1px;
   }
 }
+
 @media (--viewport-lg) {
   .calendar-day--body {
     min-height: 7rem;
@@ -116,6 +111,7 @@
 .calendar-days > .calendar-day:nth-last-child(-n + 7) {
   border-bottom-width: 0;
 }
+
 .calendar-day__date {
   display: inline-flex;
   height: 1.5rem;
@@ -124,9 +120,8 @@
 }
 .calendar-day__day_of_week {
   display: inline-block;
-}
-@media (--viewport-lg) {
-  .calendar-day__day_of_week {
+
+  @media (--viewport-lg) {
     display: none;
   }
 }
