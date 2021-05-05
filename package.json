@@ -40,6 +40,7 @@
     "local-time": "^2.1.0",
     "luxon": "^1.25.0",
     "normalize.css": "^8.0.1",
+    "postcss-mixins": "^7.0.3",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   }

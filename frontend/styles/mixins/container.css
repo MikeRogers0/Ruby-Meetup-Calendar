@@ -1,0 +1,33 @@
+@define-mixin container $selector {
+  $(selector) {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    @mixin-content;
+  }
+
+  @media (--viewport-md) {
+    $(selector) {
+      max-width: 640px;
+    }
+  }
+
+  @media (--viewport-md) {
+    $(selector) {
+      max-width: 768px;
+    }
+  }
+
+  @media (--viewport-lg) {
+    $(selector) {
+      max-width: 1024px;
+    }
+  }
+
+  @media (--viewport-xl) {
+    $(selector) {
+      max-width: 1280px;
+    }
+  }
+}

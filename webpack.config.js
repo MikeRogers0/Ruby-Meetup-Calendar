@@ -60,7 +60,7 @@ module.exports = {
           },
         },
       },
-      
+
       {
         test: /\.(s[ac]|c)ss$/,
         use: [
@@ -73,8 +73,8 @@ module.exports = {
           },
           "postcss-loader"
         ],
-      },      
-      
+      },
+
       {
         test: /\.woff2?$|\.ttf$|\.eot$|\.svg$/,
         loader: "file-loader",
