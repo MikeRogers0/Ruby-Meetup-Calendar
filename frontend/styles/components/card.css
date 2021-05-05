@@ -8,6 +8,7 @@
 
   background-color: var(--background-secondary);
 }
+
 @media (--viewport-md) {
   .card {
     border-radius: 0.5rem;
