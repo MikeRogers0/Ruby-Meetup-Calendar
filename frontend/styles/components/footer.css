@@ -7,16 +7,13 @@
   padding-bottom: 2rem;
   text-align: center;
   display: grid;
-}
 
-@media (--viewport-lg) {
-  .footer {
+  @media (--viewport-lg) {
     text-align: left;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
 
-  .footer .list-inline:last-child {
-    margin-left: auto;
+    .list-inline:last-child {
+      margin-left: auto;
+    }
   }
 }
-

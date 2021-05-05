@@ -1,4 +1,3 @@
-/* purgecss start ignore */
 [data-feather] {
   width: 1em;
   height: 1em;
@@ -50,4 +49,3 @@
 [data-feather='chevron-right'] {
   mask-image: url('~feather-icons/dist/icons/chevron-right.svg');
 }
-/* purgecss end ignore */
