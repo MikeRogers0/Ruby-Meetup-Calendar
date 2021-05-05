@@ -8,7 +8,8 @@
   text-align: center;
   display: grid;
 }
-@media (min-width: 768px) {
+
+@media (min-width: 1024px) {
   .footer {
     text-align: left;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -18,3 +19,4 @@
     margin-left: auto;
   }
 }
+

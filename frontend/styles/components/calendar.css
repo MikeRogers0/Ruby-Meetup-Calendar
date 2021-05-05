@@ -17,7 +17,7 @@
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
     var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
-@media (min-width: 768px) {
+@media (min-width: 640px) {
   .calendar {
     border-radius: 0.5rem;
   }

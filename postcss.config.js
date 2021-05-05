@@ -1,4 +1,4 @@
-module.exports = {  
+module.exports = {
   plugins: {
     'postcss-import-ext-glob': {},
     'postcss-flexbugs-fixes': {},
