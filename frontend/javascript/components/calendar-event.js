@@ -1,25 +1,17 @@
 import React from "react"
-import ReactDOM from "react-dom"
-import { DateTime } from "luxon"
 
-export default class CalendarEvent extends React.Component {
-  _formatted_datetime() {
-    DateTime.fromISO(this.props.event.datetime).toLocaleString(DateTime.TIME_WITH_SHORT_OFFSET)
-  }
+const CalendarEvent = ({event}) => (
+  <li className="text-xs mb-1 list-disc list-inside">
+    <a href={ event.external_url } target="_blank">
+      { event.name } 
+      <span> - </span> 
+      <time
+        data-format="%l:%M%P"
+        data-local="time"
+        datetime={ event.datetime }
+      >{ event.datetime }</time>
+    </a>
+  </li>
+);
 
-  render() {
-    return (
-      <li className="text-xs mb-1 list-disc list-inside">
-        <a href={ this.props.event.external_url } target="_blank">
-          { this.props.event.name } 
-          <span> - </span> 
-          <time
-            data-format="%l:%M%P"
-            data-local="time"
-            datetime={ this.props.event.datetime }
-          >{ this.props.event.datetime }</time>
-        </a>
-      </li>
-    );
-  }
-}
+export default CalendarEvent
