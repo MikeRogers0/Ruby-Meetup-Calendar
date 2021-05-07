@@ -100,6 +100,14 @@
   }
 }
 
+.calendar-day ul {
+  padding-left: 1rem;
+  font-size: 0.8rem;
+}
+.calendar-day ul li {
+  padding-bottom: 0.5rem;
+}
+
 @media (--viewport-lg) {
   .calendar-day--body {
     min-height: 7rem;
