@@ -1,6 +1,5 @@
 module.exports = {
   plugins: {
-    'postcss-import-ext-glob': {},
     'postcss-flexbugs-fixes': {},
     'postcss-mixins': {
       mixinsDir: './frontend/styles/mixins/'

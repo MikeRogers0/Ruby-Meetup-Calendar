@@ -1,7 +1,21 @@
-@import-glob "variables/*.css";
+@import "variables/colours.css";
+@import "variables/fonts.css";
+@import "variables/spacing.css";
 
 @import 'normalize.css';
 
-@import-glob "base/*.css";
-@import-glob "components/*.css";
-@import-glob "utilities/*.css";
+@import "base/html.css";
+@import "base/typography.css";
+
+@import "components/btn.css";
+@import "components/calendar-events.css";
+@import "components/calendar.css";
+@import "components/card-list.css";
+@import "components/card.css";
+@import "components/feather.css";
+@import "components/footer.css";
+@import "components/navbar.css";
+
+@import "utilities/container.css";
+@import "utilities/list-inline.css";
+@import "utilities/sr-only.css";
