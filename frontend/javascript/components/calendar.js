@@ -2,17 +2,25 @@ import React from "react"
 import ReactDOM from "react-dom"
 import CalendarDay from "./calendar-day"
 
-class ReactCalendarDays extends React.Component {
-  render() {
-    return (
-      <div className="calendar-days">{this.listCalendarDays()}</div>
+
+const ReactCalendarDays = ({dateRange, currentMonth, events}) => {
+
+  function listCalendarDays() {
+    return dateRange.map((day) => (
+      <CalendarDay 
+        key={ day } 
+        day={ day } 
+        currentMonth={ currentMonth } 
+        events={ events } />
+      )
     );
   }
-
-  listCalendarDays() {
-    return this.props.dateRange.map((day) => <CalendarDay key={ day } day={ day } currentMonth={ this.props.currentMonth } events={ this.props.events }/>);
-  }
+  
+  return (
+    <div className="calendar-days">{listCalendarDays()}</div>
+  );
 }
+
 
 class CalendarDays extends HTMLElement {
   connectedCallback() {
