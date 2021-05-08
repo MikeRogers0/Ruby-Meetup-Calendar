@@ -13,9 +13,6 @@
   <a target="_blank" href="https://github.com/MikeRogers0/Ruby-Meetup-Calendar/actions/workflows/standard.yml">
     <img src="https://github.com/MikeRogers0/Ruby-Meetup-Calendar/actions/workflows/standard.yml/badge.svg" alt="Standard">
   </a>
-  <a target="_blank" href="https://github.com/MikeRogers0/Ruby-Meetup-Calendar/actions/workflows/standard.yml">
-    <img src="https://github.com/MikeRogers0/Ruby-Meetup-Calendar/actions/workflows/standard.yml/badge.svg" alt="Standard">
-  </a>
   <a target="_blank" href="https://github.com/MikeRogers0/Ruby-Meetup-Calendar/actions/workflows/pull-latest-events.yml">
     <img src="https://github.com/MikeRogers0/Ruby-Meetup-Calendar/actions/workflows/pull-latest-events.yml/badge.svg" alt="Pull Latest Events">
   </a>
