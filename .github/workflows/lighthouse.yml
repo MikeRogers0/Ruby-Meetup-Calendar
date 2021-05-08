@@ -1,5 +1,11 @@
-name: Lighthouse CI for Netlify sites
-on: pull_request
+name: Lighthouse CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
 jobs:
   build:
     runs-on: ubuntu-latest
