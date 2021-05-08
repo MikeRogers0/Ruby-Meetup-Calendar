@@ -37,17 +37,14 @@
 }
 
 .calendar-day--past {
-  --tw-text-opacity: 1;
-  color: rgba(161, 161, 170, var(--tw-text-opacity));
-  background: #232c39;
+  color: var(--text-secondary-light);
+  background: var(--background-secondary-light);
 }
 .calendar-day--past a {
-  --tw-text-opacity: 1;
-  color: rgba(161, 161, 170, var(--tw-text-opacity));
+  color: var(--text-secondary-light);
 }
 .calendar-day--today {
-  --tw-bg-opacity: 1;
-  background-color: rgba(55, 65, 81, var(--tw-bg-opacity));
+  background: var(--background-secondary-lightest);
 }
 .calendar-day--not-in-current-month {
   display: none;
