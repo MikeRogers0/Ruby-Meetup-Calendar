@@ -1,6 +1,6 @@
 .card {
   @mixin shadow;
-  padding: 1rem;
+  padding: var(--spacing-4);
   overflow: hidden;
   background-color: var(--background-secondary);
 }
@@ -15,21 +15,10 @@
   margin-top: 0;
 }
 
-.card__icon-list {
-  padding: 0;
-  margin-left: -0.5rem;
-}
-
-.card__icon-list__item {
-  display: inline-block;
-  list-style: none;
-  padding-left: 0.5rem;
-}
-
 .card__icon {
   display: block;
   color: var(--text-secondary);
-  padding: 0.75rem;
+  padding: var(--spacing-3);
   font-size: var(--font-size-6);
   line-height: var(--line-height-6);
   border-radius: 9999px;

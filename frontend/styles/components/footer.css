@@ -1,10 +1,8 @@
 .footer {
   @mixin container;
 
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 1rem;
-  padding-bottom: 2rem;
+  padding: var(--spacing-4);
+  padding-bottom: var(--spacing-6);
   text-align: center;
   display: grid;
 

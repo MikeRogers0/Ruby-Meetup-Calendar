@@ -21,17 +21,10 @@
 }
 
 .calendar-day {
-  border-width: 0;
-  border-style: solid;
-  border-color: #e5e7eb;
-  --tw-border-opacity: 1;
-  border-color: rgba(17, 24, 39, var(--tw-border-opacity));
+  border: 0px solid var(--border-primary);
   border-right-width: 1px;
   border-bottom-width: 1px;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
+  padding: var(--spacing-3) var( --spacing-2);
   display: none;
 
   @media (--viewport-lg) {

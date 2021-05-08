@@ -1,11 +1,10 @@
 .calendar-events {
-  margin: 0.5rem 0;
-  padding-left: 0.75rem;
+  margin: var(--spacing-2) 0;
+  padding-left: var(--spacing-3);
 }
 
 .calendar-events__item {
   font-size: var(--font-size-1);
-  line-height: var(--line-height-1);
-  margin-bottom: 0.4rem;
-  padding-left: 0.1rem;
+  line-height: var(--line-height-2);
+  margin-bottom: var(--spacing-1);
 }

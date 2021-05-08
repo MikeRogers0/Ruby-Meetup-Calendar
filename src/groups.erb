@@ -12,9 +12,9 @@ template_engine: erb
         <%= group.name %>
       </h2>
 
-      <ul class="card__icon-list">
+      <ul class="list-inline">
         <% group.links.compact.each do |name, url| %>
-          <li class="card__icon-list__item">
+          <li>
             <a href="<%= url %>" title="<%= name.capitalize %>: <%= url %>" target="_blank" rel="noopenner" class="card__icon">
               <i data-feather="<%= name %>"></i>
               <span class="sr-only"><%= name %></span>

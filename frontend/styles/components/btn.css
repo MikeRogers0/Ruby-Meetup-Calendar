@@ -4,20 +4,25 @@
   display: inline-flex;
   align-items: center;
   line-height: var(--line-height-1);
-  padding: 0.25rem;
+  padding: var(--spacing-1);
   background-color: var(--background-secondary);
   color: var(--text-primary);
-}
-.btn:hover {
-  background-color: var(--background-tertiary);
-  color: var(--background-secondary);
+
+  &:focus {
+    @mixin shadow;
+  }
+
+  &:hover, &:focus {
+    background-color: var(--background-tertiary);
+    color: var(--background-secondary);
+  }
 }
 
 .btn--disabled {
   color: var(--text-primary-darker);
   cursor: not-allowed;
 
-  &:hover, :focus {
+  &:hover, &:focus {
     color: var(--text-primary-darker);
     background-color: var(--background-secondary);
   }
@@ -25,18 +30,17 @@
 
 .btn--navbar {
   font-weight: 700;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding: var(--spacing-3) var(--spacing-4);
   color: var(--text-primary);
   text-decoration: none;
-  display: inline-flex;
-  align-items: center;
   background-color: var(--background-secondary);
-}
-.btn--navbar:hover {
-  @mixin shadow;
-  color: var(--text-primary);
-  background-color: var(--background-secondary-dark);
+
+  &:focus {
+    @mixin shadow;
+  }
+
+  &:hover, &:focus {
+    color: var(--text-primary);
+    background-color: var(--background-secondary-dark);
+  }
 }

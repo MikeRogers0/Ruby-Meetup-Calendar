@@ -1,10 +1,7 @@
 .navbar {
   @mixin container;
-
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-bottom: 1rem;
-  padding-top: 1.5rem;
+  padding: var(--spacing-4);
+  padding-top: var(--spacing-5);
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -24,7 +21,7 @@
 }
 
 .navbar__brand__icon {
-  margin-right: 0.5rem;
+  margin-right: var(--spacing-2);
 }
 
 .navbar__links {
