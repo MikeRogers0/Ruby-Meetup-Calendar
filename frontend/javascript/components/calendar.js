@@ -24,6 +24,8 @@ const ReactCalendarDays = ({dateRange, currentMonth, events}) => {
 
 class CalendarDays extends HTMLElement {
   connectedCallback() {
+    if (this.querySelector('[type="application/json"]') === null ) { return; }
+
     const data = JSON.parse(this.querySelector('[type="application/json"]').innerHTML)
 
     ReactDOM.render(<ReactCalendarDays
