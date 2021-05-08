@@ -7,9 +7,16 @@
   }
 }
 
-@media (--viewport-lg) {
-  .calendar-days--title > .calendar-day:nth-child(7n) {
-    border-right-width: 0;
+.calendar-day--title {
+  text-align: center;
+  font-weight: 700;
+  font-size: var(--font-size-2);
+  line-height: var(--line-height-2);
+
+  @media (--viewport-lg) {
+    &:nth-child(7n) {
+      border-right-width: 0;
+    }
   }
 }
 
@@ -31,7 +38,8 @@
     display: block;
   }
 }
-.calendar-days .calendar-day--with-events {
+
+.calendar-day--with-events {
   display: block;
 }
 
@@ -75,14 +83,6 @@
   border-bottom-width: 0;
 }
 
-.calendar-day__date {
-  /*display: inline-flex;*/
-  /*height: 1.5rem;*/
-  /*line-height: 1;*/
-  /*line-height: var(--line-height-1);*/
-  /*width: 1.5rem;*/
-  /*text-align: center;*/
-}
 .calendar-day__day_of_week {
   display: inline-block;
 

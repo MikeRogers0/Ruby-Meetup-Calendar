@@ -25,12 +25,10 @@
     </ul>
   </div>
 
-  <div class="calendar-days calendar-days--title text-center">
+  <div class="calendar-days">
     <% date_range.slice(0, 7).each do |date| %>
-      <div class="calendar-day">
-        <div class="h4 uppercase">
-          <%= t('date.abbr_day_names')[date.wday] %>
-        </div>
+      <div class="calendar-day calendar-day--title">
+        <%= t('date.abbr_day_names')[date.wday] %>
       </div>
     <% end %>
   </div>
