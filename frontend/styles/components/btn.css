@@ -1,8 +1,7 @@
 .btn {
   border-radius: 0.5rem;
   cursor: pointer;
-  display: inline-flex;
-  align-items: center;
+  display: inline-block;
   line-height: var(--line-height-1);
   padding: var(--spacing-1);
   background-color: var(--background-secondary);
@@ -18,6 +17,12 @@
   }
 }
 
+.btn > [data-feather] {
+  display: inline-block;
+  vertical-align: bottom;
+  margin-right: var(--spacing-1);
+}
+
 .btn--disabled {
   color: var(--text-primary-darker);
   cursor: not-allowed;
@@ -30,7 +35,7 @@
 
 .btn--navbar {
   font-weight: 700;
-  padding: var(--spacing-3) var(--spacing-4);
+  padding: var(--spacing-3) var(--spacing-5);
   color: var(--text-primary);
   text-decoration: none;
   background-color: var(--background-secondary);
