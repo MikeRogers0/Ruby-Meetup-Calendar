@@ -1,3 +1,8 @@
+[[plugins]]
+  package = "netlify-plugin-cache"
+  [plugins.inputs]
+  paths = [".bridgetown-cache", ".bridgetown-webpack", "output"]
+
 [build]
   command = "yarn deploy"
   publish = "output"
