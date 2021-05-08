@@ -1,17 +1,16 @@
 .btn {
   border-radius: 0.5rem;
-  cursor: pointer;
   display: inline-block;
   line-height: var(--line-height-1);
   padding: var(--spacing-1);
   background-color: var(--background-secondary);
   color: var(--text-primary);
 
-  &:focus {
+  &:active, &:focus {
     @mixin shadow;
   }
 
-  &:hover, &:focus {
+  &:hover {
     background-color: var(--background-tertiary);
     color: var(--background-secondary);
   }
@@ -27,7 +26,7 @@
   color: var(--text-primary-darker);
   cursor: not-allowed;
 
-  &:hover, &:focus {
+  &:hover {
     color: var(--text-primary-darker);
     background-color: var(--background-secondary);
   }
@@ -40,11 +39,7 @@
   text-decoration: none;
   background-color: var(--background-secondary);
 
-  &:focus {
-    @mixin shadow;
-  }
-
-  &:hover, &:focus {
+  &:hover {
     color: var(--text-primary);
     background-color: var(--background-secondary-dark);
   }
