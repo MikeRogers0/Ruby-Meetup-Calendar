@@ -31,6 +31,6 @@
 
 .calendar__navigation__item {
   display: inline-block;
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: var(--font-size-6);
+  line-height: var(--line-height-6);
 }

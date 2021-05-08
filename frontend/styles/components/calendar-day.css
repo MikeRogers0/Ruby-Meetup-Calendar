@@ -63,14 +63,6 @@
   }
 }
 
-.calendar-day ul {
-  padding-left: 1rem;
-  font-size: 0.8rem;
-}
-.calendar-day ul li {
-  padding-bottom: 0.5rem;
-}
-
 @media (--viewport-lg) {
   .calendar-day--body {
     min-height: 7rem;
@@ -84,10 +76,12 @@
 }
 
 .calendar-day__date {
-  display: inline-flex;
-  height: 1.5rem;
-  line-height: 1;
-  width: 1.5rem;
+  /*display: inline-flex;*/
+  /*height: 1.5rem;*/
+  /*line-height: 1;*/
+  /*line-height: var(--line-height-1);*/
+  /*width: 1.5rem;*/
+  /*text-align: center;*/
 }
 .calendar-day__day_of_week {
   display: inline-block;

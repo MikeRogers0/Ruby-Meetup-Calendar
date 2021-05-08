@@ -42,7 +42,7 @@ export const CalendarDay = ({ events, day, currentMonth }) => {
 
   function renderEvents() {
     return dayHasEvents() ? (
-      <ul>
+      <ul className="calendar-events">
         { eventsOnDay().map((event) => <CalendarEvent key={event.title + event.datetime} event={ event } />) }
       </ul>
     ) : null

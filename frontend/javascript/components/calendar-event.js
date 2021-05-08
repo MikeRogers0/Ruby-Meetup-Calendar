@@ -1,7 +1,7 @@
 import React from "react"
 
 const CalendarEvent = ({event}) => (
-  <li className="text-xs mb-1 list-disc list-inside">
+  <li className="calendar-events__item">
     <a href={ event.external_url } target="_blank">
       { event.name } 
       <span> - </span> 
