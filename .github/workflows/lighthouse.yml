@@ -17,5 +17,5 @@ jobs:
           urls: |
             ${{ steps.netlify.outputs.url }}
             ${{ steps.netlify.outputs.url }}/groups
-          budgetPath: ./budget.json
+          budgetPath: ./.github/budget.json
           uploadArtifacts: true
