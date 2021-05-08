@@ -26,8 +26,11 @@
 .navbar__brand__icon {
   margin-right: 0.5rem;
 }
+
 .navbar__links {
-  padding: 0;
+  @mixin list-inline;
+  margin-top: 0;
+  margin-bottom: 0;
   display: none;
 
   @media (--viewport-md) {
@@ -35,8 +38,3 @@
     margin-left: auto;
   }
 }
-.navbar__links .list-inline {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-

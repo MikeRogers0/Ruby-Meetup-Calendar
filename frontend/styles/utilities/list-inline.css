@@ -1,11 +1,3 @@
 .list-inline {
-  list-style: none;
-  margin-left: -1rem;
-  margin-right: -1rem;
-  padding: 0;
-}
-
-.list-inline > li {
-  display: inline-block;
-  padding: 0 1rem;
+  @mixin list-inline;
 }
