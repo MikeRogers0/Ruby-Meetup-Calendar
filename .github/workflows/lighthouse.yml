@@ -19,6 +19,7 @@ jobs:
         with:
           site_name: 'ruby-meetup-calendar'
       - name: Audit URLs using Lighthouse
+        if: steps.wait-for-Netlify.outputs.conclusion == 'neutral'
         uses: treosh/lighthouse-ci-action@v7
         with:
           urls: |
