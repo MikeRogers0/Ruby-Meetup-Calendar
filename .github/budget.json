@@ -1,27 +1,5 @@
 [
   {
-    "timings": [
-      {
-        "metric": "interactive",
-        "budget": 3500
-      },
-      {
-        "metric": "first-meaningful-paint",
-        "budget": 2750
-      },
-      {
-        "metric": "cumulative-layout-shift",
-        "budget": 1
-      },
-      {
-        "metric": "total-blocking-time",
-        "budget": 75
-      },
-      {
-        "metric": "speed-index",
-        "budget": 2500
-      }
-    ],
     "resourceSizes": [
       {
         "resourceType": "document",
@@ -37,7 +15,7 @@
       },
       {
         "resourceType": "image",
-        "budget": 5
+        "budget": 15
       },
       {
         "resourceType": "script",
