@@ -1,26 +1,23 @@
 <nav class="navbar" id="navbar" data-turbo-permanent>
   {% capture page_title %}{{ page.title | strip_html | strip_newlines }}{% endcapture %}
-  <div class="navbar__brand">
-    <h1>
-      <a href="/">
-        <span class="mr-2">💎</span>
-        {{ metadata.title | escape }}
-      </a>
-    </h1>
-  </div>
+  <h1 class="navbar__brand">
+    <a href="/">
+      <span class="navbar__brand__icon">💎</span>
+      {{ metadata.title | escape }}
+    </a>
+  </h1>
 
-  <ul class="navbar__links">
-    <li class="navbar__link">
-      <a href="/groups" class="btn--navbar">
-        All Groups
-      </a>
-    </li>
-
-    <li class="navbar__link">
-      <a href="https://github.com/MikeRogers0/Ruby-Meetup-Calendar" target="_blank" rel="noopener" class="btn--navbar">
-        <i data-feather="plus" class="mr-2"></i>
-        Add An Event
-      </a>
-    </li>
-  </ul>
+    <ul class="navbar__links">
+      <li class="navbar__link">
+        <a href="/groups" class="btn btn--navbar">
+          All Groups
+        </a>
+      </li>
+      <li class="navbar__link">
+        <a href="https://github.com/MikeRogers0/Ruby-Meetup-Calendar" target="_blank" rel="noopener" class="btn btn--navbar">
+          <i data-feather="plus"></i>
+          Add An Event
+        </a>
+      </li>
+    </ul>
 </nav>

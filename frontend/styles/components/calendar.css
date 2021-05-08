@@ -1,76 +1,35 @@
 .calendar {
-  @apply my-2 md:my-4 p-4;
-  @apply md:rounded-lg shadow-lg overflow-hidden;
-  @apply bg-gray-800;
+  @mixin shadow;
+  margin-top: var(--spacing-2);
+  margin-bottom: var(--spacing-2);
+  padding: var(--spacing-4);
+  background-color: var(--background-secondary);
+  overflow: hidden;
+
+  @media (--viewport-md) {
+    margin-top: var(--spacing-4);
+    margin-bottom: var(--spacing-4);
+  }
+  @media (--viewport-sm) {
+    border-radius: 0.5rem;
+  }
 }
 
 .calendar__header {
-  @apply flex items-center justify-between px-2 pb-2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-2);
+  padding-top: 0;
 }
 
-.calendar-days {
-  @apply grid grid-cols-1;
-
-  @apply lg:grid-cols-7;
+.calendar__navigation {
+  margin: 0;
+  list-style: none;
 }
 
-.calendar-days--title > .calendar-day:nth-child(7n) {
-  @apply lg:border-r-0;
-}
-
-.calendar-day {
-  @apply py-2 px-3 border-gray-900 border-r border-b;
-
-  @apply hidden;
-  @apply lg:block;
-}
-
-.calendar-day--with-events {
-  @apply block;
-}
-
-.calendar-day--past {
-  @apply text-true-gray-400;
-  background: #232C39;
-}
-
-.calendar-day--past a {
-  @apply text-true-gray-400;
-}
-
-.calendar-day--today {
-  @apply bg-gray-700;
-}
-
-.calendar-day--not-in-current-month {
-  @apply hidden;
-  @apply lg:block;
-}
-
-.calendar-days > .calendar-day {
-  @apply border-r-0;
-  @apply lg:border-r;
-}
-
-.calendar-day--body {
-  @apply lg:min-h-28;
-}
-
-.calendar-days > .calendar-day:nth-child(7n) {
-  @apply border-r-0;
-}
-
-.calendar-days > .calendar-day:nth-last-child(-n+7) {
-  @apply border-b-0;
-}
-
-.calendar-day__title {
-}
-
-.calendar-day__date {
-  @apply inline-flex w-6 h-6 leading-none;
-}
-
-.calendar-day__day_of_week {
-  @apply inline-block lg:hidden;
+.calendar__navigation__item {
+  display: inline-block;
+  font-size: var(--font-size-6);
+  line-height: var(--line-height-6);
 }

@@ -1,12 +1,51 @@
 .btn {
-  @apply leading-none rounded-lg inline-flex items-center cursor-pointer text-gray-400 hover:bg-gray-100 p-1;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: inline-block;
+  line-height: var(--line-height-1);
+  padding: var(--spacing-1);
+  background-color: var(--background-secondary);
+  color: var(--text-primary);
+
+  &:focus {
+    @mixin shadow;
+  }
+
+  &:hover, &:focus {
+    background-color: var(--background-tertiary);
+    color: var(--background-secondary);
+  }
+}
+
+.btn > [data-feather] {
+  display: inline-block;
+  vertical-align: bottom;
+  margin-right: var(--spacing-1);
 }
 
 .btn--disabled {
-  @apply opacity-50 hover:bg-transparent;
+  color: var(--text-primary-darker);
+  cursor: not-allowed;
+
+  &:hover, &:focus {
+    color: var(--text-primary-darker);
+    background-color: var(--background-secondary);
+  }
 }
 
 .btn--navbar {
-  @apply leading-none rounded-lg inline-flex items-center cursor-pointer bg-gray-800 hover:bg-gray-900 hover:shadow-lg;
-  @apply no-underline text-white font-bold py-3 px-4 rounded;
+  font-weight: 700;
+  padding: var(--spacing-3) var(--spacing-5);
+  color: var(--text-primary);
+  text-decoration: none;
+  background-color: var(--background-secondary);
+
+  &:focus {
+    @mixin shadow;
+  }
+
+  &:hover, &:focus {
+    color: var(--text-primary);
+    background-color: var(--background-secondary-dark);
+  }
 }

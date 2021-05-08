@@ -1,6 +1,6 @@
-import "index.css"
+import 'index.css'
 
-import LocalTime from "local-time"
+import LocalTime from 'local-time'
 LocalTime.start()
 
 // Import the React Components

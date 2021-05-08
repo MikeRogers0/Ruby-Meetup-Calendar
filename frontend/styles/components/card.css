@@ -1,5 +1,30 @@
 .card {
-  @apply bg-white p-4;
-  @apply md:rounded-lg shadow-lg overflow-hidden;
-  @apply bg-gray-800;
+  @mixin shadow;
+  padding: var(--spacing-4);
+  overflow: hidden;
+  background-color: var(--background-secondary);
+}
+
+@media (--viewport-md) {
+  .card {
+    border-radius: 0.5rem;
+  }
+}
+
+.card__title {
+  margin-top: 0;
+}
+
+.card__icon {
+  display: block;
+  color: var(--text-secondary);
+  padding: var(--spacing-3);
+  font-size: var(--font-size-6);
+  line-height: var(--line-height-6);
+  border-radius: 9999px;
+  background-color: var(--background-tertiary);
+}
+
+.card__icon:hover {
+  background-color: var(--background-tertiary-light);
 }

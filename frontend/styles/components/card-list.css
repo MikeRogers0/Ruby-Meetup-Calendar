@@ -1,0 +1,15 @@
+.card-list {
+  display: grid;
+  gap: var(--spacing-5);
+  padding: 0;
+  list-style: none;
+
+  @media (--viewport-md) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (--viewport-lg) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+

@@ -1,6 +1,17 @@
 .footer {
-  @apply py-8 px-4 container mx-auto text-gray-100 text-center;
-}
+  @mixin container;
 
-.footer__links {
+  padding: var(--spacing-4);
+  padding-bottom: var(--spacing-6);
+  text-align: center;
+  display: grid;
+
+  @media (--viewport-lg) {
+    text-align: left;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    .list-inline:last-child {
+      margin-left: auto;
+    }
+  }
 }

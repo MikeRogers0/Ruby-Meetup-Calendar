@@ -1,0 +1,82 @@
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+
+  @media (--viewport-lg) {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+  }
+}
+
+.calendar-day--title {
+  text-align: center;
+  font-weight: 700;
+  font-size: var(--font-size-2);
+  line-height: var(--line-height-2);
+
+  @media (--viewport-lg) {
+    &:nth-child(7n) {
+      border-right-width: 0;
+    }
+  }
+}
+
+.calendar-day {
+  border: 0px solid var(--border-primary);
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  padding: var(--spacing-3) var( --spacing-2);
+  display: none;
+
+  @media (--viewport-lg) {
+    display: block;
+  }
+}
+
+.calendar-day--with-events {
+  display: block;
+}
+
+.calendar-day--past {
+  color: var(--text-secondary-light);
+  background: var(--background-secondary-light);
+}
+.calendar-day--past a {
+  color: var(--text-secondary-light);
+}
+.calendar-day--today {
+  background: var(--background-secondary-lightest);
+}
+.calendar-day--not-in-current-month {
+  display: none;
+
+  @media (--viewport-lg) {
+    display: block;
+  }
+}
+.calendar-days > .calendar-day {
+  border-right-width: 0;
+
+  @media (--viewport-lg) {
+    border-right-width: 1px;
+  }
+}
+
+@media (--viewport-lg) {
+  .calendar-day--body {
+    min-height: 7rem;
+  }
+}
+.calendar-days > .calendar-day:nth-child(7n) {
+  border-right-width: 0;
+}
+.calendar-days > .calendar-day:nth-last-child(-n + 7) {
+  border-bottom-width: 0;
+}
+
+.calendar-day__day_of_week {
+  display: inline-block;
+
+  @media (--viewport-lg) {
+    display: none;
+  }
+}

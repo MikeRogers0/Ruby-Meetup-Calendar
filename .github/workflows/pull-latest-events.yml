@@ -2,7 +2,7 @@ name: Pull Latest Events
 
 on:
   schedule:
-    - cron:  '0 3 * * *'
+    - cron: '0 3 * * *'
   workflow_dispatch:
 
 jobs:
@@ -10,45 +10,45 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-    - uses: actions/checkout@master
+      - uses: actions/checkout@master
 
-    # Setup Ruby
-    # https://github.com/ruby/setup-ruby#single-job
-    - name: Setup Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: 2.7.2
-        bundler-cache: true
+      # Setup Ruby
+      # https://github.com/ruby/setup-ruby#single-job
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7.2
+          bundler-cache: true
 
-    # Setup Yarn
-    # https://github.com/actions/cache/blob/main/examples.md#node---yarn
-    - name: Get yarn cache directory path
-      id: yarn-cache-dir-path
-      run: echo "::set-output name=dir::$(yarn cache dir)"
-    - name: Restoring Yarn Cache
-      uses: actions/cache@v2
-      id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
-      with:
-        path: |
-          ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          node_modules
-        key: ${{ runner.os }}-yarn_modules-${{ hashFiles('**/yarn.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-yarn-
-    - name: Install Yarn Dependencies
-      run: yarn install --prefer-offline --check-files
+      # Setup Yarn
+      # https://github.com/actions/cache/blob/main/examples.md#node---yarn
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - name: Restoring Yarn Cache
+        uses: actions/cache@v2
+        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+        with:
+          path: |
+            ${{ steps.yarn-cache-dir-path.outputs.dir }}
+            node_modules
+          key: ${{ runner.os }}-yarn_modules-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+      - name: Install Yarn Dependencies
+        run: yarn install --prefer-offline --check-files
 
-    - name: Update event data
-      run: |
-        bundle exec rake update_data:all
-    - name: Commit files
-      run: |
-        git config --local user.email "github-actions@example.com"
-        git config --local user.name "GitHub Actions"
-        git add .
-        git commit -am "[nodoc] Updating Data files: `date`" || echo "No changes to commit"
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: ${{ github.ref }}
+      - name: Update event data
+        run: |
+          bundle exec rake update_data:all
+      - name: Commit files
+        run: |
+          git config --local user.email "github-actions@example.com"
+          git config --local user.name "GitHub Actions"
+          git add .
+          git commit -am "[nodoc] Updating Data files: `date`" || echo "No changes to commit"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}

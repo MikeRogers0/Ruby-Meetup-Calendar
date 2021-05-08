@@ -1,31 +1,37 @@
 .navbar {
-  @apply pt-6 pb-4 px-4 container mx-auto;
-  @apply grid gap-4 grid-cols-1 md:grid-cols-2;
-}
+  @mixin container;
+  padding: var(--spacing-4);
+  padding-top: var(--spacing-5);
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
 
-.navbar__brand h1 a {
-  @apply text-2xl text-gray-100 no-underline;
-}
-
-.navbar__links {
-  @apply flex -mx-3 mt-2;
-  align-items: center;
-  width: 100%;
-}
-
-@screen md {
-  .navbar__links {
-    @apply mt-0;
-    width: auto;
-    justify-content: end;
+  @media (--viewport-md) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-.navbar__link {
-  @apply px-3;
+.navbar__brand {
+  margin: 0;
+}
+.navbar__brand a {
+  font-size: var(--font-size-6);
+  color: var(--text-primary);
+  text-decoration: none;
 }
 
-.navbar__link .feather {
-  width: 16px;
-  height: 16px;
+.navbar__brand__icon {
+  margin-right: var(--spacing-2);
+}
+
+.navbar__links {
+  @mixin list-inline;
+  margin-top: 0;
+  margin-bottom: 0;
+  display: none;
+
+  @media (--viewport-md) {
+    display: block;
+    margin-left: auto;
+  }
 }

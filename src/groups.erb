@@ -1,21 +1,21 @@
 ---
-layout: page
+layout: default
 title: Groups
 permalink: /groups/
 template_engine: erb
 ---
 
-<ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+<ul class="card-list">
   <% site.data.groups.each do |group| %>
     <li class="card">
-      <h2 class="border-b border-gray-900">
+      <h2 class="card__title h3">
         <%= group.name %>
       </h2>
 
-      <ul class="mt-4">
+      <ul class="list-inline">
         <% group.links.compact.each do |name, url| %>
-          <li class="inline-block mr-4">
-            <a href="<%= url %>" title="<%= name.capitalize %>: <%= url %>" target="_blank" rel="noopenner" class="bg-gray-300 text-gray-900 hover:bg-white p-3 block rounded-full text-2xl">
+          <li>
+            <a href="<%= url %>" title="<%= name.capitalize %>: <%= url %>" target="_blank" rel="noopenner" class="card__icon">
               <i data-feather="<%= name %>"></i>
               <span class="sr-only"><%= name %></span>
             </a>

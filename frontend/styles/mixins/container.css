@@ -1,0 +1,15 @@
+@define-mixin container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  /*
+   * We have to declare media queries as their processed, as it appears PostCSS
+   * don't like it when I use custom properties here.
+   * */
+  @media (min-width: 768px) { max-width: 768px; }
+  @media (min-width: 768px) { max-width: 768px; }
+  @media (min-width: 1024px) { max-width: 1024px; }
+  @media (min-width: 1280px) { max-width: 1280px; }
+  @media (min-width: 1536px) { max-width: 1536px; }
+}

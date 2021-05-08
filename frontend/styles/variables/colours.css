@@ -1,0 +1,19 @@
+:root {
+  --background-primary: #3c2aaa;
+  --background-secondary: #1d2938;
+  --background-secondary-lightest: #3f4a5b;
+  --background-secondary-light: #232c39;
+  --background-secondary-dark: #0f192c;
+  --background-tertiary: #d0d5dc;
+  --background-tertiary-light: #ffffff;
+
+  --text-primary: #f9fafb;
+  --text-primary-darker: #a1a1ab;
+  --text-secondary: #101828;
+  --text-secondary-light: #ababb3;
+
+  --link-primary: #c5d1ff;
+  --link-secondary: #a1a1ab;
+
+  --border-primary: #273241;
+}
