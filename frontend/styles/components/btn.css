@@ -20,7 +20,7 @@
 .btn > [data-feather] {
   display: inline-block;
   vertical-align: bottom;
-  margin-right: var(--spacing-1);
+  margin: 0;
 }
 
 .btn--disabled {
@@ -48,4 +48,7 @@
     color: var(--text-primary);
     background-color: var(--background-secondary-dark);
   }
+}
+.btn--navbar > [data-feather] {
+  margin-right: var(--spacing-1);
 }
