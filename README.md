@@ -7,8 +7,8 @@
   <a target="_blank" href="https://twitter.com/MikeRogers0">
     <img src="https://img.shields.io/twitter/follow/MikeRogers0?label=Follow%20%40MikeRogers0%20For%20Updates&style=social" alt="Follow @MikeRogers on Twitter">
   </a>
-  <a target="_blank" href="https://github.com/MikeRogers0/Ruby-Meetup-Calendar/actions/workflows/lighthouse.yml">
-    <img src="https://github.com/MikeRogers0/Ruby-Meetup-Calendar/actions/workflows/lighthouse.yml/badge.svg" alt="Lighthouse CI">
+  <a target="_blank" href="https://github.com/MikeRogers0/Ruby-Meetup-Calendar/actions/workflows/lighthouse-cron.yml">
+    <img src="https://github.com/MikeRogers0/Ruby-Meetup-Calendar/actions/workflows/lighthouse-cron.yml/badge.svg" alt="Lighthouse">
   </a>
   <a target="_blank" href="https://github.com/MikeRogers0/Ruby-Meetup-Calendar/actions/workflows/standard.yml">
     <img src="https://github.com/MikeRogers0/Ruby-Meetup-Calendar/actions/workflows/standard.yml/badge.svg" alt="Standard">

@@ -1,0 +1,20 @@
+name: Lighthouse
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron:  '0 5 * * 1'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Audit URLs using Lighthouse
+        uses: treosh/lighthouse-ci-action@v7
+        with:
+          urls: |
+            https://ruby-meetup-calendar.mikerogers.io/
+            https://ruby-meetup-calendar.mikerogers.io/groups
+          budgetPath: ./.github/budget.json
+          uploadArtifacts: true
