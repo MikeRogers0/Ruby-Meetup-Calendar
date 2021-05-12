@@ -3,7 +3,7 @@
   padding: var(--spacing-4);
   padding-top: var(--spacing-5);
   display: grid;
-  gap: 1rem;
+  gap: var(--spacing-4);
   grid-template-columns: repeat(1, minmax(0, 1fr));
 
   @media (--viewport-md) {

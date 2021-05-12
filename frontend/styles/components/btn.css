@@ -1,5 +1,5 @@
 .btn {
-  border-radius: 0.5rem;
+  border-radius: var(--border-radius-1);
   display: inline-block;
   line-height: var(--line-height-1);
   padding: var(--spacing-1);

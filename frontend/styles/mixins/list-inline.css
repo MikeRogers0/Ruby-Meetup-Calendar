@@ -1,7 +1,7 @@
 @define-mixin list-inline {
   list-style: none;
-  margin-left: var(--spacing--2);
-  margin-right: var(--spacing--2);
+  margin-left: calc(var(--spacing-2) * -1);
+  margin-right: calc(var(--spacing-2) * -1);
   padding: 0;
 
   > li {
