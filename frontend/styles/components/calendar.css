@@ -11,7 +11,7 @@
     margin-bottom: var(--spacing-4);
   }
   @media (--viewport-sm) {
-    border-radius: 0.5rem;
+    border-radius: var(--border-radius-1);
   }
 }
 
