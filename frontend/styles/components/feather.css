@@ -49,3 +49,7 @@
 [data-feather='chevron-right'] {
   mask-image: url('~feather-icons/dist/icons/chevron-right.svg');
 }
+
+[data-feather='filter'] {
+  mask-image: url('~feather-icons/dist/icons/filter.svg');
+}
