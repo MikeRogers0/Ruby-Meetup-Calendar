@@ -8,10 +8,14 @@
 <% date_range = (start_date..end_date).to_a %>
 
 <div class="calendar">
-  <input type="hidden" name="show_filter" />
+  <input type="checkbox" name="show_filter" id="show_filter" />
 
   <div class="calendar__filter">
     <form>
+      <div class="h3">
+        Filter
+      </div>
+
       <ul>
         <li>
           <label><input type="checkbox" name="online_event" /> Show Only Online Events</label>
@@ -23,7 +27,7 @@
   <div class="calendar__inner">
 
     <div class="calendar__header">
-      <label class="btn" style="font-size: var(--font-size-2);font-weight: bold;border: none;">
+      <label class="btn" style="font-size: var(--font-size-2);font-weight: bold;border: none;" for="show_filter">
         <i data-feather="filter"></i>
         <span class="sr-only">Filter</span>
       </label>
