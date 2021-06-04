@@ -13,13 +13,11 @@ const ReactFilterForm = () => {
   };
 
   return (
-    <div className="filter-form">
-      <ul>
-        <li>
-          <label><input type="checkbox" name="online_event_only" onChange={handleChangeEvent} checked={onlineEventOnly} /> Show Only Online Events</label>
-        </li>
-      </ul>
-    </div>
+    <ul className="filter-form list-inline">
+      <li>
+        <label><input type="checkbox" name="online_event_only" onChange={handleChangeEvent} checked={onlineEventOnly} /> Show Only Online Events</label>
+      </li>
+    </ul>
   );
 }
 

@@ -9,71 +9,55 @@
 
 <div class="calendar">
   <input type="checkbox" name="show_filter" id="show_filter" />
-
-  <div class="calendar__filter">
-    <form>
-      <div class="h3">
-        Filter
-      </div>
-
-      <filter-form />
-      <ul>
-        <li>
-          <label><input type="checkbox" name="online_event_only" /> Show Only Online Events</label>
-        </li>
-      </ul>
-    </form>
-  </div>
-
-  <div class="calendar__inner">
-
-    <div class="calendar__header">
-      <label class="btn" style="font-size: var(--font-size-2);font-weight: bold;border: none;" for="show_filter">
-        <i data-feather="filter"></i>
-        <span class="sr-only">Filter</span>
-      </label>
-
-      <div class="h3">
-        <%= t('date.month_names')[current_month.month] %>
-        <span class="muted"><%= current_month.year %></span>
-      </div>
-
-      <ul class="calendar__navigation">
-        <li class="calendar__navigation__item">
-          <%= partial 'calendar/nav_button', month: current_month - 1.months, forward_svg: false %>
-        </li>
-        <li class="calendar__navigation__item">
-          <%= partial 'calendar/nav_button', month: current_month + 1.months, forward_svg: true %>
-        </li>
-      </ul>
+  <label class="btn" for="show_filter" style="font-size: var(--font-size-2);font-weight: bold;border: none;">
+    <i data-feather="filter"></i>
+    <span class="sr-only">Filter</span>
+  </label>
+  <div class="calendar__header">
+    <div class="h3">
+      <%= t('date.month_names')[current_month.month] %>
+      <span class="muted"><%= current_month.year %></span>
     </div>
 
+    <ul class="calendar__navigation">
+      <li class="calendar__navigation__item">
+        <%= partial 'calendar/nav_button', month: current_month - 1.months, forward_svg: false %>
+      </li>
+      <li class="calendar__navigation__item">
+        <%= partial 'calendar/nav_button', month: current_month + 1.months, forward_svg: true %>
+      </li>
+    </ul>
+  </div>
+
+  <div class="calendar__filter">
+    <filter-form></filter-form>
+  </div>
+
+  <div class="calendar-days">
+    <% date_range.slice(0, 7).each do |date| %>
+      <div class="calendar-day calendar-day--title">
+        <%= t('date.abbr_day_names')[date.wday] %>
+      </div>
+    <% end %>
+  </div>
+
+  <calendar-days>
+    <script type="application/json">
+      <% events = site
+        .collections
+        .events
+        .docs
+        .select { |event| ((current_month.beginning_of_month - 1.week)..(current_month.end_of_month + 1.week)).cover?(event[:date]) }
+        .sort_by { |event| event[:datetime] }
+        .collect { |event| event.data.slice(:title, :datetime, :name, :external_url, :online_event) }
+      %>
+      <%= { current_month: current_month.iso8601, date_range: date_range, events: events }.to_json %>
+    </script>
     <div class="calendar-days">
-      <% date_range.slice(0, 7).each do |date| %>
-        <div class="calendar-day calendar-day--title">
-          <%= t('date.abbr_day_names')[date.wday] %>
+      <% date_range.each do |date| %>
+        <div class="calendar-day calendar-day--body">
         </div>
       <% end %>
     </div>
-
-    <calendar-days>
-      <script type="application/json">
-        <% events = site
-          .collections
-          .events
-          .docs
-          .select { |event| ((current_month.beginning_of_month - 1.week)..(current_month.end_of_month + 1.week)).cover?(event[:date]) }
-          .sort_by { |event| event[:datetime] }
-          .collect { |event| event.data.slice(:title, :datetime, :name, :external_url, :online_event) }
-      %>
-      <%= { current_month: current_month.iso8601, date_range: date_range, events: events }.to_json %>
-      </script>
-      <div class="calendar-days">
-        <% date_range.each do |date| %>
-          <div class="calendar-day calendar-day--body">
-          </div>
-        <% end %>
-      </div>
-    </calendar-days>
-  </div>
+  </calendar-days>
 </div>
