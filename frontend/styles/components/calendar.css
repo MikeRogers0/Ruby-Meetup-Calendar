@@ -25,30 +25,6 @@
   padding-top: 0;
 }
 
-input[name="show_filter"] {
-  /*display: none;*/
-  position: absolute;
-  left: -100vw;
-}
-.calendar__filter {
-  display: none;
-}
-input[name="show_filter"]:checked ~ .calendar__filter {
-  display: block;
-}
-
-label[for="show_filter"] {
-  border: 1px dotted rgba(255, 255, 255, 0);
-}
-input[name="show_filter"]:focus ~ * > label[for="show_filter"] {
-  @mixin shadow;
-  border: 1px dotted #fff;
-}
-input[name="show_filter"]:checked ~ * > label[for="show_filter"] {
-  background-color: var(--background-tertiary);
-  color: var(--background-secondary);
-}
-
 .calendar__navigation {
   margin: 0;
   list-style: none;
