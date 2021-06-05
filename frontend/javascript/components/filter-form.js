@@ -1,21 +1,21 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import createPersistedState from 'use-persisted-state';
-
-// https://www.npmjs.com/package/use-persisted-state
-const onlineEventOnlyState = createPersistedState('online_event_only');
+import useOnlineEventsOnlyState from "persisted-states/online-events-only";
 
 const ReactFilterForm = () => {
-  const [onlineEventOnly, setOnlineEventOnly] = onlineEventOnlyState(false);
+  const [onlineEventsOnly, setOnlineEventsOnly] = useOnlineEventsOnlyState(true);
 
   function handleChangeEvent(event){
-    setOnlineEventOnly(event.target.checked);
+    setOnlineEventsOnly(event.target.checked);
   };
 
   return (
     <ul className="filter-form list-inline">
       <li>
-        <label><input type="checkbox" name="online_event_only" onChange={handleChangeEvent} checked={onlineEventOnly} /> Show Only Online Events</label>
+        <label>
+          <input type="checkbox" name="online_events_only" onChange={handleChangeEvent} checked={onlineEventsOnly} />
+          Show Online Events Only
+        </label>
       </li>
     </ul>
   );

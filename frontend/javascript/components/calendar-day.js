@@ -1,13 +1,10 @@
 import React from "react"
 import { DateTime } from "luxon"
 import CalendarEvent from "./calendar-event"
-import createPersistedState from 'use-persisted-state';
-
-// https://www.npmjs.com/package/use-persisted-state
-const onlineEventOnlyState = createPersistedState('online_event_only');
+import useOnlineEventsOnlyState from "persisted-states/online-events-only";
 
 export const CalendarDay = ({ events, day, currentMonth }) => {
-  const [onlineEventOnly, setOnlineEventOnly] = onlineEventOnlyState(false);
+  const [onlineEventsOnly, setOnlineEventsOnly] = useOnlineEventsOnlyState(true);
   
   function date() {
     return DateTime.fromISO(day)
@@ -30,7 +27,12 @@ export const CalendarDay = ({ events, day, currentMonth }) => {
   }
 
   function eventsOnDay() {
-    return events.filter(event => DateTime.fromISO(event.datetime).toLocaleString(DateTime.DATE_SHORT) == date().toLocaleString(DateTime.DATE_SHORT) && (!onlineEventOnly || onlineEventOnly && event.online_event));
+    return events.filter(eventsOnDayFilter);
+  }
+
+  function eventsOnDayFilter(event) {
+    return DateTime.fromISO(event.datetime).toLocaleString(DateTime.DATE_SHORT) == date().toLocaleString(DateTime.DATE_SHORT) &&
+      (!onlineEventsOnly || onlineEventsOnly && event.online_event)
   }
 
   function classNames() {
