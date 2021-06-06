@@ -1,9 +1,6 @@
 require "yaml"
-require "active_support"
-require "active_support/core_ext"
-require "./lib/event"
 
-class EventsReformatter
+class Events::Reformatter
   EVENTS_PATH = "src/_events/*.md"
 
   def call

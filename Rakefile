@@ -16,6 +16,7 @@ end
 namespace :update_data do
   desc "Updates the currently known events & converts them into posts"
   task all: :environment do
+    Events::FutureClearer.new.call
     PostsGenerator.new.call
   end
 
