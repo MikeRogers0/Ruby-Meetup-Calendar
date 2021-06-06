@@ -1,21 +1,26 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import CalendarDay from "./calendar-day"
-
+import CalendarDay from "./calendar/day"
+import useOnlineEventsOnlyState from "persisted-states/online-events-only";
 
 const ReactCalendarDays = ({dateRange, currentMonth, events}) => {
+  const [onlineEventsOnly, setOnlineEventsOnly] = useOnlineEventsOnlyState();
+
+  function filteredEvents() {
+    return events.filter(event => (onlineEventsOnly !== true || onlineEventsOnly && event.online_event));
+  }
 
   function listCalendarDays() {
     return dateRange.map((day) => (
-      <CalendarDay 
-        key={ day } 
-        day={ day } 
-        currentMonth={ currentMonth } 
-        events={ events } />
+      <CalendarDay
+        key={ day }
+        day={ day }
+        currentMonth={ currentMonth }
+        events={ filteredEvents() } />
       )
     );
   }
-  
+
   return (
     <div className="calendar-days">{listCalendarDays()}</div>
   );

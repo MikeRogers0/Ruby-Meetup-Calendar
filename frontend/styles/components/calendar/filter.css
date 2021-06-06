@@ -1,0 +1,32 @@
+input[name="show_filter"] {
+  /*
+   * To allow keyboard navigation to highlight the label
+   */
+  position: absolute;
+  left: -100vw;
+}
+
+.calendar-filter {
+  display: none;
+  padding-top: var(--spacing-1);
+  padding-bottom: var(--spacing-1);
+}
+
+input[name="show_filter"]:checked ~ .calendar-filter {
+  display: block;
+}
+
+label[for="show_filter"] {
+  border: 1px dotted rgba(255, 255, 255, 0);
+  font-size: var(--font-size-2);
+  font-weight: bold;
+}
+
+input[name="show_filter"]:focus ~ * > label[for="show_filter"] {
+  border-color: rgba(255, 255, 255, 1);
+}
+
+input[name="show_filter"]:checked ~ * > label[for="show_filter"] {
+  background-color: var(--background-tertiary);
+  color: var(--background-secondary);
+}

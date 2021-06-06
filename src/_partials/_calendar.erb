@@ -8,8 +8,13 @@
 <% date_range = (start_date..end_date).to_a %>
 
 <div class="calendar">
-
+  <input type="checkbox" name="show_filter" id="show_filter" />
   <div class="calendar__header">
+    <label class="btn" for="show_filter" style="font-size: var(--font-size-2);font-weight: bold;">
+      <i data-feather="filter"></i>
+      <span class="sr-only">Filter</span>
+    </label>
+
     <div class="h3">
       <%= t('date.month_names')[current_month.month] %>
       <span class="muted"><%= current_month.year %></span>
@@ -24,6 +29,8 @@
       </li>
     </ul>
   </div>
+
+  <filter-form class="calendar-filter"></filter-form>
 
   <div class="calendar-days">
     <% date_range.slice(0, 7).each do |date| %>

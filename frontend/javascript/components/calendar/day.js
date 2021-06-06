@@ -1,10 +1,8 @@
 import React from "react"
 import { DateTime } from "luxon"
-import CalendarEvent from "./calendar-event"
-
+import CalendarEvent from "./event"
 
 export const CalendarDay = ({ events, day, currentMonth }) => {
-  
   function date() {
     return DateTime.fromISO(day)
   }
@@ -26,7 +24,11 @@ export const CalendarDay = ({ events, day, currentMonth }) => {
   }
 
   function eventsOnDay() {
-    return events.filter(event => DateTime.fromISO(event.datetime).toLocaleString(DateTime.DATE_SHORT) == date().toLocaleString(DateTime.DATE_SHORT));
+    return events.filter(eventsOnDayFilter);
+  }
+
+  function eventsOnDayFilter(event) {
+    return DateTime.fromISO(event.datetime).toLocaleString(DateTime.DATE_SHORT) == date().toLocaleString(DateTime.DATE_SHORT)
   }
 
   function classNames() {
