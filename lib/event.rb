@@ -27,7 +27,7 @@ class Event
   private
 
   def valid?
-    @datetime >= (Time.now - 1.months) && @datetime <= (Time.now + 3.months)
+    @datetime.between?(1.months.ago, 3.months.from_now)
   end
 
   def slug
