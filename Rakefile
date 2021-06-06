@@ -9,6 +9,7 @@ task :environment do
   require "dotenv/load"
 
   require "./lib/event"
+  require "./lib/events"
   require "./lib/groups_sorter"
   require "./lib/posts_generator"
 end

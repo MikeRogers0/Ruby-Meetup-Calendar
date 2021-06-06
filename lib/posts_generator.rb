@@ -1,5 +1,4 @@
 require "yaml"
-require "./lib/posts_generator/group"
 
 class PostsGenerator
   def call
@@ -14,3 +13,5 @@ class PostsGenerator
     @groups ||= YAML.safe_load(File.open("src/_data/groups.yml"))
   end
 end
+
+require "./lib/posts_generator/group"
