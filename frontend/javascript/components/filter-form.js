@@ -3,18 +3,17 @@ import ReactDOM from "react-dom"
 import useOnlineEventsOnlyState from "persisted-states/online-events-only";
 
 const ReactFilterForm = () => {
-  const [onlineEventsOnly, setOnlineEventsOnly] = useOnlineEventsOnlyState("false");
+  const [onlineEventsOnly, setOnlineEventsOnly] = useOnlineEventsOnlyState();
 
   function handleChangeEvent(event){
-    console.log("handleChangeEvent", event.target.checked)
-    setOnlineEventsOnly(event.target.checked ? "true" : "false");
+    setOnlineEventsOnly(event.target.checked);
   };
 
   return (
     <ul className="list-inline">
       <li>
         <label>
-          <input type="checkbox" name="online_events_only" onChange={handleChangeEvent} checked={onlineEventsOnly === "true"} />
+          <input type="checkbox" name="online_events_only" onChange={handleChangeEvent} checked={onlineEventsOnly} />
           Show Online Events Only
         </label>
       </li>

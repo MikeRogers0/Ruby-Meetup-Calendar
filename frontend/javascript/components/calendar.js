@@ -4,11 +4,10 @@ import CalendarDay from "./calendar-day"
 import useOnlineEventsOnlyState from "persisted-states/online-events-only";
 
 const ReactCalendarDays = ({dateRange, currentMonth, events}) => {
-  const [onlineEventsOnly, setOnlineEventsOnly] = useOnlineEventsOnlyState("false");
+  const [onlineEventsOnly, setOnlineEventsOnly] = useOnlineEventsOnlyState();
 
   function filteredEvents() {
-    console.log("filteredEvents", onlineEventsOnly)
-    return events.filter(event => (onlineEventsOnly === "false" || onlineEventsOnly === "true" && event.online_event));
+    return events.filter(event => (onlineEventsOnly !== true || onlineEventsOnly && event.online_event));
   }
 
   function listCalendarDays() {
