@@ -1,6 +1,6 @@
 import React from "react"
 import { DateTime } from "luxon"
-import CalendarEvent from "./calendar-event"
+import CalendarEvent from "./event"
 
 export const CalendarDay = ({ events, day, currentMonth }) => {
   function date() {

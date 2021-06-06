@@ -1,6 +1,6 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import CalendarDay from "./calendar-day"
+import CalendarDay from "./calendar/day"
 import useOnlineEventsOnlyState from "persisted-states/online-events-only";
 
 const ReactCalendarDays = ({dateRange, currentMonth, events}) => {
