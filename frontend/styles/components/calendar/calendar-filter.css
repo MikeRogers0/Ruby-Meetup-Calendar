@@ -8,6 +8,8 @@ input[name="show_filter"] {
 
 .calendar-filter {
   display: none;
+  padding-top: var(--spacing-1);
+  padding-bottom: var(--spacing-1);
 }
 
 input[name="show_filter"]:checked ~ .calendar-filter {
@@ -16,11 +18,12 @@ input[name="show_filter"]:checked ~ .calendar-filter {
 
 label[for="show_filter"] {
   border: 1px dotted rgba(255, 255, 255, 0);
-  font-size: var(--font-size-2);font-weight: bold;
+  font-size: var(--font-size-2);
+  font-weight: bold;
 }
 
 input[name="show_filter"]:focus ~ * > label[for="show_filter"] {
-  border: 1px dotted #fff;
+  border-color: rgba(255, 255, 255, 1);
 }
 
 input[name="show_filter"]:checked ~ * > label[for="show_filter"] {

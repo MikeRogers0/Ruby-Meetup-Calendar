@@ -1,6 +1,6 @@
 @import-glob "variables/*.css";
 
-@import-glob 'normalize.css';
+@import-glob "normalize.css";
 
 @import-glob "base/*.css";
 @import-glob "components/**/*.css";

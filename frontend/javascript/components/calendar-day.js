@@ -1,11 +1,8 @@
 import React from "react"
 import { DateTime } from "luxon"
 import CalendarEvent from "./calendar-event"
-import useOnlineEventsOnlyState from "persisted-states/online-events-only";
 
 export const CalendarDay = ({ events, day, currentMonth }) => {
-  const [onlineEventsOnly, setOnlineEventsOnly] = useOnlineEventsOnlyState(true);
-  
   function date() {
     return DateTime.fromISO(day)
   }
@@ -31,8 +28,7 @@ export const CalendarDay = ({ events, day, currentMonth }) => {
   }
 
   function eventsOnDayFilter(event) {
-    return DateTime.fromISO(event.datetime).toLocaleString(DateTime.DATE_SHORT) == date().toLocaleString(DateTime.DATE_SHORT) &&
-      (!onlineEventsOnly || onlineEventsOnly && event.online_event)
+    return DateTime.fromISO(event.datetime).toLocaleString(DateTime.DATE_SHORT) == date().toLocaleString(DateTime.DATE_SHORT)
   }
 
   function classNames() {
