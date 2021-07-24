@@ -306,6 +306,16 @@
     twitter: https://twitter.com/fleur_de_ruby
     link: https://discord.com/invite/xFp5GQhVtf
 
+- name: HexDevs
+  source: MeetingPlace
+  meeting_place_id: hexdevs
+  links:
+    link: https://www.hexdevs.com/
+    twitter: https://twitter.com/HexDevs
+    youtube: https://www.youtube.com/channel/UCoygmH4rHPNuQHt_OBVD5Dw
+    github: https://github.com/hexdevs
+    instagram: https://www.instagram.com/hexdevs/
+
 - name: indy.rb
   source: MeetingPlace
   meeting_place_id: indyrb
