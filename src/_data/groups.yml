@@ -118,6 +118,16 @@
     twitter: https://twitter.com/HamburgOnRuby
     github: https://github.com/rughh/planning
 
+- name: HexDevs
+  source: MeetingPlace
+  meeting_place_id: hexdevs
+  links:
+    link: https://www.hexdevs.com/
+    twitter: https://twitter.com/HexDevs
+    youtube: https://www.youtube.com/channel/UCoygmH4rHPNuQHt_OBVD5Dw
+    github: https://github.com/hexdevs
+    instagram: https://www.instagram.com/hexdevs/
+
 - name: LRUG
   source: Eventbrite
   eventbrite_id: 28936506513
@@ -221,6 +231,14 @@
     twitch: https://www.twitch.tv/therubygalaxy
     link: https://rubygalaxy.io/
 
+- name: Ruby Ireland
+  source: Meetup
+  meetup_id: rubyireland
+  links:
+    link: https://www.rubyireland.com/
+    twitter: https://twitter.com/rubyireland
+    github: https://github.com/rubyireland
+
 - name: Ruby LoCo
   source: Meetup
   meetup_id: Ruby-LoCo
@@ -305,16 +323,6 @@
   links:
     twitter: https://twitter.com/fleur_de_ruby
     link: https://discord.com/invite/xFp5GQhVtf
-
-- name: HexDevs
-  source: MeetingPlace
-  meeting_place_id: hexdevs
-  links:
-    link: https://www.hexdevs.com/
-    twitter: https://twitter.com/HexDevs
-    youtube: https://www.youtube.com/channel/UCoygmH4rHPNuQHt_OBVD5Dw
-    github: https://github.com/hexdevs
-    instagram: https://www.instagram.com/hexdevs/
 
 - name: indy.rb
   source: MeetingPlace
