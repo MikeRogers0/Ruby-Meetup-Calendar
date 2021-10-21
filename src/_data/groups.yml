@@ -163,6 +163,13 @@
     youtube: https://www.youtube.com/c/RubyAustralia
     github: https://github.com/rails-oceania/melbourne-ruby
 
+- name: Nash.rb (Nashville Ruby Meetup)
+  source: Meetup
+  meetup_id: nash-rb
+  links:
+    link: https://www.meetup.com/nashrb/
+    twitter: https://twitter.com/nashrb
+
 - name: NYC.rb
   source: Meetup
   meetup_id: NYC-rb
